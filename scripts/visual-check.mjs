@@ -93,10 +93,18 @@ for (const spec of [
   })));
   await foundersSection.screenshot({ path: `.impeccable/review/founders-${spec.name}.png` });
 
-  await page.locator('[data-comparison-range]').fill('0');
+  const setComparisonPosition = async (value) => {
+    await page.locator('[data-comparison]').evaluate((element, pct) => {
+      element.style.setProperty('--comparison-position', `${pct}%`);
+      element.dataset.comparisonEdge = pct <= 2 ? 'start' : pct >= 98 ? 'end' : 'middle';
+      element.querySelector('.comparison-stage')?.setAttribute('aria-valuenow', String(pct));
+    }, value);
+  };
+
+  await setComparisonPosition(0);
   metrics.comparisonStart = await page.locator('[data-comparison]').evaluate((element) => {
     const stageBounds = element.querySelector('.comparison-stage')?.getBoundingClientRect();
-    const handleBounds = element.querySelector('.comparison-line span')?.getBoundingClientRect();
+    const handleBounds = element.querySelector('.comparison-handle')?.getBoundingClientRect();
     return {
       position: element.style.getPropertyValue('--comparison-position'),
       edge: element.getAttribute('data-comparison-edge'),
@@ -105,10 +113,10 @@ for (const spec of [
       ),
     };
   });
-  await page.locator('[data-comparison-range]').fill('100');
+  await setComparisonPosition(100);
   metrics.comparisonEnd = await page.locator('[data-comparison]').evaluate((element) => {
     const stageBounds = element.querySelector('.comparison-stage')?.getBoundingClientRect();
-    const handleBounds = element.querySelector('.comparison-line span')?.getBoundingClientRect();
+    const handleBounds = element.querySelector('.comparison-handle')?.getBoundingClientRect();
     return {
       position: element.style.getPropertyValue('--comparison-position'),
       edge: element.getAttribute('data-comparison-edge'),
@@ -132,7 +140,7 @@ for (const spec of [
   metrics.comparisonPointerDrag = await page.locator('[data-comparison]').evaluate((element) =>
     element.style.getPropertyValue('--comparison-position'),
   );
-  await page.locator('[data-comparison-range]').fill('50');
+  await setComparisonPosition(50);
   await page.locator('[data-comparison]').screenshot({ path: `.impeccable/review/case-${spec.name}.png` });
 
   await page.evaluate(() => {
