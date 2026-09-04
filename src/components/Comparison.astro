@@ -32,50 +32,54 @@
     <div class="comparison-stage">
       <article class="site-proof proof-before" aria-label="Versão anterior do site da Náutica Engenharia">
         <div class="browser-bar"><i></i><i></i><i></i><span>www.nauticaengenharia.com</span></div>
-        <img
-          class="capture-image capture-desktop"
-          src="/assets/cases/nautica-before-desktop.jpg"
-          alt="Página inicial anterior da Náutica Engenharia no desktop, com menu extenso, fotografia de obra e grande logotipo central"
-          width="1440"
-          height="900"
-          loading="lazy"
-          decoding="async"
-          draggable="false"
-        />
-        <img
-          class="capture-image capture-mobile"
-          src="/assets/cases/nautica-before-mobile.jpg"
-          alt="Página inicial anterior da Náutica Engenharia no celular, com hero seguido imediatamente por uma grade carregada de serviços"
-          width="390"
-          height="844"
-          loading="lazy"
-          decoding="async"
-          draggable="false"
-        />
+        <div class="capture-frame">
+          <img
+            class="capture-image capture-desktop"
+            src="/assets/cases/nautica-before-desktop.jpg"
+            alt="Página inicial anterior da Náutica Engenharia no desktop, com menu extenso, fotografia de obra e grande logotipo central"
+            width="1440"
+            height="900"
+            loading="lazy"
+            decoding="async"
+            draggable="false"
+          />
+          <img
+            class="capture-image capture-mobile"
+            src="/assets/cases/nautica-before-mobile.jpg"
+            alt="Página inicial anterior da Náutica Engenharia no celular, com hero seguido imediatamente por uma grade carregada de serviços"
+            width="390"
+            height="844"
+            loading="lazy"
+            decoding="async"
+            draggable="false"
+          />
+        </div>
       </article>
 
       <article class="site-proof proof-after" aria-label="Redesign do site da Náutica Engenharia">
         <div class="browser-bar"><i></i><i></i><i></i><span>nauticaengenharia.vercel.app</span></div>
-        <img
-          class="capture-image capture-desktop"
-          src="/assets/cases/nautica-after-desktop.jpg"
-          alt="Redesign da página inicial da Náutica Engenharia no desktop, com navegação compacta, título forte e ações comerciais claras"
-          width="1440"
-          height="900"
-          loading="lazy"
-          decoding="async"
-          draggable="false"
-        />
-        <img
-          class="capture-image capture-mobile"
-          src="/assets/cases/nautica-after-mobile.jpg"
-          alt="Redesign da página inicial da Náutica Engenharia no celular, com título legível, posicionamento regional e dois botões de ação"
-          width="390"
-          height="844"
-          loading="lazy"
-          decoding="async"
-          draggable="false"
-        />
+        <div class="capture-frame">
+          <img
+            class="capture-image capture-desktop"
+            src="/assets/cases/nautica-after-desktop.jpg"
+            alt="Redesign da página inicial da Náutica Engenharia no desktop, com navegação compacta, título forte e ações comerciais claras"
+            width="1440"
+            height="900"
+            loading="lazy"
+            decoding="async"
+            draggable="false"
+          />
+          <img
+            class="capture-image capture-mobile"
+            src="/assets/cases/nautica-after-mobile.jpg"
+            alt="Redesign da página inicial da Náutica Engenharia no celular, com título legível, posicionamento regional e dois botões de ação"
+            width="390"
+            height="844"
+            loading="lazy"
+            decoding="async"
+            draggable="false"
+          />
+        </div>
       </article>
 
       <div class="comparison-line" aria-hidden="true"><span></span></div>
@@ -165,6 +169,6 @@
     });
 
     setPosition(Number(range?.value ?? 50));
-    if (window.matchMedia('(max-width: 640px)').matches) setDevice('mobile');
+    if (window.matchMedia('(max-width: 760px)').matches) setDevice('mobile');
   });
 </script>

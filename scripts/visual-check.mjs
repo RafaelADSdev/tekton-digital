@@ -6,10 +6,13 @@ const browser = await chromium.launch({
 });
 
 const results = {};
+const siteUrl = process.env.VISUAL_CHECK_URL || 'http://127.0.0.1:4323/';
 
 for (const spec of [
   { name: 'desktop', width: 1440, height: 1000 },
+  { name: 'mobile-wide', width: 430, height: 932 },
   { name: 'mobile', width: 390, height: 844 },
+  { name: 'mobile-narrow', width: 320, height: 740 },
 ]) {
   const page = await browser.newPage({
     viewport: { width: spec.width, height: spec.height },
@@ -23,7 +26,7 @@ for (const spec of [
   });
   page.on('pageerror', (error) => errors.push(error.message));
 
-  await page.goto('http://127.0.0.1:4323/', { waitUntil: 'networkidle' });
+  await page.goto(siteUrl, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
 
   const metrics = await page.evaluate(() => ({
@@ -41,7 +44,9 @@ for (const spec of [
     fonts: [...document.fonts].map((font) => font.family).filter((value, index, all) => all.indexOf(value) === index),
   }));
 
-  if (spec.name === 'mobile') {
+  const isMobile = spec.width <= 760;
+
+  if (isMobile) {
     await page.locator('.menu-toggle').click();
     metrics.menuExpanded = await page.locator('.menu-toggle').getAttribute('aria-expanded');
     metrics.menuVisible = await page.locator('.main-navigation').evaluate((element) => getComputedStyle(element).visibility);
@@ -49,13 +54,14 @@ for (const spec of [
     metrics.menuClosedWithEscape = await page.locator('.menu-toggle').getAttribute('aria-expanded');
   }
 
-  const expectedDevice = spec.name === 'mobile' ? 'mobile' : 'desktop';
+  const expectedDevice = isMobile ? 'mobile' : 'desktop';
   metrics.initialCaseDevice = await page.locator('[data-comparison]').getAttribute('data-device');
   const alternateDevice = expectedDevice === 'desktop' ? 'mobile' : 'desktop';
   await page.locator(`[data-device-button="${alternateDevice}"]`).click();
   metrics.alternateCaseDevice = await page.locator('[data-comparison]').getAttribute('data-device');
   await page.locator(`[data-device-button="${expectedDevice}"]`).click();
   metrics.finalCaseDevice = await page.locator('[data-comparison]').getAttribute('data-device');
+  await page.locator('.comparison-stage').scrollIntoViewIfNeeded();
   metrics.caseImagesLoaded = await page.locator(`.capture-${expectedDevice}`).evaluateAll((images) =>
     images.every((image) => image instanceof HTMLImageElement && image.complete && image.naturalWidth > 0),
   );
@@ -151,6 +157,19 @@ for (const spec of [
   metrics.heroVisibleAtProgressEnd = await page.locator('.hero').evaluate((element) =>
     element.getBoundingClientRect().bottom > 0,
   );
+
+  metrics.touchTargets = isMobile
+    ? await page.locator('.menu-toggle, .device-toggle button, .form-submit').evaluateAll((elements) =>
+        elements.map((element) => {
+          const bounds = element.getBoundingClientRect();
+          return {
+            label: element.textContent?.trim() || element.getAttribute('aria-label'),
+            width: Math.round(bounds.width),
+            height: Math.round(bounds.height),
+          };
+        }),
+      )
+    : [];
 
   await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
   await page.waitForTimeout(150);

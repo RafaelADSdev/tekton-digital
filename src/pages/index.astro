@@ -5,10 +5,12 @@ import SiteFooter from '../components/SiteFooter.astro';
 import Comparison from '../components/Comparison.astro';
 import { founders, services } from '../data/site';
 
-const contactEmail = import.meta.env.PUBLIC_CONTACT_EMAIL;
-const whatsappUrl = import.meta.env.PUBLIC_WHATSAPP_URL;
-const contactEndpoint = import.meta.env.PUBLIC_CONTACT_ENDPOINT;
-const contactReady = Boolean(contactEndpoint);
+const contactEmail = import.meta.env.PUBLIC_CONTACT_EMAIL?.trim() || 'rafaelarcanjods05@gmail.com';
+const whatsappUrl = import.meta.env.PUBLIC_WHATSAPP_URL?.trim() || 'https://wa.me/5581985932808';
+const whatsappGreeting = encodeURIComponent(
+  'Olá, vim pelo site da Tekton Digital e gostaria de conversar sobre um projeto.',
+);
+const whatsappDirectUrl = `${whatsappUrl}${whatsappUrl.includes('?') ? '&' : '?'}text=${whatsappGreeting}`;
 ---
 
 <BaseLayout
@@ -66,36 +68,22 @@ const contactReady = Boolean(contactEndpoint);
   </div>
 
   <section class="manifesto section-shell" id="sobre" aria-labelledby="about-title">
-    <div class="section-meta">
-      <span>Tekton Digital</span>
-      <span>Construir · Melhorar · Sustentar</span>
-    </div>
     <div class="manifesto-grid">
       <h2 id="about-title">Tecnologia só cria valor quando resolve o problema certo.</h2>
       <div class="manifesto-copy">
         <p>
-          Nossa missão é construir soluções digitais que aproximem negócios e pessoas. Fazemos isso entendendo
-          primeiro o contexto, preservando o que já tem valor e intervindo onde a mudança realmente importa.
-        </p>
-        <p>
-          Unimos visão de negócio e desenvolvimento para entregar uma presença digital coerente por fora,
-          consistente por dentro e simples de usar no dia a dia.
+          Entendemos o contexto, preservamos o que tem valor e intervenimos onde a mudança importa —
+          com visão de negócio e desenvolvimento na mesma entrega.
         </p>
         <a class="text-link dark" href="#servicos">Conheça nossas frentes <span aria-hidden="true">↓</span></a>
       </div>
-    </div>
-    <div class="principle-strip" aria-label="Princípios da Tekton">
-      <span>Clareza antes de complexidade</span>
-      <span>Decisões com contexto</span>
-      <span>Qualidade que pode evoluir</span>
     </div>
   </section>
 
   <section class="services-section" id="servicos" aria-labelledby="services-title">
     <div class="section-shell">
       <div class="services-heading">
-        <h2 id="services-title">Três maneiras de fazer seu produto digital avançar.</h2>
-        <p>Entramos no ponto em que o seu negócio está — do primeiro site à evolução de uma operação que já existe.</p>
+        <h2 id="services-title">Três frentes para avançar.</h2>
       </div>
 
       <div class="service-list">
@@ -106,9 +94,6 @@ const contactReady = Boolean(contactEndpoint);
               <h3>{service.title}</h3>
               <p>{service.description}</p>
             </div>
-            <ul>
-              {service.deliverables.map((item) => <li>{item}</li>)}
-            </ul>
           </article>
         ))}
       </div>
@@ -117,11 +102,7 @@ const contactReady = Boolean(contactEndpoint);
 
   <section class="founders-section section-shell" id="fundadores" aria-labelledby="founders-title">
     <div class="founders-intro">
-      <h2 id="founders-title">Quem pensa, constrói e acompanha cada entrega.</h2>
-      <p>
-        A Tekton é conduzida por três sócios que unem repertórios complementares para manter estratégia e execução
-        na mesma mesa.
-      </p>
+      <h2 id="founders-title">Quem constrói cada entrega.</h2>
     </div>
 
     <div class="founder-grid">
@@ -139,7 +120,6 @@ const contactReady = Boolean(contactEndpoint);
               />
             ) : (
               <div class="portrait-placeholder" aria-label="Foto será adicionada">
-                <span>{founder.code}</span>
                 <svg viewBox="0 0 200 260" aria-hidden="true">
                   <circle cx="100" cy="82" r="38"></circle>
                   <path d="M35 232c4-65 34-97 65-97s61 32 65 97"></path>
@@ -149,7 +129,6 @@ const contactReady = Boolean(contactEndpoint);
             )}
           </div>
           <div class="founder-info">
-            <span>{founder.code}</span>
             <h3>{founder.name}</h3>
             <strong>{founder.role}</strong>
             <p>{founder.bio}</p>
@@ -208,14 +187,14 @@ const contactReady = Boolean(contactEndpoint);
 
         <div class="contact-channels">
           {contactEmail && <a href={`mailto:${contactEmail}`}>{contactEmail} <span aria-hidden="true">↗</span></a>}
-          {whatsappUrl && <a href={whatsappUrl} target="_blank" rel="noreferrer">Conversar pelo WhatsApp <span aria-hidden="true">↗</span></a>}
+          {whatsappUrl && <a href={whatsappDirectUrl} target="_blank" rel="noreferrer">Conversar pelo WhatsApp <span aria-hidden="true">↗</span></a>}
           {!contactEmail && !whatsappUrl && (
             <p id="contact-config-note">E-mail e WhatsApp serão ativados aqui antes da publicação.</p>
           )}
         </div>
       </div>
 
-      <form class="contact-form" data-contact-form data-endpoint={contactEndpoint ?? ''}>
+      <form class="contact-form" data-contact-form data-email={contactEmail} data-whatsapp={whatsappUrl}>
         <div class="field-grid">
           <label>
             <span>Seu nome</span>
@@ -243,10 +222,16 @@ const contactReady = Boolean(contactEndpoint);
           <textarea name="message" rows="5" required placeholder="Em que momento o negócio está e o que precisa mudar?"></textarea>
         </label>
 
-        <button class="button form-submit" type="submit" disabled={!contactReady} aria-describedby={!contactReady ? 'contact-config-note' : undefined}>
-          <span>{contactReady ? 'Enviar briefing' : 'Canal em configuração'}</span>
-          <span aria-hidden="true">↗</span>
-        </button>
+        <div class="form-actions">
+          <button class="button form-submit" type="submit">
+            <span>Enviar por e-mail</span>
+            <span aria-hidden="true">↗</span>
+          </button>
+          <button class="button form-submit form-submit-secondary" type="button" data-whatsapp-submit>
+            <span>Enviar pelo WhatsApp</span>
+            <span aria-hidden="true">↗</span>
+          </button>
+        </div>
         <p class="form-status" role="status" aria-live="polite"></p>
       </form>
     </div>
@@ -257,38 +242,54 @@ const contactReady = Boolean(contactEndpoint);
   <script>
     const form = document.querySelector<HTMLFormElement>('[data-contact-form]');
     const status = form?.querySelector<HTMLElement>('.form-status');
-    const submit = form?.querySelector<HTMLButtonElement>('button[type="submit"]');
+    const whatsappSubmit = form?.querySelector<HTMLButtonElement>('[data-whatsapp-submit]');
 
-    form?.addEventListener('submit', async (event) => {
+    const getBriefing = () => {
+      if (!form) return null;
+
+      const data = new FormData(form);
+      const name = String(data.get('name') ?? '').trim();
+      const email = String(data.get('email') ?? '').trim();
+      const projectType = String(data.get('projectType') ?? '').trim();
+      const message = String(data.get('message') ?? '').trim();
+
+      return {
+        subject: `Novo briefing pelo site — ${name}`,
+        body: [
+          `Nome: ${name}`,
+          `E-mail: ${email}`,
+          `Tipo de projeto: ${projectType}`,
+          '',
+          'Sobre o projeto:',
+          message,
+        ].join('\n'),
+      };
+    };
+
+    form?.addEventListener('submit', (event) => {
       event.preventDefault();
-      if (!status || !submit) return;
+      if (!status) return;
 
-      const endpoint = form.dataset.endpoint;
-      if (!endpoint) {
-        status.textContent = 'O canal de envio ainda precisa ser configurado antes da publicação.';
-        return;
-      }
+      const briefing = getBriefing();
+      const recipient = form.dataset.email;
+      if (!briefing || !recipient) return;
 
-      submit.disabled = true;
-      submit.dataset.loading = 'true';
-      status.textContent = 'Enviando seu briefing…';
+      const mailto = `mailto:${recipient}?subject=${encodeURIComponent(briefing.subject)}&body=${encodeURIComponent(briefing.body)}`;
+      status.textContent = 'Abrimos seu aplicativo de e-mail com o briefing pronto. Revise e confirme o envio.';
+      window.location.href = mailto;
+    });
 
-      try {
-        const response = await fetch(endpoint, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(Object.fromEntries(new FormData(form))),
-        });
+    whatsappSubmit?.addEventListener('click', () => {
+      if (!form?.reportValidity() || !status) return;
 
-        if (!response.ok) throw new Error('Falha no envio');
-        form.reset();
-        status.textContent = 'Briefing enviado. A Tekton retornará o contato em breve.';
-      } catch {
-        status.textContent = 'Não foi possível enviar agora. Tente novamente ou use um dos canais diretos.';
-      } finally {
-        submit.disabled = false;
-        delete submit.dataset.loading;
-      }
+      const briefing = getBriefing();
+      const whatsapp = form.dataset.whatsapp;
+      if (!briefing || !whatsapp) return;
+
+      const separator = whatsapp.includes('?') ? '&' : '?';
+      const destination = `${whatsapp}${separator}text=${encodeURIComponent(briefing.body)}`;
+      status.textContent = 'Abrimos o WhatsApp com o briefing pronto. Revise e confirme o envio.';
+      window.open(destination, '_blank', 'noopener,noreferrer');
     });
   </script>
 </BaseLayout>

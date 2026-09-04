@@ -38,7 +38,7 @@ O site funciona como apresentação institucional e ponto inicial do processo co
 - Miguel Leite está confirmado como Desenvolvedor Web, com atuação direcionada a bancos de dados, APIs e processamento de requisições.
 - As fotografias atuais de Kaio e Miguel foram fornecidas diretamente pelo usuário.
 - Kaio Seabra possui a certificação AWS Certified Cloud Practitioner (CLF-C02), confirmada pelo usuário.
-- O WhatsApp e o e-mail comerciais definitivos ainda serão fornecidos.
+- O contato comercial usa `rafaelarcanjods05@gmail.com` e o WhatsApp `+55 81 98593-2808`, confirmados pelo usuário.
 - O case Náutica Engenharia usa capturas públicas equivalentes em desktop e mobile, realizadas em 04/09/2026.
 
 ## Brand Commitments

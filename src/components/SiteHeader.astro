@@ -34,18 +34,30 @@ const navItems = [
   const header = document.querySelector<HTMLElement>('[data-header]');
   const toggle = header?.querySelector<HTMLButtonElement>('.menu-toggle');
   const navigation = header?.querySelector<HTMLElement>('.main-navigation');
+  const mobileNavigation = window.matchMedia('(max-width: 900px)');
 
-  const setOpen = (open: boolean) => {
+  const setOpen = (open: boolean, restoreFocus = false) => {
     if (!header || !toggle || !navigation) return;
     header.dataset.open = String(open);
     toggle.setAttribute('aria-expanded', String(open));
     toggle.querySelector('.sr-only')!.textContent = open ? 'Fechar menu' : 'Abrir menu';
     document.body.classList.toggle('menu-open', open);
+
+    if (open) {
+      requestAnimationFrame(() => navigation.querySelector<HTMLAnchorElement>('a')?.focus());
+    } else if (restoreFocus) {
+      toggle.focus();
+    }
   };
 
   toggle?.addEventListener('click', () => setOpen(toggle.getAttribute('aria-expanded') !== 'true'));
   navigation?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setOpen(false)));
   document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') setOpen(false);
+    if (event.key === 'Escape' && toggle?.getAttribute('aria-expanded') === 'true') {
+      setOpen(false, true);
+    }
+  });
+  mobileNavigation.addEventListener('change', (event) => {
+    if (!event.matches) setOpen(false);
   });
 </script>
