@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-04T08:51:20.6654359-03:00",
+  "title": "Design System: Tekton Digital",
+  "extensions": {
+    "colorMeta": {
+      "structural-ink": {
+        "role": "neutral",
+        "displayName": "Preto Estrutural",
+        "canonical": "#08070a",
+        "tonalRamp": ["#08070a", "#211d25", "#39333f", "#544b5b", "#716777", "#928798", "#bbb2bf", "#f2eef4"]
+      },
+      "soft-ink": {
+        "role": "neutral",
+        "displayName": "Preto Suave",
+        "canonical": "#151218",
+        "tonalRamp": ["#0d0b0f", "#211d25", "#39343e", "#544e59", "#726b78", "#938c99", "#bdb7c1", "#f3f0f5"]
+      },
+      "execution-violet": {
+        "role": "primary",
+        "displayName": "Violeta de Execução",
+        "canonical": "#6d28d9",
+        "tonalRamp": ["#250653", "#3a087d", "#500fa8", "#6d28d9", "#8750e4", "#a97bec", "#cbb0f5", "#f0e7fd"]
+      },
+      "deep-violet": {
+        "role": "secondary",
+        "displayName": "Violeta Profundo",
+        "canonical": "#4c1d95",
+        "tonalRamp": ["#1c073d", "#2b0c5b", "#3a1377", "#4c1d95", "#6b3cad", "#8e68c4", "#b9a0dc", "#eee6f8"]
+      },
+      "electric-purple": {
+        "role": "primary",
+        "displayName": "Púrpura Elétrica",
+        "canonical": "#a855f7",
+        "tonalRamp": ["#310456", "#4d087f", "#7116ad", "#8f33dc", "#a855f7", "#bd7cfa", "#d8b1fc", "#f5eaff"]
+      },
+      "technical-lilac": {
+        "role": "secondary",
+        "displayName": "Lilás Técnico",
+        "canonical": "#e9d5ff",
+        "tonalRamp": ["#2e183e", "#4a2d60", "#694881", "#8a68a3", "#ad8fc2", "#cbb3dc", "#e9d5ff", "#faf5ff"]
+      },
+      "drafting-mist": {
+        "role": "neutral",
+        "displayName": "Névoa de Projeto",
+        "canonical": "#f4effa",
+        "tonalRamp": ["#242027", "#403a45", "#5e5666", "#7f7589", "#a198aa", "#c1bac8", "#dfdae5", "#f4effa"]
+      },
+      "technical-paper": {
+        "role": "neutral",
+        "displayName": "Papel Técnico",
+        "canonical": "#fbfafc",
+        "tonalRamp": ["#242225", "#413e43", "#605c62", "#807c83", "#a29fa5", "#c3c0c6", "#e2e0e4", "#fbfafc"]
+      },
+      "pure-white": {
+        "role": "neutral",
+        "displayName": "Branco Puro",
+        "canonical": "#ffffff",
+        "tonalRamp": ["#262626", "#424242", "#606060", "#808080", "#a3a3a3", "#c4c4c4", "#e3e3e3", "#ffffff"]
+      },
+      "muted-on-dark": {
+        "role": "neutral",
+        "displayName": "Texto Atenuado Escuro",
+        "canonical": "#aaa1b4",
+        "tonalRamp": ["#242027", "#3f3944", "#5b5362", "#776f7f", "#958d9d", "#aaa1b4", "#d0c9d4", "#f3eff5"]
+      },
+      "muted-on-light": {
+        "role": "neutral",
+        "displayName": "Texto Atenuado Claro",
+        "canonical": "#5f5865",
+        "tonalRamp": ["#1c191e", "#312d35", "#48424d", "#5f5865", "#7d7584", "#9d95a3", "#c3bdc7", "#f0edf2"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero e chamadas finais curtas." },
+      "headline": { "displayName": "Headline", "purpose": "Títulos principais de seção." },
+      "title": { "displayName": "Title", "purpose": "Serviços, fundadores e notas de case." },
+      "body": { "displayName": "Body", "purpose": "Explicações e conteúdo comercial." },
+      "label": { "displayName": "Label", "purpose": "Controles, rótulos e estados funcionais." }
+    },
+    "shadows": [
+      { "name": "sheet-elevated", "value": "12px 18px 44px rgb(0 0 0 / 34%)", "purpose": "Separar folhas técnicas sobrepostas." },
+      { "name": "control-foreground", "value": "6px 10px 24px rgb(0 0 0 / 28%)", "purpose": "Destacar a alça do comparador." },
+      { "name": "closing-panel", "value": "14px 24px 64px rgb(35 7 72 / 28%)", "purpose": "Separar o formulário preto do campo violeta." }
+    ],
+    "motion": [
+      { "name": "ease-structural", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Movimento de folhas e ações principais." },
+      { "name": "state-fast", "value": "180ms ease-out", "purpose": "Hover, foco e abertura do menu." },
+      { "name": "hero-light", "value": "scroll-linked 0..1 over 55% hero height", "purpose": "Atravessar as lâminas enquanto permanecem visíveis." }
+    ],
+    "breakpoints": [
+      { "name": "composition-adjust", "value": "1100px" },
+      { "name": "single-column", "value": "900px" },
+      { "name": "compact-mobile", "value": "640px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Ação principal reta, compacta e contrastante.",
+      "html": "<button class=\"ds-button-primary\">INICIAR UM PROJETO <span aria-hidden=\"true\">↗</span></button>",
+      "css": ".ds-button-primary{display:inline-flex;align-items:center;justify-content:space-between;gap:2rem;min-height:3.5rem;padding:.85rem 1.1rem;border:1px solid #a855f7;border-radius:0;background:#a855f7;color:#08070a;font:760 .84rem/1.2 'Manrope Variable',sans-serif;letter-spacing:.045em;text-transform:uppercase;transition:transform 240ms cubic-bezier(.16,1,.3,1),background 180ms ease}.ds-button-primary:hover{transform:translateY(-3px);background:#fff;border-color:#fff}.ds-button-primary:focus-visible{outline:3px solid #a855f7;outline-offset:4px}"
+    },
+    {
+      "name": "Disabled Button",
+      "kind": "button",
+      "refersTo": "button-disabled",
+      "description": "Estado indisponível sem simular ação funcional.",
+      "html": "<button class=\"ds-button-disabled\" disabled>CANAL EM CONFIGURAÇÃO</button>",
+      "css": ".ds-button-disabled{min-height:3.5rem;width:100%;padding:.85rem 1.1rem;border:1px solid #4e4754;border-radius:0;background:#332e37;color:#aaa1b4;font:760 .84rem/1.2 'Manrope Variable',sans-serif;letter-spacing:.045em;text-transform:uppercase;cursor:not-allowed}.ds-button-disabled:focus-visible{outline:3px solid #a855f7;outline-offset:4px}"
+    },
+    {
+      "name": "Dark Input",
+      "kind": "input",
+      "refersTo": "input-dark",
+      "description": "Campo de linha inferior sobre superfície estrutural.",
+      "html": "<label class=\"ds-field\"><span>SEU E-MAIL</span><input placeholder=\"voce@empresa.com.br\"></label>",
+      "css": ".ds-field{display:block;background:#08070a;color:#fff;font-family:'Manrope Variable',sans-serif}.ds-field span{display:block;margin-bottom:.65rem;color:#e9d5ff;font-size:.76rem;font-weight:760;line-height:1.45;letter-spacing:.09em}.ds-field input{width:100%;min-height:3.25rem;border:0;border-bottom:1px solid rgb(255 255 255 / 34%);border-radius:0;background:transparent;color:#fff;outline:none}.ds-field input::placeholder{color:#aaa1b4}.ds-field input:focus{border-color:#a855f7;background:rgb(168 85 247 / 7%)}"
+    },
+    {
+      "name": "Compact Navigation Action",
+      "kind": "nav",
+      "description": "CTA contornado que fecha a navegação institucional.",
+      "html": "<a class=\"ds-nav-action\" href=\"#\">INICIAR UM PROJETO <span aria-hidden=\"true\">↗</span></a>",
+      "css": ".ds-nav-action{display:inline-flex;align-items:center;gap:1rem;min-height:2.75rem;padding:.7rem 1rem;border:1px solid rgb(255 255 255 / 36%);color:#fff;background:#08070a;font:680 .78rem/1.2 'Manrope Variable',sans-serif;letter-spacing:.07em;text-decoration:none}.ds-nav-action:hover{border-color:#fff;background:#fff;color:#08070a}.ds-nav-action:focus-visible{outline:3px solid #a855f7;outline-offset:4px}"
+    },
+    {
+      "name": "Service Row",
+      "kind": "custom",
+      "description": "Passagem editorial de serviço sem contêiner arredondado.",
+      "html": "<article class=\"ds-service\"><span>EVOLUIR</span><div><h3>Sites que já existem</h3><p>Diagnóstico, reorganização e atualização.</p></div></article>",
+      "css": ".ds-service{display:grid;grid-template-columns:.4fr 1fr;gap:2rem;padding:2.5rem 0;border-top:1px solid rgb(8 7 10 / 16%);background:#f4effa;color:#08070a}.ds-service>span{color:#6d28d9;font:800 .72rem/1.4 ui-monospace,monospace;letter-spacing:.12em}.ds-service h3{margin:0 0 .8rem;font:560 2rem/1.05 'Syne Variable',sans-serif;letter-spacing:-.03em}.ds-service p{margin:0;color:#5f5865;font:400 1rem/1.7 'Manrope Variable',sans-serif}"
+    },
+    {
+      "name": "Technical Sheet",
+      "kind": "custom",
+      "description": "Plano violeta translúcido com marcação de execução.",
+      "html": "<div class=\"ds-sheet\"><small>TD / 01</small><strong>EVOLUIR</strong><span>O QUE JÁ FUNCIONA</span></div>",
+      "css": ".ds-sheet{display:flex;flex-direction:column;justify-content:flex-end;width:18rem;height:14rem;padding:1.4rem;border:1px solid rgb(255 255 255 / 48%);background:rgb(168 85 247 / 88%);color:#08070a;box-shadow:12px 18px 44px rgb(0 0 0 / 34%)}.ds-sheet small{margin-bottom:auto;font:800 .62rem/1.2 ui-monospace,monospace;letter-spacing:.12em}.ds-sheet strong{font:560 2.5rem/1 'Syne Variable',sans-serif;letter-spacing:-.035em}.ds-sheet span{margin-top:.6rem;font:700 .7rem/1.3 'Manrope Variable',sans-serif;letter-spacing:.14em}"
+    },
+    {
+      "name": "Before After Control",
+      "kind": "custom",
+      "description": "Controle acessível para alternar o dispositivo e comparar dois planos no mesmo quadro.",
+      "html": "<div class=\"ds-case-control\"><div class=\"ds-device-toggle\" role=\"group\" aria-label=\"Escolher visualização\"><button aria-pressed=\"true\">DESKTOP</button><button aria-pressed=\"false\">MOBILE</button></div><label class=\"ds-compare\"><span>ANTES</span><input type=\"range\" min=\"10\" max=\"90\" value=\"50\" aria-label=\"Comparar antes e depois\"><span>DEPOIS</span></label></div>",
+      "css": ".ds-case-control{display:grid;gap:1rem;color:#08070a;font-family:'Manrope Variable',sans-serif}.ds-device-toggle{display:inline-grid;grid-template-columns:1fr 1fr;width:max-content;border:1px solid #08070a}.ds-device-toggle button{min-height:2.8rem;padding:.65rem 1rem;border:0;border-radius:0;background:transparent;color:#08070a;font-weight:760}.ds-device-toggle button+button{border-left:1px solid #08070a}.ds-device-toggle button[aria-pressed='true']{background:#08070a;color:#fff}.ds-compare{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:1.2rem;color:#5f5865;font:800 .8rem/1.45 ui-monospace,monospace;letter-spacing:.1em}.ds-compare input{width:100%;accent-color:#6d28d9}.ds-case-control button:focus-visible,.ds-compare input:focus-visible{outline:3px solid #a855f7;outline-offset:4px}"
+    },
+    {
+      "name": "Founder Placeholder",
+      "kind": "custom",
+      "description": "Estado editorial honesto para retratos ainda não recebidos.",
+      "html": "<div class=\"ds-founder\"><span>SÓCIO A</span><div aria-hidden=\"true\"></div><small>FOTO EM PREPARAÇÃO</small></div>",
+      "css": ".ds-founder{display:flex;flex-direction:column;justify-content:space-between;min-height:22rem;padding:1.2rem;border:1px solid rgb(255 255 255 / 16%);background:#151218;color:#e9d5ff;font:700 .68rem/1.3 ui-monospace,monospace;letter-spacing:.12em}.ds-founder div{align-self:center;width:8rem;height:8rem;border:1px solid rgb(255 255 255 / 15%);border-radius:999px}.ds-founder:focus-within{outline:3px solid #a855f7;outline-offset:4px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Lâminas de execução",
+    "overview": "A identidade da Tekton trata trabalho digital como matéria construída: planos pretos dão estrutura, folhas violetas translúcidas revelam processo e o branco técnico preserva clareza. A linguagem é profissional, precisa e contemporânea, mas a redação e a hierarquia mantêm proximidade humana. O sistema evita a aparência intercambiável de agências de tecnologia. A personalidade vem de composição assimétrica, linhas de registro, superfícies em camadas e contraste tipográfico — nunca de efeitos soltos.",
+    "keyCharacteristics": [
+      "Estrutura editorial assimétrica e legível.",
+      "Preto, violeta e branco usados como materiais, não ornamentos.",
+      "Linhas finas, marcas de registro e códigos apenas onde comunicam processo.",
+      "Movimento concentrado em uma passagem de luz ligada à leitura.",
+      "Estados pendentes explícitos, sem simular conteúdo ou funcionalidade."
+    ],
+    "rules": [
+      { "name": "The Material Purple Rule", "body": "Roxo representa plano ativo, ação ou transformação; nunca aparece como texto em gradiente ou decoração sem função.", "section": "colors" },
+      { "name": "The Two Neutrals Rule", "body": "Use preto estrutural ou papel técnico como chão; a névoa apenas diferencia passagens longas, não cria cartões flutuantes.", "section": "colors" },
+      { "name": "The No Costume Mono Rule", "body": "Monoespaçada comunica código, coordenada, URL ou medição; texto comercial permanece em Manrope ou Syne.", "section": "typography" },
+      { "name": "The Direct Heading Rule", "body": "Títulos começam a seção sem eyebrow decorativo acima deles.", "section": "typography" },
+      { "name": "The Whole-Sheet Rule", "body": "Separações de conteúdo usam mudanças de superfície e linhas contínuas; não envolva cada ideia em um retângulo arredondado.", "section": "layout" },
+      { "name": "The Structural Depth Rule", "body": "Sombra só separa planos que realmente se sobrepõem; halos coloridos e sombras sem deslocamento não pertencem ao sistema.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do use preto e papel como superfícies estruturais de página inteira.",
+      "Do reserve o púrpura elétrico para ações, foco e o plano mais ativo.",
+      "Do mantenha títulos diretos, grandes e balanceados, com no máximo 6rem.",
+      "Do preserve conteúdo visível sem JavaScript e respeite redução de movimento.",
+      "Do use estados pendentes honestos quando dados, imagens ou integrações ainda não existem."
+    ],
+    "donts": [
+      "Don't transformar a página em uma grade de cartões arredondados iguais.",
+      "Don't usar texto em gradiente, vidro decorativo ou halo colorido.",
+      "Don't adicionar eyebrows acima de títulos de seção.",
+      "Don't usar monoespaçada como fantasia de tecnologia em conteúdo comum.",
+      "Don't inventar métricas, depoimentos, pessoas, canais ou capturas para preencher espaços."
+    ]
+  }
+}

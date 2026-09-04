@@ -1,0 +1,62 @@
+---
+import '@fontsource-variable/manrope';
+import '@fontsource-variable/syne';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site) : undefined;
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#08070a" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Tekton Digital" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    {canonical && <link rel="canonical" href={canonical} />}
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>{title}</title>
+    <script is:inline>document.documentElement.classList.add('js');</script>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <slot />
+    <script>
+      const root = document.documentElement;
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const hero = document.querySelector<HTMLElement>('.hero');
+
+      const updateScroll = () => {
+        const maximum = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = maximum > 0 ? window.scrollY / maximum : 0;
+        root.style.setProperty('--scroll-progress', String(progress));
+
+        if (hero) {
+          const bounds = hero.getBoundingClientRect();
+          const heroProgress = Math.min(1, Math.max(0, -bounds.top / (bounds.height * 0.55)));
+          root.style.setProperty('--hero-progress', String(heroProgress));
+        }
+      };
+
+      if (!reduceMotion) {
+        updateScroll();
+        document.addEventListener('scroll', updateScroll, { passive: true });
+      }
+    </script>
+  </body>
+</html>

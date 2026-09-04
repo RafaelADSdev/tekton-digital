@@ -1,0 +1,177 @@
+{
+  "title": "Escolha o universo visual da Tekton Digital",
+  "question": "A direção principal transforma o processo de construir produtos digitais em uma mesa de projeto viva. Mantenha-a, escolha uma alternativa ou peça uma nova rodada.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Lâminas de execução",
+      "kicker": "THE ROLL",
+      "lineage": "mesas de luz, filmes técnicos e provas de impressão",
+      "thesis": "A Tekton aparece como um projeto digital sendo montado em camadas precisas e legíveis.",
+      "palette": ["#08070A", "#6D28D9", "#A855F7", "#FFFFFF"],
+      "materials": ["filme técnico violeta", "grafite preto", "papel translúcido"],
+      "viewport": "Uma manchete direta ocupa a base preta enquanto lâminas violetas registradas enquadram proposta, serviços e chamada para contato.",
+      "risk": "Pode parecer técnica demais se a redação perder proximidade humana.",
+      "raised": [
+        {
+          "from": "Ciclorama",
+          "raise": "Uma única passagem de luz conduz a atenção do diagnóstico à entrega."
+        },
+        {
+          "from": "Sete segmentos",
+          "raise": "Estados ausentes e futuros são desenhados com a mesma intenção dos estados ativos."
+        },
+        {
+          "from": "Rubber hose",
+          "raise": "Todo movimento compartilha um ritmo único e reconhecível."
+        },
+        {
+          "from": "Grade de horários",
+          "raise": "Um trilho de progresso mantém contexto e posição durante a leitura."
+        }
+      ],
+      "comp": ".impeccable/mocks/decision/assigned.webp",
+      "wireframe": {
+        "cols": 12,
+        "rows": 10,
+        "regions": [
+          {"label": "marca + navegação", "x": 0, "y": 0, "w": 12, "h": 1},
+          {"label": "manifesto", "x": 0, "y": 1, "w": 8, "h": 6, "accent": true},
+          {"label": "lâminas de processo", "x": 8, "y": 1, "w": 4, "h": 6},
+          {"label": "provas + CTA", "x": 0, "y": 7, "w": 12, "h": 3}
+        ]
+      }
+    },
+    {
+      "id": "model-pick",
+      "label": "Atlas construtivo",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "cadernos de arquitetura e pranchas executivas",
+      "thesis": "Cada seção funciona como uma prancha clara dentro de um atlas de decisões digitais.",
+      "palette": ["#0B0A0D", "#7C3AED", "#E9D5FF", "#FFFFFF"],
+      "materials": ["papel de projeto", "carimbo técnico", "grade modular"],
+      "viewport": "O primeiro quadro apresenta a proposta como título de uma prancha e organiza as três soluções em um índice estrutural.",
+      "risk": "É a direção mais familiar para uma marca chamada Tekton e pode se aproximar demais do clichê de blueprint.",
+      "comp": ".impeccable/mocks/decision/model-pick.webp",
+      "wireframe": {
+        "cols": 12,
+        "rows": 10,
+        "regions": [
+          {"label": "índice", "x": 0, "y": 0, "w": 3, "h": 10},
+          {"label": "proposta", "x": 3, "y": 0, "w": 9, "h": 6, "accent": true},
+          {"label": "serviços", "x": 3, "y": 6, "w": 9, "h": 4}
+        ]
+      }
+    },
+    {
+      "id": "challenger-glass",
+      "label": "Divisórias de luz",
+      "verdict": "competitive",
+      "lineage": "paredes envidraçadas de oficinas e campos de cor",
+      "thesis": "Serviços e provas ocupam painéis transparentes que se iluminam apenas quando importam.",
+      "palette": ["#050505", "#FAFAFA", "#7C3AED", "#C084FC"],
+      "materials": ["vidro texturizado", "barras pretas", "luz violeta"],
+      "viewport": "Uma parede assimétrica de painéis enquadra a promessa central e acende o caminho até o contato.",
+      "case": "Identifica bem uma empresa que organiza complexidade e mantém excelente clareza por painel, mas comunica menos processo do que as lâminas técnicas.",
+      "risk": "Pode lembrar interfaces de vidro genéricas se as barras não governarem toda a composição.",
+      "comp": ".impeccable/mocks/decision/challenger-glass.webp",
+      "hero": "https://impeccable.style/worlds/cards/craft-making-glazier-colorfield-partition-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/craft-making-glazier-colorfield-partition.webp"
+    },
+    {
+      "id": "challenger-type",
+      "label": "Espécime variável",
+      "verdict": "competitive",
+      "lineage": "catálogos tipográficos interativos",
+      "thesis": "A proposta muda de peso e escala ao vivo para demonstrar adaptação, não apenas prometê-la.",
+      "palette": ["#FCFCFC", "#0A0A0A", "#6D28D9", "#DDD6FE"],
+      "materials": ["papel branco", "tinta preta", "eixos tipográficos"],
+      "viewport": "Uma palavra monumental responde ao cursor enquanto a oferta comercial permanece em uma coluna precisa.",
+      "case": "Cria forte identificação com design e tecnologia, porém a demonstração tipográfica explica menos diretamente as três frentes de serviço.",
+      "risk": "A tipografia pode virar protagonista maior que a própria empresa.",
+      "comp": ".impeccable/mocks/decision/challenger-type.webp",
+      "hero": "https://impeccable.style/worlds/cards/variable-font-specimen-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/variable-font-specimen.webp"
+    },
+    {
+      "id": "challenger-cyclorama",
+      "label": "Ciclorama",
+      "verdict": "declined",
+      "lineage": "iluminação teatral do escuro ao dia",
+      "thesis": "A jornada comercial avança de um problema escuro para uma entrega plenamente iluminada.",
+      "palette": ["#030303", "#4C1D95", "#C084FC", "#FFFFFF"],
+      "materials": ["luz cênica", "horizonte contínuo", "sombra"],
+      "viewport": "A promessa emerge em faixas de luz que atravessam o primeiro quadro.",
+      "case": "A transformação é clara, mas o universo teatral tem pouca relação direta com o público e os serviços da Tekton.",
+      "kept": "Uma única luz deve dirigir a atenção por toda a experiência.",
+      "risk": "Pode sugerir entretenimento em vez de engenharia digital."
+    },
+    {
+      "id": "challenger-segment",
+      "label": "Painel segmentado",
+      "verdict": "declined",
+      "lineage": "placares e instrumentos de sete segmentos",
+      "thesis": "Resultados e etapas ocupam células fixas que acendem conforme o projeto avança.",
+      "palette": ["#050505", "#A855F7", "#E9D5FF", "#FFFFFF"],
+      "materials": ["LED", "máscara de células", "segmentos fantasma"],
+      "viewport": "A proposta aparece em uma máscara digital rígida, com etapas latentes ao redor.",
+      "case": "O controle de estados é forte, mas a linguagem de placar reduz a percepção de proximidade e sofisticação institucional.",
+      "kept": "Estados futuros e vazios também precisam ser deliberadamente desenhados.",
+      "risk": "Pode parecer retrô ou orientado a métricas inexistentes."
+    },
+    {
+      "id": "challenger-rubber",
+      "label": "Cel animado",
+      "verdict": "declined",
+      "lineage": "animação rubber-hose do início do cinema sonoro",
+      "thesis": "Cada solução ganha um gesto flexível e uma transição em ritmo de cena.",
+      "palette": ["#050505", "#FFFFFF", "#A855F7", "#D4D4D8"],
+      "materials": ["nanquim", "papel", "íris circular"],
+      "viewport": "A marca abre em uma vinheta animada e conduz a uma sequência de soluções.",
+      "case": "Tem personalidade, mas conflita com a credibilidade técnica e com a natureza institucional do primeiro contato.",
+      "kept": "A página deve ter um único ritmo de movimento, não efeitos dispersos.",
+      "risk": "Pode infantilizar a empresa."
+    },
+    {
+      "id": "challenger-timetable",
+      "label": "Rack de itinerários",
+      "verdict": "declined",
+      "lineage": "horários aéreos sobre mesa iluminada",
+      "thesis": "A oferta se organiza como uma sequência inclinada de destinos, códigos e confirmações.",
+      "palette": ["#09090B", "#6D28D9", "#FAFAFA", "#A855F7"],
+      "materials": ["acetato", "tinta opaca", "trilho de posição"],
+      "viewport": "Cartões inclinados cruzam a tela e mostram as três rotas de projeto.",
+      "case": "O sistema ordena bem uma jornada, mas o eixo lateral e o tamanho tipográfico único prejudicam a leitura do conteúdo institucional.",
+      "kept": "Um trilho de posição deve manter o leitor orientado em qualquer largura.",
+      "risk": "A inclinação pode competir com o conteúdo e enfraquecer o mobile."
+    }
+  ],
+  "reroll": {
+    "registers": ["safer", "bolder"]
+  },
+  "buildPath": {
+    "value": "code",
+    "toggle": true
+  },
+  "canon": true,
+  "canonCard": {
+    "label": "Padrão de agência tech",
+    "thesis": "Uma landing page escura com gradiente roxo, cartões arredondados e seções previsíveis, executada com rigor.",
+    "palette": ["#09090B", "#7C3AED", "#FFFFFF", "#D4D4D8"],
+    "materials": ["gradiente digital", "cartões de interface", "ícones lineares"],
+    "viewport": "Hero centralizado, mockup abstrato ao lado e três cartões de serviço logo abaixo.",
+    "risk": "Seria clara, mas deliberadamente indistinguível de dezenas de estúdios digitais.",
+    "comp": ".impeccable/mocks/decision/canon.webp",
+    "wireframe": {
+      "cols": 12,
+      "rows": 10,
+      "regions": [
+        {"label": "nav", "x": 0, "y": 0, "w": 12, "h": 1},
+        {"label": "copy", "x": 1, "y": 2, "w": 5, "h": 5, "accent": true},
+        {"label": "mockup", "x": 7, "y": 2, "w": 4, "h": 5},
+        {"label": "cards", "x": 1, "y": 8, "w": 10, "h": 2}
+      ]
+    }
+  },
+  "steer": true
+}

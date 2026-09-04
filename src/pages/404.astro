@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Página não encontrada — Tekton Digital" description="A página solicitada não foi encontrada.">
+  <main class="not-found">
+    <a class="brand" href="/" aria-label="Tekton Digital — início">
+      <svg class="brand-mark" viewBox="0 0 34 34" aria-hidden="true">
+        <path d="M3 4h28v7H20.5v19h-7V11H3z" fill="currentColor"></path>
+        <path d="M10 14h14v6H10z" fill="white"></path>
+      </svg>
+      <span>Tekton <strong>Digital</strong></span>
+    </a>
+    <div>
+      <span>ERRO 404</span>
+      <h1>Esta lâmina não faz parte do projeto.</h1>
+      <p>O endereço pode ter mudado ou não existe.</p>
+      <a class="button button-primary" href="/">Voltar ao início <span aria-hidden="true">←</span></a>
+    </div>
+  </main>
+</BaseLayout>

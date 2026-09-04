@@ -1,0 +1,294 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import Comparison from '../components/Comparison.astro';
+import { founders, services } from '../data/site';
+
+const contactEmail = import.meta.env.PUBLIC_CONTACT_EMAIL;
+const whatsappUrl = import.meta.env.PUBLIC_WHATSAPP_URL;
+const contactEndpoint = import.meta.env.PUBLIC_CONTACT_ENDPOINT;
+const contactReady = Boolean(contactEndpoint);
+---
+
+<BaseLayout
+  title="Tekton Digital — sites e sistemas construídos para avançar"
+  description="A Tekton Digital cria e moderniza sites institucionais, sites de vendas e sistemas para cursos online."
+>
+  <div class="scroll-rail" aria-hidden="true"><span></span></div>
+  <div class="hero-shell" id="topo">
+    <SiteHeader />
+
+    <main id="conteudo">
+      <section class="hero section-shell" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <h1 id="hero-title">Seu próximo avanço digital não precisa começar do zero.</h1>
+          <p class="hero-lead">
+            Estratégia, design e desenvolvimento para criar produtos digitais e transformar estruturas existentes
+            em experiências mais claras, atuais e preparadas para crescer.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#contato">Conversar sobre o projeto <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="#case">Ver uma transformação real <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <div class="registration registration-a">+</div>
+          <div class="registration registration-b">+</div>
+          <div class="sheet sheet-back">
+            <span>SISTEMAS</span>
+            <small>CURSOS ONLINE</small>
+          </div>
+          <div class="sheet sheet-middle">
+            <span>CRIAR</span>
+            <small>PRESENÇA DIGITAL</small>
+          </div>
+          <div class="sheet sheet-front">
+            <div class="sheet-code">TD / 01</div>
+            <strong>EVOLUIR</strong>
+            <small>O QUE JÁ FUNCIONA</small>
+            <svg viewBox="0 0 180 100">
+              <path d="M5 84h38V55h38V37h39V20h55" fill="none" stroke="currentColor" stroke-width="1.5"></path>
+              <circle cx="43" cy="55" r="3"></circle><circle cx="81" cy="37" r="3"></circle><circle cx="120" cy="20" r="3"></circle>
+            </svg>
+          </div>
+          <div class="hero-measure measure-x">720 / 1240</div>
+          <div class="hero-measure measure-y">VERSÃO 01</div>
+        </div>
+
+        <div class="hero-footnote">
+          <span>Para empresas e negócios de educação</span>
+          <span>Do diagnóstico à publicação</span>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <section class="manifesto section-shell" id="sobre" aria-labelledby="about-title">
+    <div class="section-meta">
+      <span>Tekton Digital</span>
+      <span>Construir · Melhorar · Sustentar</span>
+    </div>
+    <div class="manifesto-grid">
+      <h2 id="about-title">Tecnologia só cria valor quando resolve o problema certo.</h2>
+      <div class="manifesto-copy">
+        <p>
+          Nossa missão é construir soluções digitais que aproximem negócios e pessoas. Fazemos isso entendendo
+          primeiro o contexto, preservando o que já tem valor e intervindo onde a mudança realmente importa.
+        </p>
+        <p>
+          Unimos visão de negócio e desenvolvimento para entregar uma presença digital coerente por fora,
+          consistente por dentro e simples de usar no dia a dia.
+        </p>
+        <a class="text-link dark" href="#servicos">Conheça nossas frentes <span aria-hidden="true">↓</span></a>
+      </div>
+    </div>
+    <div class="principle-strip" aria-label="Princípios da Tekton">
+      <span>Clareza antes de complexidade</span>
+      <span>Decisões com contexto</span>
+      <span>Qualidade que pode evoluir</span>
+    </div>
+  </section>
+
+  <section class="services-section" id="servicos" aria-labelledby="services-title">
+    <div class="section-shell">
+      <div class="services-heading">
+        <h2 id="services-title">Três maneiras de fazer seu produto digital avançar.</h2>
+        <p>Entramos no ponto em que o seu negócio está — do primeiro site à evolução de uma operação que já existe.</p>
+      </div>
+
+      <div class="service-list">
+        {services.map((service) => (
+          <article class="service-row">
+            <div class="service-verb">{service.verb}</div>
+            <div class="service-main">
+              <h3>{service.title}</h3>
+              <p>{service.description}</p>
+            </div>
+            <ul>
+              {service.deliverables.map((item) => <li>{item}</li>)}
+            </ul>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="founders-section section-shell" id="fundadores" aria-labelledby="founders-title">
+    <div class="founders-intro">
+      <h2 id="founders-title">Quem pensa, constrói e acompanha cada entrega.</h2>
+      <p>
+        A Tekton é conduzida por três sócios que unem repertórios complementares para manter estratégia e execução
+        na mesma mesa.
+      </p>
+    </div>
+
+    <div class="founder-grid">
+      {founders.map((founder, index) => (
+        <article class="founder" style={`--founder-index: ${index}`}>
+          <div class="founder-photo">
+            {founder.image ? (
+              <img
+                src={founder.image}
+                alt={`Retrato de ${founder.name}`}
+                width="540"
+                height="540"
+                loading="lazy"
+                decoding="async"
+              />
+            ) : (
+              <div class="portrait-placeholder" aria-label="Foto será adicionada">
+                <span>{founder.code}</span>
+                <svg viewBox="0 0 200 260" aria-hidden="true">
+                  <circle cx="100" cy="82" r="38"></circle>
+                  <path d="M35 232c4-65 34-97 65-97s61 32 65 97"></path>
+                </svg>
+                <small>FOTO EM PREPARAÇÃO</small>
+              </div>
+            )}
+          </div>
+          <div class="founder-info">
+            <span>{founder.code}</span>
+            <h3>{founder.name}</h3>
+            <strong>{founder.role}</strong>
+            <p>{founder.bio}</p>
+            {founder.certifications?.length ? (
+              <ul class="founder-certs">
+                {founder.certifications.map((certification) => (
+                  <li>
+                    <span>{certification.code}</span>
+                    {certification.name}
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="case-section" id="case" aria-labelledby="case-title">
+    <div class="section-shell">
+      <div class="case-heading">
+        <h2 id="case-title">Náutica Engenharia: de um template genérico a uma presença própria.</h2>
+        <p>
+          Um redesign completo para organizar o conteúdo, tornar a navegação mais clara e atualizar a percepção da
+          marca com uma base moderna em Astro.
+        </p>
+      </div>
+
+      <Comparison />
+
+      <div class="case-notes">
+        <article>
+          <span>Antes</span>
+          <h3>Uma estrutura que dificultava a leitura.</h3>
+          <p>Site em Wix, menu carregado e uma aparência genérica que não traduzia a especialização da empresa.</p>
+          <a href="https://nauticaengenharia.com" target="_blank" rel="noreferrer">Visitar endereço original <span aria-hidden="true">↗</span></a>
+        </article>
+        <article>
+          <span>Depois</span>
+          <h3>Uma experiência mais clara e contemporânea.</h3>
+          <p>Redesign em Astro com arquitetura de conteúdo organizada, linguagem visual própria e construção mais leve.</p>
+          <a href="https://nauticaengenharia.vercel.app" target="_blank" rel="noreferrer">Ver o redesign <span aria-hidden="true">↗</span></a>
+        </article>
+      </div>
+      <p class="case-pending">Capturas das versões públicas realizadas em 04/09/2026 nos mesmos tamanhos de viewport.</p>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contato" aria-labelledby="contact-title">
+    <div class="contact-light" aria-hidden="true"></div>
+    <div class="section-shell contact-grid">
+      <div class="contact-copy">
+        <h2 id="contact-title">Vamos construir o próximo avanço do seu negócio?</h2>
+        <p>Conte brevemente o que você precisa criar ou melhorar. A conversa começa pelo contexto, não por uma solução pronta.</p>
+
+        <div class="contact-channels">
+          {contactEmail && <a href={`mailto:${contactEmail}`}>{contactEmail} <span aria-hidden="true">↗</span></a>}
+          {whatsappUrl && <a href={whatsappUrl} target="_blank" rel="noreferrer">Conversar pelo WhatsApp <span aria-hidden="true">↗</span></a>}
+          {!contactEmail && !whatsappUrl && (
+            <p id="contact-config-note">E-mail e WhatsApp serão ativados aqui antes da publicação.</p>
+          )}
+        </div>
+      </div>
+
+      <form class="contact-form" data-contact-form data-endpoint={contactEndpoint ?? ''}>
+        <div class="field-grid">
+          <label>
+            <span>Seu nome</span>
+            <input type="text" name="name" autocomplete="name" required placeholder="Como podemos chamar você?" />
+          </label>
+          <label>
+            <span>Seu e-mail</span>
+            <input type="email" name="email" autocomplete="email" required placeholder="voce@empresa.com.br" />
+          </label>
+        </div>
+
+        <label>
+          <span>O que você precisa?</span>
+          <select name="projectType" required>
+            <option value="">Selecione uma opção</option>
+            <option>Melhorar um site existente</option>
+            <option>Criar um site institucional</option>
+            <option>Criar um sistema para cursos</option>
+            <option>Outro projeto digital</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Conte um pouco sobre o projeto</span>
+          <textarea name="message" rows="5" required placeholder="Em que momento o negócio está e o que precisa mudar?"></textarea>
+        </label>
+
+        <button class="button form-submit" type="submit" disabled={!contactReady} aria-describedby={!contactReady ? 'contact-config-note' : undefined}>
+          <span>{contactReady ? 'Enviar briefing' : 'Canal em configuração'}</span>
+          <span aria-hidden="true">↗</span>
+        </button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <SiteFooter />
+
+  <script>
+    const form = document.querySelector<HTMLFormElement>('[data-contact-form]');
+    const status = form?.querySelector<HTMLElement>('.form-status');
+    const submit = form?.querySelector<HTMLButtonElement>('button[type="submit"]');
+
+    form?.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (!status || !submit) return;
+
+      const endpoint = form.dataset.endpoint;
+      if (!endpoint) {
+        status.textContent = 'O canal de envio ainda precisa ser configurado antes da publicação.';
+        return;
+      }
+
+      submit.disabled = true;
+      submit.dataset.loading = 'true';
+      status.textContent = 'Enviando seu briefing…';
+
+      try {
+        const response = await fetch(endpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(Object.fromEntries(new FormData(form))),
+        });
+
+        if (!response.ok) throw new Error('Falha no envio');
+        form.reset();
+        status.textContent = 'Briefing enviado. A Tekton retornará o contato em breve.';
+      } catch {
+        status.textContent = 'Não foi possível enviar agora. Tente novamente ou use um dos canais diretos.';
+      } finally {
+        submit.disabled = false;
+        delete submit.dataset.loading;
+      }
+    });
+  </script>
+</BaseLayout>

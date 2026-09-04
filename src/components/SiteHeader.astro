@@ -1,0 +1,51 @@
+---
+const navItems = [
+  { href: '#sobre', label: 'Sobre' },
+  { href: '#servicos', label: 'Serviços' },
+  { href: '#fundadores', label: 'Fundadores' },
+  { href: '#case', label: 'Case' },
+];
+---
+
+<header class="site-header" data-header>
+  <a class="brand" href="#topo" aria-label="Tekton Digital — início">
+    <svg class="brand-mark" viewBox="0 0 34 34" aria-hidden="true">
+      <path d="M3 4h28v7H20.5v19h-7V11H3z" fill="currentColor"></path>
+      <path d="M10 14h14v6H10z" fill="white"></path>
+    </svg>
+    <span>Tekton <strong>Digital</strong></span>
+  </a>
+
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">
+    <span class="sr-only">Abrir menu</span>
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+  </button>
+
+  <nav id="main-navigation" class="main-navigation" aria-label="Navegação principal">
+    <ul>
+      {navItems.map((item) => <li><a href={item.href}>{item.label}</a></li>)}
+    </ul>
+    <a class="header-cta" href="#contato">Iniciar um projeto <span aria-hidden="true">↗</span></a>
+  </nav>
+</header>
+
+<script>
+  const header = document.querySelector<HTMLElement>('[data-header]');
+  const toggle = header?.querySelector<HTMLButtonElement>('.menu-toggle');
+  const navigation = header?.querySelector<HTMLElement>('.main-navigation');
+
+  const setOpen = (open: boolean) => {
+    if (!header || !toggle || !navigation) return;
+    header.dataset.open = String(open);
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.querySelector('.sr-only')!.textContent = open ? 'Fechar menu' : 'Abrir menu';
+    document.body.classList.toggle('menu-open', open);
+  };
+
+  toggle?.addEventListener('click', () => setOpen(toggle.getAttribute('aria-expanded') !== 'true'));
+  navigation?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setOpen(false)));
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') setOpen(false);
+  });
+</script>
