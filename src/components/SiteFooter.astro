@@ -1,23 +1,71 @@
+---
+interface Props {
+  contactEmail?: string;
+  whatsappUrl?: string;
+}
+
+const contactEmail = Astro.props.contactEmail || import.meta.env.PUBLIC_CONTACT_EMAIL?.trim() || '';
+const whatsappUrl = Astro.props.whatsappUrl || import.meta.env.PUBLIC_WHATSAPP_URL?.trim() || '';
+
+const navItems = [
+  { href: '#sobre', label: 'Sobre' },
+  { href: '#servicos', label: 'Serviços' },
+  { href: '#equipe', label: 'Equipe' },
+  { href: '#case', label: 'Case' },
+  { href: '#contato', label: 'Contato' },
+];
+---
+
 <footer class="site-footer">
-  <div>
-    <a class="brand footer-brand" href="#topo" aria-label="Tekton Digital — voltar ao início">
-      <svg class="brand-mark" viewBox="0 0 34 34" aria-hidden="true">
-        <path d="M3 4h28v7H20.5v19h-7V11H3z" fill="currentColor"></path>
-        <path d="M10 14h14v6H10z" fill="white"></path>
-      </svg>
-      <span>Tekton <strong>Digital</strong></span>
-    </a>
-    <p>Estratégia, design e tecnologia para construir o próximo avanço do seu negócio.</p>
-  </div>
-  <div class="footer-nav">
-    <a href="#sobre">Sobre</a>
-    <a href="#servicos">Serviços</a>
-    <a href="#fundadores">Fundadores</a>
-    <a href="#case">Case</a>
-    <a href="#contato">Contato</a>
-  </div>
-  <div class="footer-meta">
-    <p>© {new Date().getFullYear()} Tekton Digital.</p>
-    <a href="#topo">Voltar ao topo <span aria-hidden="true">↑</span></a>
+  <div class="footer-accent" aria-hidden="true"></div>
+
+  <div class="section-shell footer-shell">
+    <div class="footer-main">
+      <div class="footer-brand-col">
+        <a class="brand footer-brand" href="#topo" aria-label="Tekton Digital — voltar ao início">
+          <svg class="brand-mark" viewBox="0 0 34 34" aria-hidden="true">
+            <path d="M3 4h28v7H20.5v19h-7V11H3z" fill="currentColor"></path>
+            <path d="M10 14h14v6H10z" fill="white"></path>
+          </svg>
+          <span>Tekton <strong>Digital</strong></span>
+        </a>
+        <p class="footer-tagline">Estratégia, design e tecnologia para construir o próximo avanço do seu negócio.</p>
+        <a class="footer-cta" href="#contato">Iniciar um projeto <span aria-hidden="true">↗</span></a>
+      </div>
+
+      <nav class="footer-nav" aria-label="Navegação do rodapé">
+        <p class="footer-label">Navegação</p>
+        <ul>
+          {navItems.map((item) => (
+            <li>
+              <a href={item.href}>{item.label}</a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
+      {(contactEmail || whatsappUrl) && (
+        <div class="footer-contact">
+          <p class="footer-label">Contato</p>
+          <ul>
+            {contactEmail && (
+              <li>
+                <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
+              </li>
+            )}
+            {whatsappUrl && (
+              <li>
+                <a href={whatsappUrl} target="_blank" rel="noreferrer">WhatsApp</a>
+              </li>
+            )}
+          </ul>
+        </div>
+      )}
+    </div>
+
+    <div class="footer-bottom">
+      <p>© {new Date().getFullYear()} Tekton Digital.</p>
+      <a class="footer-top" href="#topo">Voltar ao topo <span aria-hidden="true">↑</span></a>
+    </div>
   </div>
 </footer>

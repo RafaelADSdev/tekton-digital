@@ -36,7 +36,7 @@ for (const spec of [
     scrollWidth: document.documentElement.scrollWidth,
     clientWidth: document.documentElement.clientWidth,
     h1: document.querySelector('h1')?.textContent?.trim(),
-    sections: ['sobre', 'servicos', 'fundadores', 'case', 'contato'].map((id) =>
+    sections: ['sobre', 'servicos', 'equipe', 'case', 'contato'].map((id) =>
       Boolean(document.getElementById(id)),
     ),
     disabledSubmit: document.querySelector('.form-submit')?.hasAttribute('disabled'),
@@ -66,7 +66,7 @@ for (const spec of [
     images.every((image) => image instanceof HTMLImageElement && image.complete && image.naturalWidth > 0),
   );
 
-  const foundersSection = page.locator('#fundadores');
+  const foundersSection = page.locator('#equipe');
   await foundersSection.scrollIntoViewIfNeeded();
   const founderNames = ['Rafael Arcanjo', 'Kaio Seabra', 'Miguel Leite'];
   const founderPortraits = founderNames.map((name) => foundersSection.locator(`img[alt="Retrato de ${name}"]`));

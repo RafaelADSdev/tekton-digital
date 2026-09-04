@@ -100,9 +100,10 @@ const whatsappDirectUrl = `${whatsappUrl}${whatsappUrl.includes('?') ? '&' : '?'
     </div>
   </section>
 
-  <section class="founders-section section-shell" id="fundadores" aria-labelledby="founders-title">
+  <section class="founders-section section-shell" id="equipe" aria-labelledby="team-title">
     <div class="founders-intro">
-      <h2 id="founders-title">Quem constrói cada entrega.</h2>
+      <p class="team-kicker">Equipe</p>
+      <h2 id="team-title">Quem desenvolve cada projeto.</h2>
     </div>
 
     <div class="founder-grid">
@@ -165,13 +166,11 @@ const whatsappDirectUrl = `${whatsappUrl}${whatsappUrl.includes('?') ? '&' : '?'
           <span>Antes</span>
           <h3>Uma estrutura que dificultava a leitura.</h3>
           <p>Site em Wix, menu carregado e uma aparência genérica que não traduzia a especialização da empresa.</p>
-          <a href="https://nauticaengenharia.com" target="_blank" rel="noreferrer">Visitar endereço original <span aria-hidden="true">↗</span></a>
         </article>
         <article>
           <span>Depois</span>
           <h3>Uma experiência mais clara e contemporânea.</h3>
           <p>Redesign em Astro com arquitetura de conteúdo organizada, linguagem visual própria e construção mais leve.</p>
-          <a href="https://nauticaengenharia.vercel.app" target="_blank" rel="noreferrer">Ver o redesign <span aria-hidden="true">↗</span></a>
         </article>
       </div>
       <p class="case-pending">Capturas das versões públicas realizadas em 04/09/2026 nos mesmos tamanhos de viewport.</p>
@@ -237,7 +236,7 @@ const whatsappDirectUrl = `${whatsappUrl}${whatsappUrl.includes('?') ? '&' : '?'
     </div>
   </section>
 
-  <SiteFooter />
+  <SiteFooter contactEmail={contactEmail} whatsappUrl={whatsappUrl} />
 
   <script>
     const form = document.querySelector<HTMLFormElement>('[data-contact-form]');
