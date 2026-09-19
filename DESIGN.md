@@ -1,213 +1,274 @@
 ---
-name: Tekton Digital
-description: Precisão editorial para construir e transformar produtos digitais.
+name: "Tekton Digital"
+description: "Uma mesa de execução digital que transforma rigor, prova real e decisão em uma linguagem visual premium."
 colors:
-  structural-ink: "#08070a"
-  soft-ink: "#151218"
-  execution-violet: "#6d28d9"
-  deep-violet: "#4c1d95"
-  electric-purple: "#a855f7"
-  technical-lilac: "#e9d5ff"
-  drafting-mist: "#f4effa"
-  technical-paper: "#fbfafc"
-  pure-white: "#ffffff"
-  muted-on-dark: "#aaa1b4"
-  muted-on-light: "#5f5865"
+  mineral-black: "#09090b"
+  graphite-sheet: "#121217"
+  graphite-raised: "#18181f"
+  proof-paper: "#ededeb"
+  paper-white: "#fafafa"
+  muted-copy: "#a1a1aa"
+  strong-muted-copy: "#c7c7cf"
+  fine-rule: "rgba(250, 250, 250, 0.13)"
+  strong-rule: "rgba(250, 250, 250, 0.24)"
+  execution-violet: "#8b5cf6"
+  deep-violet: "#6d28d9"
+  pale-violet: "#c4b5fd"
+  violet-hover: "#9f7aea"
+  action-ink: "#0b0712"
 typography:
   display:
-    fontFamily: "Syne Variable, sans-serif"
-    fontSize: "clamp(3rem, 6vw, 6rem)"
-    fontWeight: 560
-    lineHeight: 0.96
-    letterSpacing: "-0.04em"
+    fontFamily: "Plus Jakarta Sans, Arial, sans-serif"
+    fontSize: "clamp(3rem, 5.6vw, 6.65rem)"
+    fontWeight: 700
+    lineHeight: 0.98
+    letterSpacing: "-0.045em"
   headline:
-    fontFamily: "Syne Variable, sans-serif"
-    fontSize: "clamp(2.6rem, 5vw, 5.4rem)"
-    fontWeight: 560
-    lineHeight: 1
+    fontFamily: "Plus Jakarta Sans, Arial, sans-serif"
+    fontSize: "clamp(2.25rem, 4.7vw, 5.2rem)"
+    fontWeight: 690
+    lineHeight: 1.02
     letterSpacing: "-0.04em"
   title:
-    fontFamily: "Syne Variable, sans-serif"
-    fontSize: "clamp(1.5rem, 2.3vw, 3rem)"
-    fontWeight: 560
-    lineHeight: 1.06
-    letterSpacing: "-0.03em"
+    fontFamily: "Plus Jakarta Sans, Arial, sans-serif"
+    fontSize: "clamp(1.8rem, 3vw, 3rem)"
+    fontWeight: 650
+    letterSpacing: "-0.035em"
   body:
-    fontFamily: "Manrope Variable, sans-serif"
-    fontSize: "clamp(1rem, 1.25vw, 1.15rem)"
-    fontWeight: 400
-    lineHeight: 1.75
+    fontFamily: "Inter, Arial, sans-serif"
+    fontSize: "1rem"
+    lineHeight: 1.6
   label:
-    fontFamily: "Manrope Variable, sans-serif"
-    fontSize: "0.76rem"
-    fontWeight: 760
-    lineHeight: 1.45
-    letterSpacing: "0.09em"
+    fontFamily: "Inter, Arial, sans-serif"
+    fontSize: "0.58rem"
+    fontWeight: 750
+    lineHeight: 1.35
+    letterSpacing: "0.13em"
+  action:
+    fontFamily: "Inter, Arial, sans-serif"
+    fontSize: "0.86rem"
+    fontWeight: 800
 rounded:
-  square: "0"
-  round: "999px"
+  brand: "0.4rem"
+  field: "0.5rem"
+  compact-control: "0.65rem"
+  action: "0.7rem"
+  frame: "0.8rem"
+  device: "1.25rem"
+  round: "50%"
 spacing:
-  group-sm: "0.75rem"
-  group-md: "1.5rem"
-  group-lg: "3rem"
-  page-inline: "clamp(1.25rem, 4vw, 4rem)"
-  section-block: "clamp(5.5rem, 10vw, 10rem)"
+  xs: "0.45rem"
+  sm: "0.8rem"
+  md: "1rem"
+  lg: "1.5rem"
+  xl: "2rem"
+  xxl: "3rem"
+  section-y: "clamp(5.5rem, 10vw, 9.5rem)"
 components:
   button-primary:
-    backgroundColor: "{colors.electric-purple}"
-    textColor: "{colors.structural-ink}"
-    rounded: "{rounded.square}"
-    padding: "0.85rem 1.1rem"
-    height: "3.5rem"
-  button-disabled:
-    backgroundColor: "#332e37"
-    textColor: "{colors.muted-on-dark}"
-    rounded: "{rounded.square}"
-    padding: "0.85rem 1.1rem"
-    height: "3.5rem"
-  input-dark:
-    backgroundColor: "{colors.structural-ink}"
-    textColor: "{colors.pure-white}"
-    rounded: "{rounded.square}"
-    padding: "0.8rem 0"
+    backgroundColor: "{colors.execution-violet}"
+    textColor: "{colors.action-ink}"
+    typography: "{typography.action}"
+    rounded: "{rounded.action}"
+    padding: "0.85rem 1.35rem"
+    height: "3.45rem"
+  button-primary-hover:
+    backgroundColor: "{colors.violet-hover}"
+    textColor: "{colors.action-ink}"
+  text-link:
+    textColor: "{colors.paper-white}"
+    padding: "0 0 0.25rem"
+    height: "3rem"
+  input-field:
+    backgroundColor: "{colors.graphite-sheet}"
+    textColor: "{colors.paper-white}"
+    rounded: "{rounded.field}"
+    padding: "0 0.9rem"
+    height: "3.15rem"
+  section-index:
+    textColor: "{colors.execution-violet}"
+    typography: "{typography.label}"
+  approval-stamp:
+    textColor: "{colors.deep-violet}"
+    typography: "{typography.label}"
+    padding: "0.65rem 0.9rem"
+  proof-board:
+    backgroundColor: "{colors.graphite-sheet}"
+    textColor: "{colors.paper-white}"
+    padding: "3rem 1.4rem 4rem"
+  metric-tile:
+    backgroundColor: "{colors.execution-violet}"
+    textColor: "{colors.mineral-black}"
+    padding: "clamp(1.5rem, 3vw, 2.5rem)"
 ---
 
 # Design System: Tekton Digital
 
 ## Overview
 
-**Creative North Star: "Lâminas de execução"**
+**Creative North Star: "Mesa de Execução Digital"**
 
-A identidade da Tekton trata trabalho digital como matéria construída: planos pretos dão estrutura, folhas violetas translúcidas revelam processo e o branco técnico preserva clareza. A linguagem é profissional, precisa e contemporânea, mas a redação e a hierarquia mantêm proximidade humana.
+A Tekton parece uma bancada onde decisões digitais são examinadas, marcadas e aprovadas. O preto mineral cria silêncio; folhas de grafite, réguas finas, índices funcionais e anotações violetas dão precisão operacional. Fotografias e capturas reais entram como evidência material, com enquadramento cuidadoso e sem enfeite que concorra com o trabalho.
 
-O sistema evita a aparência intercambiável de agências de tecnologia. A personalidade vem de composição assimétrica, linhas de registro, superfícies em camadas e contraste tipográfico — nunca de efeitos soltos.
+O sistema combina densidade editorial com controles que lembram comandos de aprovação. A expressão é premium porque cada contraste tem função: tipografia grande estabelece direção, texto menor documenta, linhas organizam e o violeta confirma ação, progresso ou foco. Movimento é breve e responsivo, sempre complementar a um conteúdo que já permanece legível sem JavaScript.
 
 **Key Characteristics:**
 
-- Estrutura editorial assimétrica e legível.
-- Preto, violeta e branco usados como materiais, não ornamentos.
-- Linhas finas, marcas de registro e códigos apenas onde comunicam processo.
-- Movimento concentrado em uma passagem de luz ligada à leitura.
-- Estados pendentes explícitos, sem simular conteúdo ou funcionalidade.
+- Fundo mineral contínuo com folhas de grafite e uma superfície clara reservada a provas.
+- Réguas de um pixel, grandes índices funcionais e pequenas legendas em caixa alta.
+- Violeta usado como anotação, progresso, foco e decisão.
+- Plus Jakarta Sans para direção; Inter para leitura e operação.
+- Fotografias e interfaces reais enquadradas como artefatos de trabalho.
+- Controles compactos, firmes e imediatamente acionáveis.
 
 ## Colors
 
-A paleta alterna superfícies de alto contraste com campos violetas controlados; o roxo identifica construção e transformação.
+A paleta alterna uma base mineral quase preta, camadas grafite e uma folha clara de prova; o violeta funciona como tinta de anotação e sinal de aprovação.
 
 ### Primary
 
-- **Violeta de Execução:** campo principal de marca, fundos de fechamento e lâminas intermediárias.
-- **Púrpura Elétrica:** ações primárias, foco, seleção e a folha mais ativa.
+- **Violeta de Execução:** cor de ações primárias, índices ativos, progresso e marcações que exigem atenção.
+- **Violeta Profundo:** versão de maior autoridade para carimbos, linhas e texto sobre superfícies claras.
 
 ### Secondary
 
-- **Violeta Profundo:** profundidade entre planos e estados menos próximos.
-- **Lilás Técnico:** texto secundário e informação de apoio sobre superfícies escuras ou violetas.
+- **Violeta Pálido:** realce legível para palavras-chave, ícones, funções e foco sobre fundos escuros.
+- **Violeta de Hover:** resposta luminosa exclusiva dos controles primários em interação.
 
 ### Neutral
 
-- **Preto Estrutural:** base da marca, cabeçalho, rodapé e áreas de autoridade.
-- **Preto Suave:** painéis internos e campos que precisam se separar do preto principal.
-- **Papel Técnico:** superfície editorial clara de maior prioridade.
-- **Névoa de Projeto:** seção clara secundária, especialmente listas extensas.
-- **Branco Puro:** conteúdo de maior contraste sobre preto.
-- **Texto Atenuado Escuro/Claro:** informação secundária, sempre escolhida para o fundo correspondente.
+- **Preto Mineral:** plano-base da interface e fundo contínuo entre as folhas de conteúdo.
+- **Folha Grafite:** superfície estrutural para formulários, painéis e áreas que precisam se separar do plano-base.
+- **Grafite Elevado:** camada tonal adicional para blocos internos que precisam de contraste sem sombra.
+- **Papel de Prova:** superfície clara reservada a trabalho real, comparações e evidências que precisam respirar.
+- **Branco Papel:** texto de maior contraste e conteúdo principal.
+- **Texto Silencioso:** descrições e contexto de menor prioridade.
+- **Texto Silencioso Forte:** leitura secundária que ainda precisa sustentar contraste funcional.
+- **Régua Fina / Régua Forte:** divisores de um pixel que organizam a mesa e marcam limites sem formar caixas pesadas.
 
-**The Material Purple Rule.** Roxo representa plano ativo, ação ou transformação; nunca aparece como texto em gradiente ou decoração sem função.
+### Named Rules
 
-**The Two Neutrals Rule.** Use preto estrutural ou papel técnico como chão; a névoa apenas diferencia passagens longas, não cria cartões flutuantes.
+**The Violet Annotation Rule.** O violeta marca ação, progresso, foco ou evidência; ele nunca vira preenchimento decorativo sem uma função clara.
+
+**The Proof Paper Rule.** Superfícies claras aparecem como folhas de evidência deliberadas, e não como alternância arbitrária de seção.
 
 ## Typography
 
-**Display Font:** Syne Variable (com `sans-serif` como fallback)
+**Display Font:** Plus Jakarta Sans (com Arial e sans-serif como fallback)  
+**Body Font:** Inter (com Arial e sans-serif como fallback)  
+**Label/Mono Font:** Inter; o aspecto técnico vem de tamanho, peso, espaçamento e caixa alta, não de uma fonte monoespaçada.
 
-**Body Font:** Manrope Variable (com `sans-serif` como fallback)
-
-**Label/Mono Font:** pilha monoespaçada do sistema, restrita a códigos, medições e URLs.
-
-**Character:** Syne cria títulos largos e arquitetônicos; Manrope sustenta leitura longa e controles com neutralidade. A diferença entre elas torna a hierarquia evidente sem depender de cor.
+**Character:** Plus Jakarta Sans dá autoridade geométrica a títulos e números, enquanto Inter mantém textos e controles diretos. A diferença de escala é proposital: direção grande, documentação compacta e leitura calma.
 
 ### Hierarchy
 
-- **Display** (peso 560, escala fluida até 6rem, entrelinha 0.96): hero e chamadas finais curtas.
-- **Headline** (peso 560, escala fluida até 5.4rem, entrelinha 1): títulos principais de seção.
-- **Title** (peso 560, escala fluida até 3rem, entrelinha 1.06): serviços, fundadores e notas de case.
-- **Body** (peso 400, escala fluida próxima de 1rem, entrelinha 1.75): explicações com medida ideal de 65–75 caracteres.
-- **Label** (peso 760, 0.76rem, espaçamento 0.09em, caixa alta): rótulos funcionais e campos.
+- **Display** (peso 700, `clamp(3rem, 5.6vw, 6.65rem)`, entrelinha 0.98): declara a tese principal com largura curta e tracking fechado.
+- **Headline** (peso 690, `clamp(2.25rem, 4.7vw, 5.2rem)`, entrelinha 1.02): abre seções e mantém o mesmo pulso geométrico do display.
+- **Title** (peso 650, `clamp(1.8rem, 3vw, 3rem)`, tracking -0.035em): nomeia entregas, etapas e blocos de evidência.
+- **Body** (`1rem`, entrelinha 1.6; textos explicativos chegam a 1.75): explica contexto com largura controlada, normalmente entre 30 e 39rem.
+- **Label** (peso 750, `0.58rem`, tracking 0.13em, caixa alta): identifica índices, metadados, carimbos e estados.
+- **Action** (peso 800, `0.86rem`): dá aos comandos uma voz curta e decisiva.
 
-**The No Costume Mono Rule.** Monoespaçada comunica código, coordenada, URL ou medição; texto comercial permanece em Manrope ou Syne.
+### Named Rules
 
-**The Direct Heading Rule.** Títulos começam a seção sem eyebrow decorativo acima deles.
+**The Functional Index Rule.** Tipos pequenos e espaçados sempre identificam estado, seção, medida ou evidência; nunca funcionam como textura vazia.
+
+**The Scale Before Ornament Rule.** A hierarquia nasce de escala, peso e posição; efeitos tipográficos decorativos não substituem estrutura.
 
 ## Layout
 
-O conteúdo usa um invólucro central de até 1600px, respiro lateral fluido e seções com grande separação vertical. Grades 1.25/0.75 ou 1.2/0.8 criam tensão assimétrica; listas de serviço ocupam linhas editoriais inteiras em vez de cartões iguais.
+O conteúdo usa um contêiner central de `min(92vw, 90rem)` e espaçamento vertical fluido de `clamp(5.5rem, 10vw, 9.5rem)`. A grade combina colunas assimétricas para colocar direção, explicação e prova em relações claras. Réguas, bordas contínuas e alinhamentos compartilhados conectam blocos que permanecem visualmente abertos.
 
-Acima de 900px, proposta e prova visual podem dividir o quadro. Em 900px, grades principais colapsam para uma coluna e a navegação vira painel de tela cheia. Em 640px, fundadores, comparações e formulários se tornam lineares; o padding lateral nunca cai abaixo de 1.25rem. O breakpoint de 1100px faz apenas ajustes intermediários de proporção.
+Em telas largas, os grupos podem usar duas ou três colunas e o cabeçalho organiza marca, navegação e ação em três zonas. Em `1100px`, a navegação passa a um painel móvel. Em `820px`, composições principais colapsam para uma coluna, o contêiner passa a margens de `1.25rem` e as réguas se adaptam ao eixo disponível. Em `560px`, ações e campos ocupam toda a largura, listas preservam índices e o espaçamento prioriza toque e leitura.
 
-**The Whole-Sheet Rule.** Separações de conteúdo usam mudanças de superfície e linhas contínuas; não envolva cada ideia em um retângulo arredondado.
+**The Shared Ruler Rule.** Elementos relacionados devem compartilhar uma linha, um eixo ou um limite visível; a grade precisa parecer medida, não apenas centralizada.
 
 ## Elevation & Depth
 
-O sistema é plano por padrão. Profundidade surge quando uma folha física precisa se separar de outra: lâminas técnicas, controle do comparador e painel de contato recebem sombra com deslocamento e blur; superfícies editoriais comuns usam somente tom ou linha.
+O sistema é plano por padrão e cria profundidade primeiro por contraste tonal, sobreposição e regras. Sombras aparecem apenas quando um artefato precisa parecer fisicamente apoiado sobre a mesa: botão principal, prancha de prova, moldura de dispositivo ou formulário. Glows violetas pertencem a progresso e foco; não são iluminação ambiente genérica.
 
 ### Shadow Vocabulary
 
-- **Folha elevada** (`12px 18px 44px rgb(0 0 0 / 34%)`): lâminas sobrepostas.
-- **Controle em primeiro plano** (`6px 10px 24px rgb(0 0 0 / 28%)`): alça do comparador.
-- **Painel de fechamento** (`14px 24px 64px rgb(35 7 72 / 28%)`): formulário preto sobre campo violeta.
+- **Ação apoiada** (`0 12px 38px rgba(109, 40, 217, 0.26)`): destaca o comando primário sem separá-lo do plano de trabalho.
+- **Ação em resposta** (`0 14px 44px rgba(139, 92, 246, 0.36)`): acompanha a elevação de 2px no hover ou foco.
+- **Prancha de prova** (`0 34px 100px rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(255, 255, 255, 0.025)`): dá espessura à folha grafite e preserva uma borda interna precisa.
+- **Moldura de evidência** (`0 24px 60px rgba(0, 0, 0, 0.48)`): separa uma captura real da prancha onde ela repousa.
+- **Formulário apoiado** (`0 32px 80px rgba(0, 0, 0, 0.28)`): mantém o formulário como objeto principal dentro de uma folha grafite.
 
-**The Structural Depth Rule.** Sombra só separa planos que realmente se sobrepõem; halos coloridos e sombras sem deslocamento não pertencem ao sistema.
+### Named Rules
+
+**The Sheet-First Rule.** Antes de adicionar sombra, resolva a hierarquia com cor de superfície, borda de um pixel e sobreposição; elevação física fica reservada a objetos de prova e ação.
 
 ## Shapes
 
-Botões, campos, painéis, folhas e blocos editoriais têm cantos retos. Círculos são reservados a cursores, alças e retratos provisórios. Bordas de 1px e marcas de canto dão precisão; a silhueta dominante continua sendo a folha retangular.
+A forma dominante é a folha retangular, com cantos retos em seções, listas e painéis editoriais. Controles usam curvas compactas entre `0.4rem` e `0.8rem`; molduras de celular chegam a `1.25rem` para reconhecer o objeto físico. Círculos aparecem apenas em marcadores, lentes ambientais e índices de retrato. Carimbos e dispositivos podem receber uma rotação discreta para sugerir manuseio real.
+
+Linhas de um pixel são parte estrutural da forma. Cantos de prancha recebem marcas violetas de inspeção, enquanto fotos são cortadas com precisão e permanecem dentro de molduras simples.
+
+**The Measured Corner Rule.** Folhas e grades ficam retas; arredondamento pertence a controles compactos e objetos reconhecíveis, nunca a contêineres genéricos inflados.
 
 ## Components
 
+Os componentes parecem instrumentos de uma mesa de aprovação: compactos, contrastados e explícitos sobre o que acontece em seguida.
+
 ### Buttons
 
-- **Shape:** retangular e direto, sem raio.
-- **Primary:** púrpura elétrica sobre preto, altura mínima de 3.5rem e espaçamento interno compacto.
-- **Hover / Focus:** elevação vertical suave; no foco, anel púrpura de 3px com offset de 4px.
-- **Disabled:** painel cinza-violeta escuro, texto atenuado e cursor bloqueado; nunca imita uma ação disponível.
+- **Shape:** controle firme com curva compacta (`0.7rem`) e altura mínima de `3.45rem`.
+- **Primary:** Violeta de Execução sobre Action Ink, padding `0.85rem 1.35rem`, peso 800 e ícone direcional alinhado ao texto.
+- **Hover / Focus:** sobe `2px`, clareia para Violeta de Hover e amplia a sombra; foco global usa contorno de `2px` em Violeta Pálido com offset de `4px`.
+- **Secondary / Ghost:** links de ação permanecem transparentes e recebem uma régua inferior; ações quadradas usam borda forte e mudam para violeta no hover.
+
+### Chips
+
+- **Style:** o carimbo de aprovação é retangular, transparente e contornado por Violeta Profundo, com texto pequeno, pesado e espaçado.
+- **State:** a rotação discreta comunica marcação manual; chips neutros ou pílulas decorativas não fazem parte da linguagem atual.
+
+### Cards / Containers
+
+- **Corner Style:** folhas estruturais são retas; molduras de captura usam `0.75rem` a `0.8rem` e dispositivos usam curvas maiores.
+- **Background:** Preto Mineral, Folha Grafite e Grafite Elevado formam a base; Papel de Prova é reservado a evidência.
+- **Shadow Strategy:** plana para conteúdo; sombras estruturais apenas em pranchas, capturas e formulário.
+- **Border:** réguas de `1px` em Fine Rule ou Strong Rule; acentos usam violeta com parcimônia.
+- **Internal Padding:** painéis usam de `1.5rem` a `3rem`, com ritmo maior quando carregam evidência ou formulário.
 
 ### Inputs / Fields
 
-- **Style:** fundo preto, linha inferior translúcida, texto branco e rótulo lilás em caixa alta.
-- **Focus:** linha púrpura e leve mudança tonal do campo.
-- **Error / Disabled:** mensagem deve nomear o problema e o próximo passo; o formulário inteiro pode permanecer desabilitado quando o endpoint ainda não existe.
+- **Style:** Folha Grafite, borda Fine Rule, texto Branco Papel, curva de `0.5rem`, altura mínima de `3.15rem` e labels compactos em caixa alta.
+- **Focus:** a borda assume Violeta de Execução e recebe anel `0 0 0 3px rgba(139, 92, 246, 0.12)`.
+- **Error / Disabled:** mensagens usam cor sem remover o texto; o botão de envio mantém forma e reduz opacidade para 0.72 durante espera.
 
 ### Navigation
 
-Marca compacta à esquerda, links em caixa alta à direita e CTA contornado. Em telas estreitas, a navegação ocupa o viewport e usa títulos grandes; `Escape` fecha o painel e o botão expõe `aria-expanded`.
+- **Desktop:** marca à esquerda, links centrais com sublinhado violeta animado e ação à direita, sobre vidro mineral fixo com blur de `18px`.
+- **Mobile:** painel vertical abaixo do cabeçalho, itens com altura mínima de `4rem`, índice violeta e comando final preenchido.
+- **Motion:** transições de estado usam majoritariamente `180ms ease`; o painel móvel combina opacidade e deslocamento de `1rem`.
 
-### Technical Sheets
+### Section Index
 
-Folhas semitransparentes em três profundidades carregam verbos e diagramas exatos. A passagem de luz responde ao progresso local do bloco e percorre a pilha antes que ela saia do viewport; com movimento reduzido, as folhas permanecem estáticas e legíveis.
+Um número grande em Plus Jakarta Sans encosta em uma legenda pequena, espaçada e em caixa alta. O índice orienta a leitura e oferece uma assinatura reutilizável sem virar ornamento solto.
 
-### Before/After Comparison
+### Evidence Board
 
-Dois planos compartilham o mesmo quadro e um range acessível controla a divisão. Um controle de estado alterna capturas equivalentes de desktop e mobile; em telas estreitas, mobile é a visão inicial. A alça circular é o único elemento elevado, e cada imagem real conserva dimensões, texto alternativo e origem documentada.
+A prancha combina folha grafite, régua fina, marcas de inspeção violetas, metadados compactos e uma ou mais peças reais enquadradas. O conteúdo visual precisa ser evidência verificável; o contêiner existe para tornar essa prova legível e manipulável.
 
-### Founder Portrait / Placeholder
+### Progress Ruler
 
-Retratos confirmados ocupam integralmente o quadro com `object-fit: cover`, dimensões intrínsecas e texto alternativo nominal. Para sócios cujas fotos ainda não foram fornecidas, permanece o placeholder editorial com identificação, desenho linear e aviso de imagem em preparação. Certificações confirmadas aparecem abaixo da biografia como uma linha de credencial: código do exame em monoespaçada e o nome oficial da certificação, separados por uma linha fina — sem selos, pills ou logotipos inventados.
+Uma régua de um pixel recebe uma faixa violeta de `3px` que progride com o conteúdo. A transição usa `420ms cubic-bezier(0.22, 1, 0.36, 1)` e os índices mudam de cinza para Violeta Pálido quando ativos. Em telas estreitas, a régua muda de vertical para horizontal sem perder os quatro pontos de referência.
 
 ## Do's and Don'ts
 
 ### Do:
 
-- **Do** use preto e papel como superfícies estruturais de página inteira.
-- **Do** reserve o púrpura elétrico para ações, foco e o plano mais ativo.
-- **Do** mantenha títulos diretos, grandes e balanceados, com no máximo 6rem.
-- **Do** preserve conteúdo visível sem JavaScript e respeite redução de movimento.
-- **Do** use estados pendentes honestos quando dados, imagens ou integrações ainda não existem.
+- Do usar o violeta para decisões, progresso, foco e anotações que tenham função identificável.
+- Do construir hierarquia com grandes índices, alinhamentos compartilhados e réguas de um pixel.
+- Do enquadrar fotografias e interfaces reais como prova, preservando proporção, nitidez e contexto.
+- Do manter conteúdo e controles legíveis sem animação e respeitar `prefers-reduced-motion`.
+- Do adaptar a grade para uma coluna e ações de largura total quando o espaço móvel exigir.
 
 ### Don't:
 
-- **Don't** transformar a página em uma grade de cartões arredondados iguais.
-- **Don't** usar texto em gradiente, vidro decorativo ou halo colorido.
-- **Don't** adicionar eyebrows acima de títulos de seção.
-- **Don't** usar monoespaçada como fantasia de tecnologia em conteúdo comum.
-- **Don't** inventar métricas, depoimentos, pessoas, canais ou capturas para preencher espaços.
+- Don't transformar toda superfície em cartão arredondado ou usar pílulas como decoração genérica.
+- Don't espalhar glows e sombras por blocos editoriais que podem ser separados por tom e linha.
+- Don't usar violeta em grandes áreas sem relação com ação, progresso, foco ou evidência.
+- Don't inventar métricas, depoimentos ou imagens para preencher uma prancha de prova.
+- Don't esconder conteúdo atrás de opacidade inicial, recorte ou movimento obrigatório.

@@ -1,26 +1,53 @@
 # Tekton Digital
 
-Site institucional da Tekton Digital, construído em Astro, TypeScript e Tailwind CSS.
+Site institucional e portfólio da Tekton Digital, construído com Next.js, React, TypeScript, Tailwind CSS e Supabase.
 
 ## Rodar localmente
 
+Requisitos: Node.js 20.9 ou superior e npm.
+
 ```bash
 npm install
+copy .env.example .env.local
 npm run dev
 ```
 
-Validação de tipos e build:
+Abra `http://localhost:3000`.
+
+## Configuração
+
+- `NEXT_PUBLIC_SITE_URL`: origem pública usada em metadados, sitemap e dados estruturados.
+- `NEXT_PUBLIC_WHATSAPP_NUMBER`: número com país e DDD, apenas dígitos. O CTA só aparece quando o valor é válido.
+- `SUPABASE_URL`: URL do projeto Supabase.
+- `SUPABASE_SECRET_KEY`: chave secreta usada exclusivamente pela rota de servidor. Projetos antigos podem usar `SUPABASE_SERVICE_ROLE_KEY`.
+
+Nunca use uma chave secreta em variável `NEXT_PUBLIC_*`.
+
+## Banco de dados
+
+A migração em `supabase/migrations` cria a tabela `public.leads`, habilita RLS e remove acesso dos papéis públicos. O formulário grava por `/api/leads`, no servidor.
+
+Depois de conectar um projeto Supabase, aplique a migração pelo fluxo oficial da CLI e valide:
+
+1. Inserção pelo formulário com as variáveis configuradas.
+2. Ausência de leitura ou escrita da tabela com chave pública.
+3. Registro completo no painel do projeto.
+
+Sem credenciais, o formulário retorna uma mensagem de indisponibilidade e não simula sucesso.
+
+## Validação local
 
 ```bash
-npm run check
+npm run typecheck
+npm test
 npm run build
 ```
 
-## Conteúdo pendente
+As imagens de portfólio e equipe são materiais reais do projeto anterior da Tekton. A origem e o processamento estão documentados em `public/assets/ASSET_SOURCES.md`.
 
-- Fundadores: atualize nomes, cargos, biografias e caminhos das fotos em `src/data/site.ts`.
-- Case Náutica: as quatro capturas públicas estão em `public/assets/cases`. Para atualizá-las, execute `node scripts/capture-nautica-case.mjs` com acesso à rede e revise visualmente os arquivos antes de publicar.
-- Contato: e-mail e WhatsApp estão configurados no site. O formulário prepara o briefing no aplicativo de e-mail ou no WhatsApp do visitante; as variáveis de `.env.example` permitem substituir os canais.
-- URL pública: ao definir o domínio, adicione a propriedade `site` em `astro.config.ts` para ativar canonical e integrações dependentes do endereço final.
+## Pendências antes da publicação
 
-Nenhuma métrica, depoimento ou informação comercial foi inventada. Os estados pendentes permanecem visíveis para evitar publicação acidental de dados falsos.
+- Informar domínio oficial e número comercial de WhatsApp.
+- Conectar e validar um projeto Supabase real.
+- Revisar o texto jurídico e incluir o contato do controlador de dados.
+- Executar PageSpeed Insights na URL publicada; o objetivo de 95+ mobile depende do ambiente final.

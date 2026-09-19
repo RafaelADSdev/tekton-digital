@@ -1,13 +1,32 @@
 node_modules/
+.next/
+out/
 dist/
-.astro/
-.vercel
-.netlify
+coverage/
+
+# Supabase
+supabase/.temp/
+
+# Environment
 .env
 .env.*
 !.env.example
-.DS_Store
+
+# Caches & logs
+*.tsbuildinfo
 *.log
-.impeccable/review/*.png
-.impeccable/questions/
+npm-debug.log*
+
+# Deploy
+.vercel/
+.netlify/
+
+# Impeccable artifacts
+.impeccable/review/*
+!.impeccable/review/.gitkeep
+.impeccable/critique/
+.impeccable/live/
 .impeccable/build/
+.impeccable/questions/
+
+.DS_Store

@@ -8,62 +8,55 @@ web
 
 ## Stack
 
-Astro + TypeScript + Tailwind CSS.
+Next.js com App Router, React, TypeScript, Tailwind CSS e Supabase para persistência de leads. Fluxo de criação confirmado como code-first.
 
 ## Users
 
-Empresas de diferentes portes e produtores ou escolas online que precisam criar uma presença digital do zero ou melhorar uma solução já existente. O visitante principal é o decisor que procura um parceiro técnico para transformar uma necessidade de negócio em um site ou sistema confiável.
+- Pequenas e médias empresas que precisam criar ou elevar sua presença digital.
+- Prestadores de serviço que precisam converter interesse em oportunidades comerciais.
+- Negócios que querem substituir planilhas e processos manuais por sistemas sob medida.
 
 ## Product Purpose
 
-Apresentar a Tekton Digital, explicar suas frentes de atuação, demonstrar sua capacidade por meio de cases comparativos e conduzir potenciais clientes a uma conversa comercial.
+Ser o principal canal comercial e a maior prova de capacidade da Tekton Digital. A página deve comunicar confiança em poucos segundos, demonstrar qualidade com trabalho real e conduzir o visitante a iniciar uma conversa sobre seu projeto.
 
 ## Positioning
 
-A Tekton Digital combina visão de negócio e desenvolvimento para criar produtos digitais e modernizar ativos existentes com decisões pragmáticas, desempenho técnico e acompanhamento próximo dos fundadores.
+A Tekton Digital combina direção de design, engenharia de software e visão comercial para transformar necessidades reais de negócio em sites e sistemas completos, sem separar aparência, performance e operação.
 
 ## Operating Context
 
-O site funciona como apresentação institucional e ponto inicial do processo comercial. O visitante deve entender rapidamente o que a empresa faz, reconhecer seu cenário entre os serviços apresentados, avaliar evidências concretas no portfólio e iniciar contato por WhatsApp, e-mail ou formulário.
+O visitante chega principalmente pelo celular, muitas vezes comparando fornecedores e sem domínio técnico. Precisa entender o que a Tekton entrega, reconhecer evidência concreta e encontrar um caminho de contato rápido por formulário ou WhatsApp.
 
 ## Capabilities and Constraints
 
-- Melhoria, otimização e atualização de sites institucionais e de vendas existentes.
-- Criação de sites institucionais para empresas.
-- Criação de sistemas para cursos online.
-- Site estático, responsivo e construído em Astro, TypeScript e Tailwind CSS.
-- Conteúdo em português do Brasil.
-- Rafael Arcanjo está confirmado como sócio e Desenvolvedor Web; sua biografia foi sintetizada a partir de `rafaeladsdev.com` e sua fotografia foi fornecida pelo próprio fundador.
-- Kaio Seabra está confirmado como Desenvolvedor Web, com atuação direcionada a back-end e AWS.
-- Miguel Leite está confirmado como Desenvolvedor Web, com atuação direcionada a bancos de dados, APIs e processamento de requisições.
-- As fotografias atuais de Kaio e Miguel foram fornecidas diretamente pelo usuário.
-- Kaio Seabra possui a certificação AWS Certified Cloud Practitioner (CLF-C02), confirmada pelo usuário.
-- O contato comercial usa `rafaelarcanjods05@gmail.com` e o WhatsApp `+55 81 98593-2808`, confirmados pelo usuário.
-- O case Náutica Engenharia usa capturas públicas equivalentes em desktop e mobile, realizadas em 04/09/2026.
+- One-page institucional com serviços, método, portfólio, equipe e contato.
+- Captação por formulário persistido no Supabase e alternativa por WhatsApp.
+- Sem painel administrativo, CRM, notificações por e-mail ou publicação nesta primeira entrega.
+- Entrega local pronta para integração. Domínio, telefone e credenciais reais permanecem configuráveis.
+- Mobile first, SEO técnico, acessibilidade e desempenho são requisitos do produto.
 
 ## Brand Commitments
 
 - Nome: Tekton Digital.
-- Paleta obrigatória: roxo, branco e preto.
-- Referência de qualidade: projetos institucionais já produzidos pelo cliente, especialmente Náutica Engenharia, sem copiar sua identidade.
-- Comunicação clara, profissional, direta e próxima.
+- Identidade dark premium: fundo `#09090B`, superfícies `#121217`, texto `#FAFAFA` e `#A1A1AA`, roxos `#6D28D9` e `#8B5CF6`.
+- Plus Jakarta Sans em títulos e Inter em textos.
+- Linguagem segura, clara e comercial, sem jargão desnecessário.
 
 ## Evidence on Hand
 
-- Case Náutica Engenharia.
-- Antes: `nauticaengenharia.com`, desenvolvido em Wix, com menu carregado e aparência genérica de template.
-- Depois: `nauticaengenharia.vercel.app`, redesign em Astro, mais leve e moderno.
-- Capturas comparativas reais disponíveis em `public/assets/cases`, com versões desktop e mobile para os dois sites.
-- Não inventar métricas de desempenho ou resultados comerciais.
+- Capturas reais desktop e mobile do case Náutica Engenharia no projeto anterior da Tekton.
+- Fotografias de Rafael Arcanjo, Kaio Seabra e Miguel Leite no projeto anterior da Tekton.
+- Não há autorização para inventar métricas, depoimentos, resultados comerciais, contatos, certificações ou credenciais.
 
 ## Product Principles
 
-- Tornar a proposta da empresa compreensível já no primeiro contato.
-- Mostrar transformação por evidência real, sem fabricar números ou depoimentos.
-- Fazer cada serviço falar com uma necessidade concreta do cliente.
-- Manter o caminho para contato sempre evidente e acessível.
-- Tratar desempenho, responsividade e acessibilidade como parte da qualidade percebida.
+- Demonstrar capacidade com artefatos reais antes de fazer promessas.
+- Explicar tecnologia pelo impacto que ela produz no negócio.
+- Reduzir o caminho entre interesse e conversa comercial.
+- Tratar desempenho, acessibilidade e SEO como parte do design.
+- Manter dados comerciais ausentes como configuração explícita.
 
 ## Accessibility & Inclusion
 
-O site deve ser navegável por teclado, respeitar preferência por redução de movimento, preservar contraste adequado e funcionar bem de celulares pequenos a telas desktop amplas.
+Atender WCAG 2.2 AA, navegação por teclado, foco visível, mensagens de formulário acessíveis, conteúdo disponível sem animação e suporte a `prefers-reduced-motion`.

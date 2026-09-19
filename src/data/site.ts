@@ -1,60 +1,88 @@
-export type FounderCertification = {
-  code: string;
-  name: string;
-};
-
-export type Founder = {
-  name: string;
-  role: string;
-  bio: string;
-  image?: string;
-  certifications?: FounderCertification[];
-};
-
-export const founders: Founder[] = [
-  {
-    name: 'Rafael Arcanjo',
-    role: 'Desenvolvedor Web',
-    bio: 'React, Next.js e TypeScript para transformar necessidades de negócio em produtos digitais.',
-    image: '/assets/rafael-arcanjo.webp',
-  },
-  {
-    name: 'Kaio Seabra',
-    role: 'Desenvolvedor Web — Back-end e AWS',
-    bio: 'APIs, regras de negócio e infraestrutura na AWS com foco em estabilidade e evolução.',
-    image: '/assets/kaio-seabra.jpg',
-    certifications: [
-      {
-        code: 'AWS CLF-C02',
-        name: 'AWS Certified Cloud Practitioner',
-      },
-    ],
-  },
-  {
-    name: 'Miguel Leite',
-    role: 'Desenvolvedor Web — Dados e APIs',
-    bio: 'Persistência, consultas e integrações para manter dados consistentes e fluxos confiáveis.',
-    image: '/assets/miguel-leite.jpg',
-  },
-];
+export const siteConfig = {
+  name: "Tekton Digital",
+  description:
+    "Estúdio tecnológico que combina estratégia, design e desenvolvimento para criar sites e sistemas que movem negócios.",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
+  nav: [
+    { label: "Serviços", href: "#servicos" },
+    { label: "Método", href: "#metodo" },
+    { label: "Portfólio", href: "#portfolio" },
+    { label: "Equipe", href: "#equipe" },
+  ],
+} as const;
 
 export const services = [
   {
-    verb: 'Evoluir',
-    title: 'Sites que já existem',
+    index: "01",
+    title: "Landing Pages",
     description:
-      'Atualizamos e reorganizamos o que já funciona para reduzir atrito e renovar a percepção da marca.',
+      "Uma página, uma oferta e um caminho claro para transformar interesse em conversa comercial.",
+    deliverables: ["Estratégia de conteúdo", "Design responsivo", "Medição e SEO técnico"],
   },
   {
-    verb: 'Construir',
-    title: 'Sites institucionais',
+    index: "02",
+    title: "Sites Institucionais",
     description:
-      'Da estrutura à publicação — presença digital clara, credível e pronta para converter.',
+      "Presença digital consistente para explicar seu negócio, construir confiança e sustentar o crescimento.",
+    deliverables: ["Arquitetura de informação", "Sistema visual", "Performance e publicação"],
   },
   {
-    verb: 'Estruturar',
-    title: 'Sistemas para cursos online',
+    index: "03",
+    title: "Sistemas Web",
     description:
-      'Ambientes próprios para conteúdo, alunos e operação educacional.',
+      "Aplicações sob medida para tirar processos da planilha e organizar a operação com segurança.",
+    deliverables: ["Mapeamento de fluxo", "Interface operacional", "Dados e integrações"],
   },
-];
+] as const;
+
+export const processSteps = [
+  {
+    index: "01",
+    title: "Entender",
+    description: "Mapeamos o negócio, a decisão do cliente e o que a entrega precisa resolver.",
+  },
+  {
+    index: "02",
+    title: "Projetar",
+    description: "Transformamos estratégia em arquitetura, conteúdo e uma direção visual própria.",
+  },
+  {
+    index: "03",
+    title: "Construir",
+    description: "Desenvolvemos com atenção a velocidade, acessibilidade, SEO e manutenção.",
+  },
+  {
+    index: "04",
+    title: "Entregar",
+    description: "Validamos a experiência completa e deixamos a operação pronta para evoluir.",
+  },
+] as const;
+
+export const team = [
+  {
+    name: "Rafael Arcanjo",
+    role: "Desenvolvimento de produto",
+    description: "Traduz necessidades de negócio em interfaces claras e produtos digitais consistentes.",
+    image: "/assets/team/rafael-arcanjo.webp",
+  },
+  {
+    name: "Kaio Seabra",
+    role: "Back-end e infraestrutura",
+    description: "Constrói APIs, regras de negócio e infraestrutura com foco em estabilidade e evolução.",
+    image: "/assets/team/kaio-seabra.webp",
+  },
+  {
+    name: "Miguel Leite",
+    role: "Dados e integrações",
+    description: "Conecta dados, consultas e serviços para manter fluxos confiáveis de ponta a ponta.",
+    image: "/assets/team/miguel-leite.webp",
+  },
+] as const;
+
+export const whatsappNumber = (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "").replace(/\D/g, "");
+
+export const whatsappHref = whatsappNumber
+  ? `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+      "Olá! Conheci a Tekton Digital pelo site e quero conversar sobre um projeto.",
+    )}`
+  : null;
