@@ -308,9 +308,14 @@ export default function Home() {
 
       <footer className="site-footer">
         <div className="footer-top">
-          <a className="brand footer-brand" href="#top">
-            <span className="brand-mark" aria-hidden="true">T</span>
-            <span>TEKTON DIGITAL</span>
+          <a className="brand footer-brand" href="#top" aria-label="Tekton Digital, ir para o topo">
+            <Image
+              src="/assets/brand/tekton-logo.png"
+              alt="Tekton Digital"
+              width={720}
+              height={194}
+              loading="lazy"
+            />
           </a>
           <p>Software e design para quem leva o próprio negócio a sério.</p>
           <a href="#top">Voltar ao topo <ArrowUpRight size={15} aria-hidden="true" /></a>

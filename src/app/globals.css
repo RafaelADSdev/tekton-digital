@@ -104,24 +104,11 @@ a {
   display: inline-flex;
   align-items: center;
   width: fit-content;
-  gap: 0.8rem;
-  font-family: var(--font-display), Arial, sans-serif;
-  font-size: 0.76rem;
-  font-weight: 760;
-  letter-spacing: 0.13em;
 }
 
-.brand-mark {
-  display: inline-grid;
-  place-items: center;
-  width: 2rem;
-  aspect-ratio: 1;
-  border-radius: 0.4rem;
-  background: var(--violet);
-  color: var(--on-violet);
-  font-size: 1rem;
-  font-weight: 800;
-  letter-spacing: -0.04em;
+.brand img {
+  width: auto;
+  height: 2.2rem;
 }
 
 .desktop-nav {
@@ -1655,12 +1642,8 @@ a {
 }
 
 @media (max-width: 560px) {
-  .brand {
-    font-size: 0.68rem;
-  }
-
-  .brand-mark {
-    width: 1.8rem;
+  .brand img {
+    height: 1.85rem;
   }
 
   .hero {

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { siteConfig } from "@/data/site";
 
@@ -9,11 +10,14 @@ export function Header() {
 
   return (
     <header className="site-header">
-      <a className="brand" href="#top">
-        <span className="brand-mark" aria-hidden="true">
-          T
-        </span>
-        <span>TEKTON DIGITAL</span>
+      <a className="brand" href="#top" aria-label="Tekton Digital, ir para o topo">
+        <Image
+          src="/assets/brand/tekton-logo.png"
+          alt="Tekton Digital"
+          width={720}
+          height={194}
+          priority
+        />
       </a>
 
       <nav className="desktop-nav" aria-label="Navegação principal">
