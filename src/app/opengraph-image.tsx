@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Tekton Digital — Design e desenvolvimento para negócios reais";
+export const alt = "Tekton Digital: design e desenvolvimento para negócios reais";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

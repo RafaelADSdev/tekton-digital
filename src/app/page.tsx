@@ -38,16 +38,16 @@ export default function Home() {
         <section className="hero" id="top" aria-labelledby="hero-title">
           <div className="hero-orbit" aria-hidden="true" />
           <div className="hero-copy">
-            <p className="hero-eyebrow">Tekton — Software e design</p>
+            <p className="hero-eyebrow">Tekton · Software e design</p>
             <h1 id="hero-title">
               <span>Construímos</span>
               <span className="accent">presença digital</span>
               <span>que aguenta uso real.</span>
             </h1>
             <p className="hero-summary">
-              Não vendemos pacote de site. Projetamos, desenvolvemos e entregamos produtos digitais — landing
-              pages, sites institucionais e sistemas web — com a mesma exigência técnica que aplicaríamos a um
-              software crítico. Se o seu projeto tiver fundamento, a gente avalia.
+              Não vendemos pacote de site. Projetamos, desenvolvemos e entregamos produtos digitais: landing
+              pages, sites institucionais e sistemas web. Tudo com a mesma exigência técnica que aplicaríamos
+              a um software crítico. Se o seu projeto tiver fundamento, a gente avalia.
             </p>
             <div className="hero-actions">
               <a className="primary-button" href="#contato">
@@ -154,7 +154,7 @@ export default function Home() {
             <p>
               Repare no que costuma passar despercebido: o comportamento da rolagem, o tempo de uma transição,
               o alinhamento que se mantém quando a tela muda de tamanho, o estado do botão quando o cursor
-              chega nele. Nada disso é enfeite — é o que separa uma página que funciona de uma página que
+              chega nele. Nada disso é enfeite. É o que separa uma página que funciona de uma página que
               apenas existe. Cada projeto aqui foi construído do zero.
             </p>
           </div>
@@ -239,9 +239,10 @@ export default function Home() {
             <SectionLabel>Quem executa</SectionLabel>
             <h2 id="team-title">Três sócios. Nenhum intermediário.</h2>
             <p>
-              A Tekton é uma casa pequena por escolha. Quem conversa com você na primeira mensagem é quem vai
-              escrever o código e desenhar a interface do seu projeto. Não existe camada de gerente de contas
-              repassando recado, nem equipe júnior anônima executando aquilo que outra pessoa vendeu.
+              A Tekton é uma casa pequena por escolha. Quem conversa com você na primeira mensagem é sócio da
+              casa e senta na mesma mesa de quem vai escrever o código do seu projeto. Não existe camada de
+              gerente de contas repassando recado, nem equipe júnior anônima executando aquilo que outra
+              pessoa vendeu.
             </p>
           </div>
           <div className="team-grid">
@@ -258,7 +259,6 @@ export default function Home() {
                   />
                 </div>
                 <h3>{member.name}</h3>
-                <p className="member-role">{member.role}</p>
                 <p>{member.description}</p>
               </article>
             ))}
@@ -282,7 +282,7 @@ export default function Home() {
               O que acontece lá: você explica o que precisa, a gente faz as perguntas certas sobre escopo,
               prazo e o que já existe hoje. A partir disso dizemos com honestidade se faz sentido a Tekton
               assumir esse projeto. Se fizer, tratamos de números e cronograma no privado. Se não fizer, você
-              sai da conversa com uma direção melhor do que entrou — e sem ter perdido a tarde.
+              sai da conversa com uma direção melhor do que entrou, e sem ter perdido a tarde.
             </p>
             <p>
               Aceitamos um número limitado de projetos por vez. É assim que se mantém o padrão. Vale checar se

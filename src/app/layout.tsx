@@ -18,8 +18,8 @@ const jakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Tekton — Criação de Sites, Landing Pages e Sistemas Web",
-    template: "%s — Tekton Digital",
+    default: "Tekton · Criação de Sites, Landing Pages e Sistemas Web",
+    template: "%s · Tekton Digital",
   },
   description: siteConfig.description,
   keywords: [
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     "Tekton Digital",
   ],
   openGraph: {
-    title: "Tekton — Criação de Sites, Landing Pages e Sistemas Web",
+    title: "Tekton · Criação de Sites, Landing Pages e Sistemas Web",
     description: siteConfig.description,
     type: "website",
     locale: "pt_BR",

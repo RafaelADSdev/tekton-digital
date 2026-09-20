@@ -1,4 +1,5 @@
 import { NextResponse, type NextRequest } from "next/server";
+import { whatsappNumber } from "@/data/site";
 import { leadSchema } from "@/lib/lead-schema";
 import { getSupabaseAdmin } from "@/lib/supabase-admin";
 
@@ -54,7 +55,7 @@ export async function POST(request: NextRequest) {
 
   const supabase = getSupabaseAdmin();
   if (!supabase) {
-    const hasWhatsapp = Boolean((process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "").replace(/\D/g, ""));
+    const hasWhatsapp = Boolean(whatsappNumber);
     return NextResponse.json(
       {
         message: hasWhatsapp
