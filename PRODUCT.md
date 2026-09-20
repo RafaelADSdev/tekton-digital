@@ -39,7 +39,7 @@ O visitante chega principalmente pelo celular, muitas vezes comparando fornecedo
 ## Brand Commitments
 
 - Nome: Tekton Digital.
-- Identidade dark premium: fundo `#09090B`, superfícies `#121217`, texto `#FAFAFA` e `#A1A1AA`, roxos `#6D28D9` e `#8B5CF6`.
+- Identidade dark premium: fundo `#141414`, superfícies `#1c1c1c`, texto `#CFCFCF` e `#909090`, roxos `#5C3483` e `#7E49B3`.
 - Plus Jakarta Sans em títulos e Inter em textos.
 - Linguagem segura, clara e comercial, sem jargão desnecessário.
 

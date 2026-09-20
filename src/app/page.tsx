@@ -40,11 +40,9 @@ export default function Home() {
           <div className="hero-copy">
             <p className="hero-eyebrow">Tekton — Software e design</p>
             <h1 id="hero-title">
-              Construímos
-              <br />
-              <span>presença digital</span>
-              <br />
-              que aguenta uso real.
+              <span>Construímos</span>
+              <span className="accent">presença digital</span>
+              <span>que aguenta uso real.</span>
             </h1>
             <p className="hero-summary">
               Não vendemos pacote de site. Projetamos, desenvolvemos e entregamos produtos digitais — landing
@@ -272,6 +270,7 @@ export default function Home() {
         </section>
 
         <section className="contact-section" id="contato" aria-labelledby="contact-title">
+          <div className="contact-glow" aria-hidden="true" />
           <div className="section contact-copy">
             <SectionLabel>Próximo passo</SectionLabel>
             <h2 id="contact-title">Sem formulário. Conversa direta.</h2>

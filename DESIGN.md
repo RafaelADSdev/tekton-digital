@@ -2,20 +2,20 @@
 name: "Tekton Digital"
 description: "Uma mesa de execução digital que transforma rigor, prova real e decisão em uma linguagem visual premium."
 colors:
-  mineral-black: "#09090b"
-  graphite-sheet: "#121217"
-  graphite-raised: "#18181f"
-  proof-paper: "#ededeb"
-  paper-white: "#fafafa"
-  muted-copy: "#a1a1aa"
-  strong-muted-copy: "#c7c7cf"
-  fine-rule: "rgba(250, 250, 250, 0.13)"
-  strong-rule: "rgba(250, 250, 250, 0.24)"
-  execution-violet: "#8b5cf6"
-  deep-violet: "#6d28d9"
-  pale-violet: "#c4b5fd"
-  violet-hover: "#9f7aea"
-  action-ink: "#0b0712"
+  mineral-black: "#141414"
+  graphite-sheet: "#1c1c1c"
+  graphite-raised: "#242424"
+  proof-paper: "#cfcfcf"
+  paper-white: "#cfcfcf"
+  muted-copy: "#909090"
+  strong-muted-copy: "#b4b4b4"
+  fine-rule: "rgba(207, 207, 207, 0.13)"
+  strong-rule: "rgba(207, 207, 207, 0.24)"
+  execution-violet: "#7e49b3"
+  deep-violet: "#5c3483"
+  pale-violet: "#be96e0"
+  violet-hover: "#8f55c0"
+  action-ink: "#ffffff"
 typography:
   display:
     fontFamily: "Plus Jakarta Sans, Arial, sans-serif"
@@ -123,11 +123,11 @@ O sistema combina densidade editorial com controles que lembram comandos de apro
 
 ## Colors
 
-A paleta alterna uma base mineral quase preta, camadas grafite e uma folha clara de prova; o violeta funciona como tinta de anotação e sinal de aprovação.
+A paleta parte de três cores base — Nox Noir `#141414`, Royal Amethyst `#7E49B3` e Steel Mist `#CFCFCF` — e deriva delas camadas grafite, réguas e tons de apoio; o amethyst funciona como tinta de anotação e sinal de aprovação.
 
 ### Primary
 
-- **Violeta de Execução:** cor de ações primárias, índices ativos, progresso e marcações que exigem atenção.
+- **Royal Amethyst (`#7E49B3`):** cor de ações primárias, índices ativos, progresso e marcações que exigem atenção.
 - **Violeta Profundo:** versão de maior autoridade para carimbos, linhas e texto sobre superfícies claras.
 
 ### Secondary
@@ -137,11 +137,11 @@ A paleta alterna uma base mineral quase preta, camadas grafite e uma folha clara
 
 ### Neutral
 
-- **Preto Mineral:** plano-base da interface e fundo contínuo entre as folhas de conteúdo.
+- **Nox Noir (`#141414`):** plano-base da interface e fundo contínuo entre as folhas de conteúdo.
 - **Folha Grafite:** superfície estrutural para formulários, painéis e áreas que precisam se separar do plano-base.
 - **Grafite Elevado:** camada tonal adicional para blocos internos que precisam de contraste sem sombra.
-- **Papel de Prova:** superfície clara reservada a trabalho real, comparações e evidências que precisam respirar.
-- **Branco Papel:** texto de maior contraste e conteúdo principal.
+- **Steel Mist (`#CFCFCF`):** superfície clara reservada a trabalho real, comparações e evidências que precisam respirar.
+- **Steel Mist (texto):** cor de leitura principal sobre as superfícies escuras.
 - **Texto Silencioso:** descrições e contexto de menor prioridade.
 - **Texto Silencioso Forte:** leitura secundária que ainda precisa sustentar contraste funcional.
 - **Régua Fina / Régua Forte:** divisores de um pixel que organizam a mesa e marcam limites sem formar caixas pesadas.
@@ -189,8 +189,8 @@ O sistema é plano por padrão e cria profundidade primeiro por contraste tonal,
 
 ### Shadow Vocabulary
 
-- **Ação apoiada** (`0 12px 38px rgba(109, 40, 217, 0.26)`): destaca o comando primário sem separá-lo do plano de trabalho.
-- **Ação em resposta** (`0 14px 44px rgba(139, 92, 246, 0.36)`): acompanha a elevação de 2px no hover ou foco.
+- **Ação apoiada** (`0 12px 38px rgba(92, 52, 131, 0.26)`): destaca o comando primário sem separá-lo do plano de trabalho.
+- **Ação em resposta** (`0 14px 44px rgba(126, 73, 179, 0.36)`): acompanha a elevação de 2px no hover ou foco.
 - **Prancha de prova** (`0 34px 100px rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(255, 255, 255, 0.025)`): dá espessura à folha grafite e preserva uma borda interna precisa.
 - **Moldura de evidência** (`0 24px 60px rgba(0, 0, 0, 0.48)`): separa uma captura real da prancha onde ela repousa.
 - **Formulário apoiado** (`0 32px 80px rgba(0, 0, 0, 0.28)`): mantém o formulário como objeto principal dentro de uma folha grafite.
@@ -234,7 +234,7 @@ Os componentes parecem instrumentos de uma mesa de aprovação: compactos, contr
 ### Inputs / Fields
 
 - **Style:** Folha Grafite, borda Fine Rule, texto Branco Papel, curva de `0.5rem`, altura mínima de `3.15rem` e labels compactos em caixa alta.
-- **Focus:** a borda assume Violeta de Execução e recebe anel `0 0 0 3px rgba(139, 92, 246, 0.12)`.
+- **Focus:** a borda assume Violeta de Execução e recebe anel `0 0 0 3px rgba(126, 73, 179, 0.12)`.
 - **Error / Disabled:** mensagens usam cor sem remover o texto; o botão de envio mantém forma e reduz opacidade para 0.72 durante espera.
 
 ### Navigation

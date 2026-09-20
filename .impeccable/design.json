@@ -6,86 +6,86 @@
     "colorMeta": {
       "mineral-black": {
         "role": "neutral",
-        "displayName": "Preto Mineral",
-        "canonical": "#09090b",
+        "displayName": "Nox Noir",
+        "canonical": "#141414",
         "tonalRamp": ["oklch(15% 0.004 285)", "oklch(26% 0.004 285)", "oklch(38% 0.004 285)", "oklch(50% 0.004 285)", "oklch(62% 0.004 285)", "oklch(73% 0.004 285)", "oklch(84% 0.004 285)", "oklch(95% 0.004 285)"]
       },
       "graphite-sheet": {
         "role": "neutral",
         "displayName": "Folha Grafite",
-        "canonical": "#121217",
+        "canonical": "#1c1c1c",
         "tonalRamp": ["oklch(15% 0.006 285)", "oklch(26% 0.006 285)", "oklch(38% 0.006 285)", "oklch(50% 0.006 285)", "oklch(62% 0.006 285)", "oklch(73% 0.006 285)", "oklch(84% 0.006 285)", "oklch(95% 0.006 285)"]
       },
       "graphite-raised": {
         "role": "neutral",
         "displayName": "Grafite Elevado",
-        "canonical": "#18181f",
+        "canonical": "#242424",
         "tonalRamp": ["oklch(15% 0.008 285)", "oklch(26% 0.008 285)", "oklch(38% 0.008 285)", "oklch(50% 0.008 285)", "oklch(62% 0.008 285)", "oklch(73% 0.008 285)", "oklch(84% 0.008 285)", "oklch(95% 0.008 285)"]
       },
       "proof-paper": {
         "role": "neutral",
-        "displayName": "Papel de Prova",
-        "canonical": "#ededeb",
+        "displayName": "Steel Mist",
+        "canonical": "#cfcfcf",
         "tonalRamp": ["oklch(15% 0.004 100)", "oklch(26% 0.004 100)", "oklch(38% 0.004 100)", "oklch(50% 0.004 100)", "oklch(62% 0.004 100)", "oklch(73% 0.004 100)", "oklch(84% 0.004 100)", "oklch(95% 0.004 100)"]
       },
       "paper-white": {
         "role": "neutral",
-        "displayName": "Branco Papel",
-        "canonical": "#fafafa",
+        "displayName": "Steel Mist (texto)",
+        "canonical": "#cfcfcf",
         "tonalRamp": ["oklch(15% 0 0)", "oklch(26% 0 0)", "oklch(38% 0 0)", "oklch(50% 0 0)", "oklch(62% 0 0)", "oklch(73% 0 0)", "oklch(84% 0 0)", "oklch(95% 0 0)"]
       },
       "muted-copy": {
         "role": "neutral",
         "displayName": "Texto Silencioso",
-        "canonical": "#a1a1aa",
+        "canonical": "#909090",
         "tonalRamp": ["oklch(15% 0.008 285)", "oklch(26% 0.008 285)", "oklch(38% 0.008 285)", "oklch(50% 0.008 285)", "oklch(62% 0.008 285)", "oklch(73% 0.008 285)", "oklch(84% 0.008 285)", "oklch(95% 0.008 285)"]
       },
       "strong-muted-copy": {
         "role": "neutral",
         "displayName": "Texto Silencioso Forte",
-        "canonical": "#c7c7cf",
+        "canonical": "#b4b4b4",
         "tonalRamp": ["oklch(15% 0.008 285)", "oklch(26% 0.008 285)", "oklch(38% 0.008 285)", "oklch(50% 0.008 285)", "oklch(62% 0.008 285)", "oklch(73% 0.008 285)", "oklch(84% 0.008 285)", "oklch(95% 0.008 285)"]
       },
       "fine-rule": {
         "role": "neutral",
         "displayName": "Régua Fina",
-        "canonical": "rgba(250, 250, 250, 0.13)",
+        "canonical": "rgba(207, 207, 207, 0.13)",
         "tonalRamp": ["oklch(15% 0 0)", "oklch(26% 0 0)", "oklch(38% 0 0)", "oklch(50% 0 0)", "oklch(62% 0 0)", "oklch(73% 0 0)", "oklch(84% 0 0)", "oklch(95% 0 0)"]
       },
       "strong-rule": {
         "role": "neutral",
         "displayName": "Régua Forte",
-        "canonical": "rgba(250, 250, 250, 0.24)",
+        "canonical": "rgba(207, 207, 207, 0.24)",
         "tonalRamp": ["oklch(15% 0 0)", "oklch(26% 0 0)", "oklch(38% 0 0)", "oklch(50% 0 0)", "oklch(62% 0 0)", "oklch(73% 0 0)", "oklch(84% 0 0)", "oklch(95% 0 0)"]
       },
       "execution-violet": {
         "role": "primary",
-        "displayName": "Violeta de Execução",
-        "canonical": "#8b5cf6",
+        "displayName": "Royal Amethyst",
+        "canonical": "#7e49b3",
         "tonalRamp": ["oklch(15% 0.07 293)", "oklch(26% 0.12 293)", "oklch(38% 0.17 293)", "oklch(50% 0.21 293)", "oklch(62% 0.23 293)", "oklch(73% 0.18 293)", "oklch(84% 0.12 293)", "oklch(95% 0.04 293)"]
       },
       "deep-violet": {
         "role": "primary",
         "displayName": "Violeta Profundo",
-        "canonical": "#6d28d9",
+        "canonical": "#5c3483",
         "tonalRamp": ["oklch(15% 0.08 293)", "oklch(26% 0.14 293)", "oklch(38% 0.2 293)", "oklch(50% 0.24 293)", "oklch(62% 0.22 293)", "oklch(73% 0.17 293)", "oklch(84% 0.11 293)", "oklch(95% 0.04 293)"]
       },
       "pale-violet": {
         "role": "secondary",
         "displayName": "Violeta Pálido",
-        "canonical": "#c4b5fd",
+        "canonical": "#be96e0",
         "tonalRamp": ["oklch(15% 0.04 293)", "oklch(26% 0.07 293)", "oklch(38% 0.1 293)", "oklch(50% 0.13 293)", "oklch(62% 0.15 293)", "oklch(73% 0.13 293)", "oklch(84% 0.1 293)", "oklch(95% 0.035 293)"]
       },
       "violet-hover": {
         "role": "secondary",
         "displayName": "Violeta de Hover",
-        "canonical": "#9f7aea",
+        "canonical": "#8f55c0",
         "tonalRamp": ["oklch(15% 0.05 293)", "oklch(26% 0.09 293)", "oklch(38% 0.13 293)", "oklch(50% 0.17 293)", "oklch(62% 0.19 293)", "oklch(73% 0.16 293)", "oklch(84% 0.11 293)", "oklch(95% 0.04 293)"]
       },
       "action-ink": {
         "role": "neutral",
         "displayName": "Tinta de Ação",
-        "canonical": "#0b0712",
+        "canonical": "#ffffff",
         "tonalRamp": ["oklch(15% 0.012 305)", "oklch(26% 0.012 305)", "oklch(38% 0.012 305)", "oklch(50% 0.012 305)", "oklch(62% 0.012 305)", "oklch(73% 0.012 305)", "oklch(84% 0.012 305)", "oklch(95% 0.012 305)"]
       }
     },
@@ -98,8 +98,8 @@
       "action": { "displayName": "Action", "purpose": "Dá voz curta, firme e legível aos comandos." }
     },
     "shadows": [
-      { "name": "action-supported", "value": "0 12px 38px rgba(109, 40, 217, 0.26)", "purpose": "Apoia o comando primário sobre o plano mineral." },
-      { "name": "action-response", "value": "0 14px 44px rgba(139, 92, 246, 0.36)", "purpose": "Acompanha o deslocamento do comando primário em hover ou foco." },
+      { "name": "action-supported", "value": "0 12px 38px rgba(92, 52, 131, 0.26)", "purpose": "Apoia o comando primário sobre o plano mineral." },
+      { "name": "action-response", "value": "0 14px 44px rgba(126, 73, 179, 0.36)", "purpose": "Acompanha o deslocamento do comando primário em hover ou foco." },
       { "name": "proof-board", "value": "0 34px 100px rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(255, 255, 255, 0.025)", "purpose": "Dá espessura à prancha de prova sem suavizar suas arestas." },
       { "name": "evidence-frame", "value": "0 24px 60px rgba(0, 0, 0, 0.48)", "purpose": "Separa uma captura real da prancha onde ela repousa." },
       { "name": "form-supported", "value": "0 32px 80px rgba(0, 0, 0, 0.28)", "purpose": "Mantém o formulário como objeto principal dentro da folha grafite." }
@@ -125,7 +125,7 @@
       "refersTo": "button-primary",
       "description": "Comando principal violeta com peso firme, brilho de resposta e deslocamento curto.",
       "html": "<button class=\"ds-primary-button\" type=\"button\"><span>APROVAR ETAPA</span><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button>",
-      "css": ".ds-primary-button { position: relative; display: inline-flex; align-items: center; justify-content: center; min-height: 3.45rem; padding: 0.85rem 1.35rem; overflow: hidden; border: 1px solid transparent; border-radius: 0.7rem; background: var(--violet, #8b5cf6); box-shadow: 0 12px 38px rgba(109, 40, 217, 0.26); color: #0b0712; font-family: var(--font-body), Arial, sans-serif; font-size: 0.86rem; font-weight: 800; gap: 0.65rem; cursor: pointer; transition: background 180ms ease, box-shadow 180ms ease, transform 180ms ease; } .ds-primary-button::before { position: absolute; top: -40%; left: -30%; width: 25%; height: 180%; background: rgba(255,255,255,0.32); content: ''; transform: rotate(20deg) translateX(-220%); transition: transform 420ms ease; } .ds-primary-button > * { position: relative; z-index: 1; } .ds-primary-button:hover, .ds-primary-button:focus-visible { background: #9f7aea; box-shadow: 0 14px 44px rgba(139, 92, 246, 0.36); transform: translateY(-2px); } .ds-primary-button:hover::before { transform: rotate(20deg) translateX(620%); } .ds-primary-button:focus-visible { outline: 2px solid var(--violet-pale, #c4b5fd); outline-offset: 4px; }"
+      "css": ".ds-primary-button { position: relative; display: inline-flex; align-items: center; justify-content: center; min-height: 3.45rem; padding: 0.85rem 1.35rem; overflow: hidden; border: 1px solid transparent; border-radius: 0.7rem; background: var(--violet, #7e49b3); box-shadow: 0 12px 38px rgba(92, 52, 131, 0.26); color: #ffffff; font-family: var(--font-body), Arial, sans-serif; font-size: 0.86rem; font-weight: 800; gap: 0.65rem; cursor: pointer; transition: background 180ms ease, box-shadow 180ms ease, transform 180ms ease; } .ds-primary-button::before { position: absolute; top: -40%; left: -30%; width: 25%; height: 180%; background: rgba(255,255,255,0.32); content: ''; transform: rotate(20deg) translateX(-220%); transition: transform 420ms ease; } .ds-primary-button > * { position: relative; z-index: 1; } .ds-primary-button:hover, .ds-primary-button:focus-visible { background: #8f55c0; box-shadow: 0 14px 44px rgba(126, 73, 179, 0.36); transform: translateY(-2px); } .ds-primary-button:hover::before { transform: rotate(20deg) translateX(620%); } .ds-primary-button:focus-visible { outline: 2px solid var(--violet-pale, #be96e0); outline-offset: 4px; }"
     },
     {
       "name": "Measured Text Link",
@@ -133,7 +133,7 @@
       "refersTo": "text-link",
       "description": "Ação secundária transparente que usa uma régua inferior e ícone direcional.",
       "html": "<a class=\"ds-text-link\" href=\"#\"><span>VER TRABALHO REAL</span><svg viewBox=\"0 0 24 24\" width=\"17\" height=\"17\" aria-hidden=\"true\"><path d=\"M12 5v14M6 13l6 6 6-6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
-      "css": ".ds-text-link { display: inline-flex; align-items: center; min-height: 3rem; border-bottom: 1px solid var(--line-strong, rgba(250,250,250,0.24)); color: var(--paper, #fafafa); font-family: var(--font-body), Arial, sans-serif; font-size: 0.85rem; font-weight: 650; gap: 0.55rem; text-decoration: none; transition: border-color 180ms ease, color 180ms ease; } .ds-text-link:hover { border-color: var(--violet, #8b5cf6); color: var(--violet-pale, #c4b5fd); } .ds-text-link:focus-visible { outline: 2px solid var(--violet-pale, #c4b5fd); outline-offset: 4px; }"
+      "css": ".ds-text-link { display: inline-flex; align-items: center; min-height: 3rem; border-bottom: 1px solid var(--line-strong, rgba(207, 207, 207,0.24)); color: var(--paper, #cfcfcf); font-family: var(--font-body), Arial, sans-serif; font-size: 0.85rem; font-weight: 650; gap: 0.55rem; text-decoration: none; transition: border-color 180ms ease, color 180ms ease; } .ds-text-link:hover { border-color: var(--violet, #7e49b3); color: var(--violet-pale, #be96e0); } .ds-text-link:focus-visible { outline: 2px solid var(--violet-pale, #be96e0); outline-offset: 4px; }"
     },
     {
       "name": "Briefing Field",
@@ -141,7 +141,7 @@
       "refersTo": "input-field",
       "description": "Campo grafite com label técnico e foco violeta explícito.",
       "html": "<label class=\"ds-field\"><span>CONTEXTO DO PROJETO</span><input type=\"text\" placeholder=\"Descreva o que precisa ser resolvido\" /></label>",
-      "css": ".ds-field { display: grid; gap: 0.45rem; color: var(--muted-strong, #c7c7cf); font-family: var(--font-body), Arial, sans-serif; font-size: 0.69rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; } .ds-field input { width: 100%; min-height: 3.15rem; padding: 0 0.9rem; border: 1px solid var(--line, rgba(250,250,250,0.13)); border-radius: 0.5rem; background: var(--surface, #121217); color: var(--paper, #fafafa); font: inherit; font-size: 0.92rem; font-weight: 400; letter-spacing: normal; text-transform: none; outline: none; transition: border-color 180ms ease, box-shadow 180ms ease; } .ds-field input::placeholder { color: #606068; } .ds-field input:focus { border-color: var(--violet, #8b5cf6); box-shadow: 0 0 0 3px rgba(139,92,246,0.12); } .ds-field input:focus-visible { outline: 2px solid var(--violet-pale, #c4b5fd); outline-offset: 4px; }"
+      "css": ".ds-field { display: grid; gap: 0.45rem; color: var(--muted-strong, #b4b4b4); font-family: var(--font-body), Arial, sans-serif; font-size: 0.69rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; } .ds-field input { width: 100%; min-height: 3.15rem; padding: 0 0.9rem; border: 1px solid var(--line, rgba(207, 207, 207,0.13)); border-radius: 0.5rem; background: var(--surface, #1c1c1c); color: var(--paper, #cfcfcf); font: inherit; font-size: 0.92rem; font-weight: 400; letter-spacing: normal; text-transform: none; outline: none; transition: border-color 180ms ease, box-shadow 180ms ease; } .ds-field input::placeholder { color: #6e6e6e; } .ds-field input:focus { border-color: var(--violet, #7e49b3); box-shadow: 0 0 0 3px rgba(126, 73, 179,0.12); } .ds-field input:focus-visible { outline: 2px solid var(--violet-pale, #be96e0); outline-offset: 4px; }"
     },
     {
       "name": "Execution Navigation",
@@ -149,7 +149,7 @@
       "refersTo": "text-link",
       "description": "Navegação mineral fixa com marca, links medidos e sublinhado violeta responsivo.",
       "html": "<nav class=\"ds-nav\" aria-label=\"Navegação de demonstração\"><a class=\"ds-nav-brand\" href=\"#\"><b>T</b><span>TEKTON DIGITAL</span></a><div class=\"ds-nav-links\"><a href=\"#\">SERVIÇOS</a><a href=\"#\">MÉTODO</a><a href=\"#\">EVIDÊNCIAS</a></div></nav>",
-      "css": ".ds-nav { display: flex; align-items: center; justify-content: space-between; min-height: 4.75rem; padding: 0 1.25rem; border-bottom: 1px solid var(--line, rgba(250,250,250,0.13)); background: rgba(9,9,11,0.88); color: var(--paper, #fafafa); font-family: var(--font-body), Arial, sans-serif; backdrop-filter: blur(18px); gap: 2rem; } .ds-nav-brand { display: inline-flex; align-items: center; color: inherit; font-family: var(--font-display), Arial, sans-serif; font-size: 0.76rem; font-weight: 760; letter-spacing: 0.13em; text-decoration: none; gap: 0.8rem; } .ds-nav-brand b { display: inline-grid; place-items: center; width: 2rem; aspect-ratio: 1; border-radius: 0.4rem; background: var(--violet, #8b5cf6); color: var(--ink, #09090b); font-size: 1rem; font-weight: 800; letter-spacing: -0.04em; } .ds-nav-links { display: flex; gap: 2rem; } .ds-nav-links a { position: relative; color: var(--muted-strong, #c7c7cf); font-size: 0.78rem; font-weight: 600; text-decoration: none; } .ds-nav-links a::after { position: absolute; bottom: -0.55rem; left: 0; width: 100%; height: 1px; background: var(--violet, #8b5cf6); content: ''; transform: scaleX(0); transform-origin: right; transition: transform 180ms ease; } .ds-nav-links a:hover::after, .ds-nav-links a:focus-visible::after { transform: scaleX(1); transform-origin: left; } .ds-nav a:focus-visible { outline: 2px solid var(--violet-pale, #c4b5fd); outline-offset: 4px; }"
+      "css": ".ds-nav { display: flex; align-items: center; justify-content: space-between; min-height: 4.75rem; padding: 0 1.25rem; border-bottom: 1px solid var(--line, rgba(207, 207, 207,0.13)); background: rgba(20, 20, 20,0.88); color: var(--paper, #cfcfcf); font-family: var(--font-body), Arial, sans-serif; backdrop-filter: blur(18px); gap: 2rem; } .ds-nav-brand { display: inline-flex; align-items: center; color: inherit; font-family: var(--font-display), Arial, sans-serif; font-size: 0.76rem; font-weight: 760; letter-spacing: 0.13em; text-decoration: none; gap: 0.8rem; } .ds-nav-brand b { display: inline-grid; place-items: center; width: 2rem; aspect-ratio: 1; border-radius: 0.4rem; background: var(--violet, #7e49b3); color: var(--ink, #141414); font-size: 1rem; font-weight: 800; letter-spacing: -0.04em; } .ds-nav-links { display: flex; gap: 2rem; } .ds-nav-links a { position: relative; color: var(--muted-strong, #b4b4b4); font-size: 0.78rem; font-weight: 600; text-decoration: none; } .ds-nav-links a::after { position: absolute; bottom: -0.55rem; left: 0; width: 100%; height: 1px; background: var(--violet, #7e49b3); content: ''; transform: scaleX(0); transform-origin: right; transition: transform 180ms ease; } .ds-nav-links a:hover::after, .ds-nav-links a:focus-visible::after { transform: scaleX(1); transform-origin: left; } .ds-nav a:focus-visible { outline: 2px solid var(--violet-pale, #be96e0); outline-offset: 4px; }"
     },
     {
       "name": "Approval Stamp",
@@ -157,7 +157,7 @@
       "refersTo": "approval-stamp",
       "description": "Carimbo angular para marcar uma evidência confirmada ou um artefato real.",
       "html": "<span class=\"ds-approval-stamp\">PROJETO REAL</span>",
-      "css": ".ds-approval-stamp { display: inline-block; padding: 0.65rem 0.9rem; border: 1px solid var(--violet-deep, #6d28d9); background: transparent; color: var(--violet-deep, #6d28d9); font-family: var(--font-body), Arial, sans-serif; font-size: 0.58rem; font-weight: 850; letter-spacing: 0.14em; transform: rotate(-5deg); } .ds-approval-stamp:hover { background: rgba(109,40,217,0.06); } .ds-approval-stamp:focus-visible { outline: 2px solid var(--violet-deep, #6d28d9); outline-offset: 4px; }"
+      "css": ".ds-approval-stamp { display: inline-block; padding: 0.65rem 0.9rem; border: 1px solid var(--violet-deep, #5c3483); background: transparent; color: var(--violet-deep, #5c3483); font-family: var(--font-body), Arial, sans-serif; font-size: 0.58rem; font-weight: 850; letter-spacing: 0.14em; transform: rotate(-5deg); } .ds-approval-stamp:hover { background: rgba(92, 52, 131,0.06); } .ds-approval-stamp:focus-visible { outline: 2px solid var(--violet-deep, #5c3483); outline-offset: 4px; }"
     },
     {
       "name": "Section Index",
@@ -165,7 +165,7 @@
       "refersTo": "section-index",
       "description": "Índice funcional que une numeral amplo e legenda técnica compacta.",
       "html": "<p class=\"ds-section-index\"><strong>03</strong><span>MÉTODO<br/>TEKTON</span></p>",
-      "css": ".ds-section-index { display: flex; align-items: flex-end; margin: 0; font-family: var(--font-body), Arial, sans-serif; gap: 0.75rem; } .ds-section-index strong { color: var(--violet, #8b5cf6); font-family: var(--font-display), Arial, sans-serif; font-size: clamp(2.6rem, 4.8vw, 4.75rem); font-weight: 720; letter-spacing: -0.05em; line-height: 0.76; } .ds-section-index span { max-width: 8rem; padding-bottom: 0.05rem; color: var(--muted-strong, #c7c7cf); font-size: 0.58rem; font-weight: 750; letter-spacing: 0.13em; line-height: 1.35; text-transform: uppercase; }"
+      "css": ".ds-section-index { display: flex; align-items: flex-end; margin: 0; font-family: var(--font-body), Arial, sans-serif; gap: 0.75rem; } .ds-section-index strong { color: var(--violet, #7e49b3); font-family: var(--font-display), Arial, sans-serif; font-size: clamp(2.6rem, 4.8vw, 4.75rem); font-weight: 720; letter-spacing: -0.05em; line-height: 0.76; } .ds-section-index span { max-width: 8rem; padding-bottom: 0.05rem; color: var(--muted-strong, #b4b4b4); font-size: 0.58rem; font-weight: 750; letter-spacing: 0.13em; line-height: 1.35; text-transform: uppercase; }"
     },
     {
       "name": "Evidence Board",
@@ -173,7 +173,7 @@
       "refersTo": "proof-board",
       "description": "Prancha grafite que organiza metadados, molduras e anotações ao redor de uma prova real.",
       "html": "<article class=\"ds-evidence-board\"><header><span>CASE / 001</span><span>ARTEFATO REAL</span></header><div class=\"ds-evidence-frame\"><div class=\"ds-browser-bar\"><i></i><i></i><i></i><span>ENTREGA RESPONSIVA</span></div><div class=\"ds-evidence-sheet\"><b>INTERFACE<br/>EM EVIDÊNCIA</b><span>DESKTOP + MOBILE</span></div></div><footer><span>ENTREGA REAL</span><strong>Direção visual + engenharia</strong></footer></article>",
-      "css": ".ds-evidence-board { position: relative; min-height: 24rem; padding: 3rem 1.4rem 4rem; border: 1px solid rgba(196,181,253,0.2); background: rgba(18,18,23,0.88); box-shadow: 0 34px 100px rgba(0,0,0,0.4), inset 0 0 0 1px rgba(255,255,255,0.025); color: var(--paper, #fafafa); font-family: var(--font-body), Arial, sans-serif; } .ds-evidence-board::before, .ds-evidence-board::after { position: absolute; width: 1.1rem; height: 1.1rem; border-color: var(--violet, #8b5cf6); content: ''; } .ds-evidence-board::before { top: -1px; left: -1px; border-top: 2px solid; border-left: 2px solid; } .ds-evidence-board::after { right: -1px; bottom: -1px; border-right: 2px solid; border-bottom: 2px solid; } .ds-evidence-board header { position: absolute; top: 1rem; right: 1.4rem; left: 1.4rem; display: flex; justify-content: space-between; color: var(--muted, #a1a1aa); font-size: 0.58rem; font-weight: 700; letter-spacing: 0.14em; } .ds-evidence-frame { width: 86%; overflow: hidden; border: 1px solid rgba(255,255,255,0.16); border-radius: 0.75rem; background: #111; box-shadow: 0 24px 60px rgba(0,0,0,0.48); } .ds-browser-bar { display: flex; align-items: center; height: 1.8rem; padding: 0 0.7rem; background: #e9e9e7; gap: 0.28rem; } .ds-browser-bar i { width: 0.38rem; height: 0.38rem; border-radius: 50%; background: #92928f; } .ds-browser-bar span { margin-inline: auto; color: #555; font-size: 0.48rem; letter-spacing: 0.02em; } .ds-evidence-sheet { display: flex; align-items: flex-end; justify-content: space-between; min-height: 13rem; padding: 1.5rem; background: linear-gradient(135deg, #ededeb 0 58%, #d8d8d4 58%); color: #121214; } .ds-evidence-sheet b { font-family: var(--font-display), Arial, sans-serif; font-size: 1.8rem; line-height: 0.95; letter-spacing: -0.04em; } .ds-evidence-sheet span { color: #606066; font-size: 0.55rem; font-weight: 800; letter-spacing: 0.15em; } .ds-evidence-board footer { position: absolute; bottom: 1.2rem; left: 1.4rem; display: flex; flex-direction: column; padding-left: 0.8rem; border-left: 1px solid var(--violet, #8b5cf6); } .ds-evidence-board footer span { color: var(--violet-pale, #c4b5fd); font-size: 0.53rem; font-weight: 800; letter-spacing: 0.16em; } .ds-evidence-board footer strong { font-size: 0.73rem; } .ds-evidence-board:focus-visible { outline: 2px solid var(--violet-pale, #c4b5fd); outline-offset: 4px; }"
+      "css": ".ds-evidence-board { position: relative; min-height: 24rem; padding: 3rem 1.4rem 4rem; border: 1px solid rgba(190, 150, 224,0.2); background: rgba(28, 28, 28,0.88); box-shadow: 0 34px 100px rgba(0,0,0,0.4), inset 0 0 0 1px rgba(255,255,255,0.025); color: var(--paper, #cfcfcf); font-family: var(--font-body), Arial, sans-serif; } .ds-evidence-board::before, .ds-evidence-board::after { position: absolute; width: 1.1rem; height: 1.1rem; border-color: var(--violet, #7e49b3); content: ''; } .ds-evidence-board::before { top: -1px; left: -1px; border-top: 2px solid; border-left: 2px solid; } .ds-evidence-board::after { right: -1px; bottom: -1px; border-right: 2px solid; border-bottom: 2px solid; } .ds-evidence-board header { position: absolute; top: 1rem; right: 1.4rem; left: 1.4rem; display: flex; justify-content: space-between; color: var(--muted, #909090); font-size: 0.58rem; font-weight: 700; letter-spacing: 0.14em; } .ds-evidence-frame { width: 86%; overflow: hidden; border: 1px solid rgba(255,255,255,0.16); border-radius: 0.75rem; background: #111; box-shadow: 0 24px 60px rgba(0,0,0,0.48); } .ds-browser-bar { display: flex; align-items: center; height: 1.8rem; padding: 0 0.7rem; background: #dcdcdc; gap: 0.28rem; } .ds-browser-bar i { width: 0.38rem; height: 0.38rem; border-radius: 50%; background: #8a8a8a; } .ds-browser-bar span { margin-inline: auto; color: #555; font-size: 0.48rem; letter-spacing: 0.02em; } .ds-evidence-sheet { display: flex; align-items: flex-end; justify-content: space-between; min-height: 13rem; padding: 1.5rem; background: linear-gradient(135deg, #cfcfcf 0 58%, #bcbcbc 58%); color: #141414; } .ds-evidence-sheet b { font-family: var(--font-display), Arial, sans-serif; font-size: 1.8rem; line-height: 0.95; letter-spacing: -0.04em; } .ds-evidence-sheet span { color: #565656; font-size: 0.55rem; font-weight: 800; letter-spacing: 0.15em; } .ds-evidence-board footer { position: absolute; bottom: 1.2rem; left: 1.4rem; display: flex; flex-direction: column; padding-left: 0.8rem; border-left: 1px solid var(--violet, #7e49b3); } .ds-evidence-board footer span { color: var(--violet-pale, #be96e0); font-size: 0.53rem; font-weight: 800; letter-spacing: 0.16em; } .ds-evidence-board footer strong { font-size: 0.73rem; } .ds-evidence-board:focus-visible { outline: 2px solid var(--violet-pale, #be96e0); outline-offset: 4px; }"
     },
     {
       "name": "Performance Metric Tile",
@@ -181,7 +181,7 @@
       "refersTo": "metric-tile",
       "description": "Bloco violeta de evidência quantitativa com numeral dominante e metadado técnico.",
       "html": "<article class=\"ds-metric-tile\"><span>AUDITORIA MOBILE / LOCAL</span><strong>96</strong><p>Performance</p></article>",
-      "css": ".ds-metric-tile { display: flex; align-items: flex-start; flex-direction: column; justify-content: space-between; min-height: 20rem; padding: clamp(1.5rem, 3vw, 2.5rem); background: var(--violet, #8b5cf6); color: var(--ink, #09090b); font-family: var(--font-body), Arial, sans-serif; } .ds-metric-tile > span { font-size: 0.55rem; font-weight: 850; letter-spacing: 0.13em; } .ds-metric-tile strong { font-family: var(--font-display), Arial, sans-serif; font-size: clamp(6rem, 11vw, 10.5rem); font-weight: 760; letter-spacing: -0.07em; line-height: 0.75; } .ds-metric-tile p { margin: 0; font-family: var(--font-display), Arial, sans-serif; font-size: 1rem; font-weight: 750; } .ds-metric-tile:focus-visible { outline: 2px solid var(--violet-pale, #c4b5fd); outline-offset: 4px; }"
+      "css": ".ds-metric-tile { display: flex; align-items: flex-start; flex-direction: column; justify-content: space-between; min-height: 20rem; padding: clamp(1.5rem, 3vw, 2.5rem); background: var(--violet, #7e49b3); color: var(--ink, #141414); font-family: var(--font-body), Arial, sans-serif; } .ds-metric-tile > span { font-size: 0.55rem; font-weight: 850; letter-spacing: 0.13em; } .ds-metric-tile strong { font-family: var(--font-display), Arial, sans-serif; font-size: clamp(6rem, 11vw, 10.5rem); font-weight: 760; letter-spacing: -0.07em; line-height: 0.75; } .ds-metric-tile p { margin: 0; font-family: var(--font-display), Arial, sans-serif; font-size: 1rem; font-weight: 750; } .ds-metric-tile:focus-visible { outline: 2px solid var(--violet-pale, #be96e0); outline-offset: 4px; }"
     },
     {
       "name": "Progress Ruler",
@@ -189,7 +189,7 @@
       "refersTo": "section-index",
       "description": "Régua de processo com avanço violeta e índices que mudam de estado sem esconder conteúdo.",
       "html": "<div class=\"ds-progress-ruler\" aria-label=\"Etapa 2 de 4\"><span class=\"ds-ruler-track\"></span><i>01</i><i class=\"is-active\">02</i><i>03</i><i>04</i></div>",
-      "css": ".ds-progress-ruler { position: relative; display: flex; flex-direction: column; justify-content: space-between; width: 4rem; height: 18rem; padding-left: 1.5rem; font-family: var(--font-body), Arial, sans-serif; } .ds-progress-ruler::before { position: absolute; top: 0; bottom: 0; left: 0; width: 1px; background: var(--line-strong, rgba(250,250,250,0.24)); content: ''; } .ds-ruler-track { position: absolute; top: 0; bottom: 0; left: -1px; width: 3px; background: var(--violet, #8b5cf6); box-shadow: 0 0 14px rgba(139,92,246,0.4); transform: scaleY(0.5); transform-origin: top; transition: transform 420ms cubic-bezier(0.22,1,0.36,1); } .ds-progress-ruler i { color: #85858f; font-size: 0.6rem; font-style: normal; font-weight: 800; transition: color 180ms ease; } .ds-progress-ruler i.is-active { color: var(--violet-pale, #c4b5fd); } .ds-progress-ruler:focus-visible { outline: 2px solid var(--violet-pale, #c4b5fd); outline-offset: 4px; }"
+      "css": ".ds-progress-ruler { position: relative; display: flex; flex-direction: column; justify-content: space-between; width: 4rem; height: 18rem; padding-left: 1.5rem; font-family: var(--font-body), Arial, sans-serif; } .ds-progress-ruler::before { position: absolute; top: 0; bottom: 0; left: 0; width: 1px; background: var(--line-strong, rgba(207, 207, 207,0.24)); content: ''; } .ds-ruler-track { position: absolute; top: 0; bottom: 0; left: -1px; width: 3px; background: var(--violet, #7e49b3); box-shadow: 0 0 14px rgba(126, 73, 179,0.4); transform: scaleY(0.5); transform-origin: top; transition: transform 420ms cubic-bezier(0.22,1,0.36,1); } .ds-progress-ruler i { color: #909090; font-size: 0.6rem; font-style: normal; font-weight: 800; transition: color 180ms ease; } .ds-progress-ruler i.is-active { color: var(--violet-pale, #be96e0); } .ds-progress-ruler:focus-visible { outline: 2px solid var(--violet-pale, #be96e0); outline-offset: 4px; }"
     }
   ],
   "narrative": {

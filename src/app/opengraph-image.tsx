@@ -14,8 +14,8 @@ export default function OpenGraphImage() {
         flexDirection: "column",
         justifyContent: "space-between",
         padding: "64px 72px",
-        color: "#FAFAFA",
-        background: "#09090B",
+        color: "#CFCFCF",
+        background: "#141414",
         fontFamily: "sans-serif",
       }}
     >
@@ -28,8 +28,8 @@ export default function OpenGraphImage() {
             width: 48,
             height: 48,
             borderRadius: 8,
-            background: "#8B5CF6",
-            color: "#09090B",
+            background: "#7E49B3",
+            color: "#FFFFFF",
             fontWeight: 800,
           }}
         >
@@ -38,7 +38,7 @@ export default function OpenGraphImage() {
         TEKTON DIGITAL
       </div>
       <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
-        <span style={{ color: "#A78BFA", fontSize: 22 }}>ESTRATÉGIA · DESIGN · ENGENHARIA</span>
+        <span style={{ color: "#BE96E0", fontSize: 22 }}>ESTRATÉGIA · DESIGN · ENGENHARIA</span>
         <div
           style={{
             display: "flex",
