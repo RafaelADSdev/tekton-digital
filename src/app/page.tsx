@@ -1,13 +1,8 @@
 import Image from "next/image";
-import {
-  ArrowDown,
-  ArrowRight,
-  ArrowUpRight,
-} from "lucide-react";
+import { ArrowDown, ArrowRight, ArrowUpRight } from "lucide-react";
 import { Header } from "@/components/Header";
-import { LeadForm } from "@/components/LeadForm";
 import { MotionController } from "@/components/MotionController";
-import { processSteps, services, siteConfig, team, whatsappHref } from "@/data/site";
+import { services, siteConfig, team, whatsappHref } from "@/data/site";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -17,19 +12,14 @@ const jsonLd = {
   description: siteConfig.description,
   areaServed: "BR",
   serviceType: [
-    "Landing pages",
-    "Sites institucionais",
-    "Desenvolvimento de sistemas web",
+    "Criação de landing pages",
+    "Desenvolvimento de sites institucionais",
+    "Sistemas web complexos",
   ],
 };
 
-function SectionIndex({ number, label }: { number: string; label: string }) {
-  return (
-    <p className="section-index">
-      <strong>{number}</strong>
-      <span>{label}</span>
-    </p>
-  );
+function SectionLabel({ children }: { children: string }) {
+  return <p className="section-label">{children}</p>;
 }
 
 export default function Home() {
@@ -48,31 +38,36 @@ export default function Home() {
         <section className="hero" id="top" aria-labelledby="hero-title">
           <div className="hero-orbit" aria-hidden="true" />
           <div className="hero-copy">
+            <p className="hero-eyebrow">Tekton — Software e design</p>
             <h1 id="hero-title">
-              Negócios reais.
+              Construímos
               <br />
-              <span>Experiências digitais</span>
+              <span>presença digital</span>
               <br />
-              de alto nível.
+              que aguenta uso real.
             </h1>
             <p className="hero-summary">
-              Estratégia, design e engenharia para transformar uma necessidade do seu negócio em um site ou
-              sistema pronto para trabalhar.
+              Não vendemos pacote de site. Projetamos, desenvolvemos e entregamos produtos digitais — landing
+              pages, sites institucionais e sistemas web — com a mesma exigência técnica que aplicaríamos a um
+              software crítico. Se o seu projeto tiver fundamento, a gente avalia.
             </p>
             <div className="hero-actions">
               <a className="primary-button" href="#contato">
-                Conversar sobre o projeto <ArrowRight size={18} aria-hidden="true" />
+                Verificar disponibilidade da equipe <ArrowRight size={18} aria-hidden="true" />
               </a>
               <a className="text-link" href="#portfolio">
-                Ver trabalho real <ArrowDown size={17} aria-hidden="true" />
+                Ver o que já construímos <ArrowDown size={17} aria-hidden="true" />
               </a>
             </div>
+            <p className="hero-note">
+              Analisamos o escopo antes de qualquer proposta. Nem todo projeto entra na fila.
+            </p>
           </div>
 
           <div className="hero-proof">
             <div className="proof-board">
               <div className="board-meta" aria-hidden="true">
-                <span>CASE / 001</span>
+                <span>PROJETO ENTREGUE</span>
                 <span>NAUTICA.ENG</span>
               </div>
               <div className="desktop-frame">
@@ -116,26 +111,20 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="signal-strip" aria-label="Princípios de execução">
-          <div><span>01</span> Estratégia antes da tela</div>
-          <div><span>02</span> Design que orienta a ação</div>
-          <div><span>03</span> Código pronto para evoluir</div>
-        </section>
-
         <section className="section services-section" id="servicos" aria-labelledby="services-title">
           <div className="section-intro">
-            <SectionIndex number="01" label="O que fazemos" />
-            <h2 id="services-title">A entrega certa para o momento do seu negócio.</h2>
+            <SectionLabel>O que construímos</SectionLabel>
+            <h2 id="services-title">Três frentes. Nenhuma delas pela metade.</h2>
             <p>
-              Do primeiro canal comercial a uma operação inteira, desenhamos cada projeto ao redor do problema
-              que precisa ser resolvido.
+              Trabalhamos com um conjunto fechado de disciplinas porque é nelas que somos bons. Não
+              terceirizamos código, não montamos site em template e não entregamos nada que a gente mesmo não
+              assinaria embaixo.
             </p>
           </div>
 
           <div className="service-list">
             {services.map((service) => (
-              <article className="service-row" key={service.index}>
-                <span className="service-index">{service.index}</span>
+              <article className="service-row" key={service.title}>
                 <div>
                   <h3>{service.title}</h3>
                   <p>{service.description}</p>
@@ -151,17 +140,24 @@ export default function Home() {
               </article>
             ))}
           </div>
+
+          <p className="section-closing">
+            Se a sua demanda não for nenhuma dessas três, provavelmente conhecemos alguém melhor para ela. E
+            vamos te dizer isso.
+          </p>
         </section>
 
         <section className="case-section" id="portfolio" aria-labelledby="case-title">
           <div className="case-header section">
             <div>
-              <SectionIndex number="02" label="Trabalho em evidência" />
-              <h2 id="case-title">Náutica Engenharia</h2>
+              <SectionLabel>Portfólio e execução</SectionLabel>
+              <h2 id="case-title">O detalhe é o argumento.</h2>
             </div>
             <p>
-              Uma presença digital criada para organizar serviços, estabelecer confiança e facilitar o primeiro
-              contato em qualquer tela.
+              Repare no que costuma passar despercebido: o comportamento da rolagem, o tempo de uma transição,
+              o alinhamento que se mantém quando a tela muda de tamanho, o estado do botão quando o cursor
+              chega nele. Nada disso é enfeite — é o que separa uma página que funciona de uma página que
+              apenas existe. Cada projeto aqui foi construído do zero.
             </p>
           </div>
 
@@ -197,7 +193,7 @@ export default function Home() {
           </div>
 
           <div className="case-details section">
-            <p>LANDING PAGE DE SERVIÇOS</p>
+            <p>NÁUTICA ENGENHARIA · LANDING PAGE DE SERVIÇOS</p>
             <ul>
               <li>Arquitetura de conteúdo</li>
               <li>Direção de interface</li>
@@ -210,35 +206,10 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section method-section" id="metodo" aria-labelledby="method-title">
-          <div className="method-heading">
-            <SectionIndex number="03" label="Método Tekton" />
-            <h2 id="method-title">Clareza para decidir. Rigor para executar.</h2>
-          </div>
-
-          <div className="method-grid">
-            <div className="method-ruler" aria-hidden="true">
-              <span className="ruler-track" />
-              {processSteps.map((step) => (
-                <i key={step.index}>{step.index}</i>
-              ))}
-            </div>
-            <div className="method-steps">
-              {processSteps.map((step) => (
-                <article key={step.index} data-stage>
-                  <span>{step.index}</span>
-                  <h3>{step.title}</h3>
-                  <p>{step.description}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <section className="capabilities-section" aria-labelledby="capabilities-title">
           <div className="section capabilities-inner">
             <div>
-              <SectionIndex number="04" label="Evidência técnica" />
+              <SectionLabel>Evidência técnica</SectionLabel>
               <h2 id="capabilities-title">Bonito na apresentação. Forte no uso real.</h2>
             </div>
             <div className="audit-board" role="group" aria-label="Resultado da validação local deste site">
@@ -267,15 +238,16 @@ export default function Home() {
 
         <section className="section team-section" id="equipe" aria-labelledby="team-title">
           <div className="team-heading">
-            <SectionIndex number="05" label="Quem executa" />
-            <h2 id="team-title">Uma equipe próxima do problema e da entrega.</h2>
+            <SectionLabel>Quem executa</SectionLabel>
+            <h2 id="team-title">Três sócios. Nenhum intermediário.</h2>
             <p>
-              A Tekton reúne competências de produto, interface, infraestrutura e dados para manter as decisões
-              conectadas de ponta a ponta.
+              A Tekton é uma casa pequena por escolha. Quem conversa com você na primeira mensagem é quem vai
+              escrever o código e desenhar a interface do seu projeto. Não existe camada de gerente de contas
+              repassando recado, nem equipe júnior anônima executando aquilo que outra pessoa vendeu.
             </p>
           </div>
           <div className="team-grid">
-            {team.map((member, index) => (
+            {team.map((member) => (
               <article key={member.name}>
                 <div className="portrait">
                   <Image
@@ -286,7 +258,6 @@ export default function Home() {
                     loading="lazy"
                     sizes="(max-width: 700px) 86vw, 30vw"
                   />
-                  <span aria-hidden="true">0{index + 1}</span>
                 </div>
                 <h3>{member.name}</h3>
                 <p className="member-role">{member.role}</p>
@@ -294,28 +265,44 @@ export default function Home() {
               </article>
             ))}
           </div>
+          <p className="section-closing">
+            Somos jovens e temos plena consciência disso. Compensamos com nível técnico, com processo e com uma
+            noção honesta do que não sabemos fazer. Você fala com os três, do primeiro escopo à entrega.
+          </p>
         </section>
 
         <section className="contact-section" id="contato" aria-labelledby="contact-title">
-          <div className="section contact-grid">
-            <div className="contact-copy">
-              <SectionIndex number="06" label="Próximo projeto" />
-              <h2 id="contact-title">Traga o contexto. A gente desenha o caminho.</h2>
-              <p>
-                Conte o que sua empresa precisa resolver. Vamos avaliar o cenário e retornar com os próximos
-                passos para a conversa.
-              </p>
-              {whatsappHref ? (
-                <a className="whatsapp-link" href={whatsappHref} target="_blank" rel="noreferrer">
-                  Prefere WhatsApp? Abrir conversa <ArrowUpRight size={17} aria-hidden="true" />
+          <div className="section contact-copy">
+            <SectionLabel>Próximo passo</SectionLabel>
+            <h2 id="contact-title">Sem formulário. Conversa direta.</h2>
+            <p>
+              Não temos um campo de &ldquo;conte-nos sobre o seu projeto&rdquo; para a sua mensagem cair numa
+              caixa de entrada que ninguém abre. Temos um número de WhatsApp onde você fala com um dos sócios.
+            </p>
+            <p>
+              O que acontece lá: você explica o que precisa, a gente faz as perguntas certas sobre escopo,
+              prazo e o que já existe hoje. A partir disso dizemos com honestidade se faz sentido a Tekton
+              assumir esse projeto. Se fizer, tratamos de números e cronograma no privado. Se não fizer, você
+              sai da conversa com uma direção melhor do que entrou — e sem ter perdido a tarde.
+            </p>
+            <p>
+              Aceitamos um número limitado de projetos por vez. É assim que se mantém o padrão. Vale checar se
+              há espaço agora.
+            </p>
+            {whatsappHref ? (
+              <>
+                <a className="primary-button" href={whatsappHref} target="_blank" rel="noreferrer">
+                  Falar com um dos sócios no WhatsApp <ArrowUpRight size={18} aria-hidden="true" />
                 </a>
-              ) : (
-                <p className="contact-note">O canal de WhatsApp será exibido quando o número comercial for configurado.</p>
-              )}
-            </div>
-            <div>
-              <LeadForm />
-            </div>
+                <p className="contact-note">
+                  Respondemos em horário comercial. Se não houver agenda, dizemos isso já na primeira resposta.
+                </p>
+              </>
+            ) : (
+              <p className="contact-note">
+                O canal de WhatsApp será exibido quando o número comercial for configurado.
+              </p>
+            )}
           </div>
         </section>
       </main>
@@ -326,7 +313,7 @@ export default function Home() {
             <span className="brand-mark" aria-hidden="true">T</span>
             <span>TEKTON DIGITAL</span>
           </a>
-          <p>Design e engenharia para negócios que querem avançar.</p>
+          <p>Software e design para quem leva o próprio negócio a sério.</p>
           <a href="#top">Voltar ao topo <ArrowUpRight size={15} aria-hidden="true" /></a>
         </div>
         <div className="footer-bottom">

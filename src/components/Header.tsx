@@ -25,7 +25,7 @@ export function Header() {
       </nav>
 
       <a className="header-cta" href="#contato">
-        Iniciar projeto <ArrowUpRight size={16} aria-hidden="true" />
+        Falar com a equipe <ArrowUpRight size={16} aria-hidden="true" />
       </a>
 
       <button
@@ -41,14 +41,13 @@ export function Header() {
 
       <div className={`mobile-menu ${open ? "is-open" : ""}`} id="mobile-menu" aria-hidden={!open}>
         <nav aria-label="Navegação móvel">
-          {siteConfig.nav.map((item, index) => (
+          {siteConfig.nav.map((item) => (
             <a key={item.href} href={item.href} onClick={() => setOpen(false)} tabIndex={open ? 0 : -1}>
-              <span>0{index + 1}</span>
               {item.label}
             </a>
           ))}
           <a className="mobile-contact" href="#contato" onClick={() => setOpen(false)} tabIndex={open ? 0 : -1}>
-            Iniciar projeto <ArrowUpRight aria-hidden="true" />
+            Falar com a equipe <ArrowUpRight aria-hidden="true" />
           </a>
         </nav>
       </div>

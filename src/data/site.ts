@@ -1,81 +1,57 @@
 export const siteConfig = {
   name: "Tekton Digital",
   description:
-    "Estúdio tecnológico que combina estratégia, design e desenvolvimento para criar sites e sistemas que movem negócios.",
+    "Criação de landing pages, desenvolvimento de sites institucionais e sistemas web complexos. Código próprio, design de alta performance.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
   nav: [
     { label: "Serviços", href: "#servicos" },
-    { label: "Método", href: "#metodo" },
     { label: "Portfólio", href: "#portfolio" },
-    { label: "Equipe", href: "#equipe" },
+    { label: "Sócios", href: "#equipe" },
   ],
 } as const;
 
 export const services = [
   {
-    index: "01",
-    title: "Landing Pages",
+    title: "Landing Pages de Alta Performance",
     description:
-      "Uma página, uma oferta e um caminho claro para transformar interesse em conversa comercial.",
-    deliverables: ["Estratégia de conteúdo", "Design responsivo", "Medição e SEO técnico"],
+      "Criação de landing pages com uma função específica: transformar visitante em conversa. Carregamento rápido, estrutura semântica limpa, responsividade testada em dispositivo real — não só no emulador. Cada elemento da página existe porque tem trabalho a fazer.",
+    deliverables: ["Arquitetura de conteúdo", "Design responsivo", "SEO técnico e medição"],
   },
   {
-    index: "02",
     title: "Sites Institucionais",
     description:
-      "Presença digital consistente para explicar seu negócio, construir confiança e sustentar o crescimento.",
-    deliverables: ["Arquitetura de informação", "Sistema visual", "Performance e publicação"],
+      "Desenvolvimento de sites institucionais para empresas que precisam ser levadas a sério quando alguém pesquisa o nome delas. Arquitetura de informação clara, SEO técnico resolvido na base e um painel para você atualizar conteúdo sem depender de terceiros.",
+    deliverables: ["Arquitetura de informação", "Sistema visual próprio", "Publicação e manutenção"],
   },
   {
-    index: "03",
-    title: "Sistemas Web",
+    title: "Sistemas Web Complexos",
     description:
-      "Aplicações sob medida para tirar processos da planilha e organizar a operação com segurança.",
+      "Painéis internos, áreas autenticadas, integrações com API, automações e regras de negócio que não cabem em ferramenta pronta. Sistemas web complexos com código versionado, documentado e escrito para ser mantido por outra pessoa depois — inclusive por você.",
     deliverables: ["Mapeamento de fluxo", "Interface operacional", "Dados e integrações"],
-  },
-] as const;
-
-export const processSteps = [
-  {
-    index: "01",
-    title: "Entender",
-    description: "Mapeamos o negócio, a decisão do cliente e o que a entrega precisa resolver.",
-  },
-  {
-    index: "02",
-    title: "Projetar",
-    description: "Transformamos estratégia em arquitetura, conteúdo e uma direção visual própria.",
-  },
-  {
-    index: "03",
-    title: "Construir",
-    description: "Desenvolvemos com atenção a velocidade, acessibilidade, SEO e manutenção.",
-  },
-  {
-    index: "04",
-    title: "Entregar",
-    description: "Validamos a experiência completa e deixamos a operação pronta para evoluir.",
   },
 ] as const;
 
 export const team = [
   {
-    name: "Rafael Arcanjo",
-    role: "Desenvolvimento de produto",
-    description: "Traduz necessidades de negócio em interfaces claras e produtos digitais consistentes.",
-    image: "/assets/team/rafael-arcanjo.webp",
+    name: "Miguel Leite",
+    role: "Dados e integrações",
+    description:
+      "Conecta bancos de dados, APIs e serviços externos. É quem garante que a informação chegue certa ao destino e continue chegando depois que o projeto entra em operação.",
+    image: "/assets/team/miguel-leite.webp",
   },
   {
     name: "Kaio Seabra",
     role: "Back-end e infraestrutura",
-    description: "Constrói APIs, regras de negócio e infraestrutura com foco em estabilidade e evolução.",
+    description:
+      "Responde pelo back-end e pela infraestrutura. Define como o sistema vai aguentar o uso real antes de ele existir, e é quem levanta a mão quando uma ideia não se sustenta em produção.",
     image: "/assets/team/kaio-seabra.webp",
   },
   {
-    name: "Miguel Leite",
-    role: "Dados e integrações",
-    description: "Conecta dados, consultas e serviços para manter fluxos confiáveis de ponta a ponta.",
-    image: "/assets/team/miguel-leite.webp",
+    name: "Rafael Arcanjo",
+    role: "Produto e interface",
+    description:
+      "Cuida do produto e da interface. Traduz a necessidade do negócio em telas que a pessoa entende sem manual, e escreve o front-end que sustenta isso.",
+    image: "/assets/team/rafael-arcanjo.webp",
   },
 ] as const;
 
@@ -83,6 +59,6 @@ export const whatsappNumber = (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "").re
 
 export const whatsappHref = whatsappNumber
   ? `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-      "Olá! Conheci a Tekton Digital pelo site e quero conversar sobre um projeto.",
+      "Olá! Vim pelo site da Tekton. Quero conversar sobre um projeto.",
     )}`
   : null;

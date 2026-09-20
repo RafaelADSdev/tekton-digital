@@ -13,7 +13,7 @@ export default function PrivacyPage() {
         <ArrowLeft size={17} aria-hidden="true" /> Voltar para o site
       </a>
       <article>
-        <p className="section-index">Documento / 01</p>
+        <p className="section-label">Documento legal</p>
         <h1>Política de Privacidade</h1>
         <p className="legal-updated">Última atualização: 18 de setembro de 2026.</p>
 
