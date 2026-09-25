@@ -10,10 +10,10 @@ export function Header() {
 
   return (
     <header className="site-header">
-      <a className="brand" href="#top" aria-label="Tekton Digital, ir para o topo">
+      <a className="brand" href="#top" aria-label="Tekton Labs, ir para o topo">
         <Image
           src="/assets/brand/tekton-logo.png"
-          alt="Tekton Digital"
+          alt="Tekton Labs"
           width={720}
           height={194}
           priority

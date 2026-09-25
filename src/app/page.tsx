@@ -1,8 +1,17 @@
 import Image from "next/image";
 import { ArrowDown, ArrowRight, ArrowUpRight } from "lucide-react";
+import { CaseCompare } from "@/components/CaseCompare";
 import { Header } from "@/components/Header";
 import { MotionController } from "@/components/MotionController";
-import { services, siteConfig, team, whatsappHref } from "@/data/site";
+import {
+  auditScores,
+  buildWhatsappHref,
+  services,
+  siteConfig,
+  team,
+  technicalEvidence,
+  whatsappHref,
+} from "@/data/site";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -38,16 +47,16 @@ export default function Home() {
         <section className="hero" id="top" aria-labelledby="hero-title">
           <div className="hero-orbit" aria-hidden="true" />
           <div className="hero-copy">
-            <p className="hero-eyebrow">Tekton · Software e design</p>
+            <p className="hero-eyebrow">Tekton Labs · Software e design</p>
             <h1 id="hero-title">
               <span>Construímos</span>
               <span className="accent">presença digital</span>
               <span>que aguenta uso real.</span>
             </h1>
             <p className="hero-summary">
-              Não vendemos pacote de site. Projetamos, desenvolvemos e entregamos produtos digitais: landing
-              pages, sites institucionais e sistemas web. Tudo com a mesma exigência técnica que aplicaríamos
-              a um software crítico. Se o seu projeto tiver fundamento, a gente avalia.
+              Não vendemos pacote de site. Projetamos, desenvolvemos e entregamos produtos digitais — landing
+              pages, sites institucionais e sistemas web — com a mesma exigência técnica de um software
+              crítico. Se o projeto tiver fundamento, a gente avalia.
             </p>
             <div className="hero-actions">
               <a className="primary-button" href="#contato">
@@ -121,27 +130,36 @@ export default function Home() {
           </div>
 
           <div className="service-list">
-            {services.map((service) => (
-              <article className="service-row" key={service.title}>
-                <div>
-                  <h3>{service.title}</h3>
-                  <p>{service.description}</p>
-                </div>
-                <ul aria-label={`Entregas de ${service.title}`}>
-                  {service.deliverables.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-                <a href="#contato" aria-label={`Conversar sobre ${service.title}`}>
-                  <ArrowUpRight aria-hidden="true" />
-                </a>
-              </article>
-            ))}
+            {services.map((service) => {
+              const serviceHref = buildWhatsappHref(service.whatsappMessage);
+              return (
+                <article className="service-row" key={service.title}>
+                  <div>
+                    <h3>{service.title}</h3>
+                    <p>{service.description}</p>
+                  </div>
+                  <ul aria-label={`Entregas de ${service.title}`}>
+                    {service.deliverables.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                  {serviceHref ? (
+                    <a className="service-cta" href={serviceHref} target="_blank" rel="noreferrer">
+                      {service.cta} <ArrowUpRight size={17} aria-hidden="true" />
+                    </a>
+                  ) : (
+                    <a className="service-cta" href="#contato">
+                      {service.cta} <ArrowDown size={17} aria-hidden="true" />
+                    </a>
+                  )}
+                </article>
+              );
+            })}
           </div>
 
           <p className="section-closing">
-            Se a sua demanda não for nenhuma dessas três, provavelmente conhecemos alguém melhor para ela. E
-            vamos te dizer isso.
+            Sua demanda não se encaixa em nenhuma dessas três? Fale com a gente mesmo assim. Todo projeto é
+            avaliado, e você recebe uma resposta honesta sobre o melhor caminho.
           </p>
         </section>
 
@@ -159,48 +177,31 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="case-stage section">
-            <div className="case-desktop">
-              <div className="browser-bar dark" aria-hidden="true">
-                <i />
-                <i />
-                <i />
-                <span>Experiência desktop</span>
-              </div>
-              <Image
-                src="/assets/cases/nautica-after-desktop.webp"
-                alt="Site da Náutica Engenharia em desktop"
-                width={1440}
-                height={900}
-                loading="lazy"
-                sizes="(max-width: 900px) 100vw, 72vw"
-              />
-            </div>
-            <div className="case-mobile">
-              <div className="case-mobile-label">ADAPTAÇÃO MOBILE</div>
-              <Image
-                src="/assets/cases/nautica-after-mobile.webp"
-                alt="Site da Náutica Engenharia em celular"
-                width={390}
-                height={844}
-                loading="lazy"
-                sizes="(max-width: 700px) 34vw, 18vw"
-              />
-            </div>
-            <span className="case-stamp" aria-hidden="true">PROJETO REAL</span>
-          </div>
+          <CaseCompare />
 
           <div className="case-details section">
-            <p>NÁUTICA ENGENHARIA · LANDING PAGE DE SERVIÇOS</p>
-            <ul>
-              <li>Arquitetura de conteúdo</li>
-              <li>Direção de interface</li>
-              <li>Desenvolvimento responsivo</li>
-            </ul>
-            <p className="case-caption">
-              O case é apresentado como evidência de execução. Não publicamos métricas ou resultados comerciais
-              que não tenham sido documentados pelo cliente.
-            </p>
+            <div className="case-project">
+              <p className="case-detail-label">Projeto entregue</p>
+              <h3>Náutica Engenharia</h3>
+              <p>Landing page de serviços</p>
+            </div>
+
+            <div className="case-scope">
+              <p className="case-detail-label">Escopo de execução</p>
+              <ul>
+                <li>Arquitetura de conteúdo</li>
+                <li>Direção de interface</li>
+                <li>Desenvolvimento responsivo</li>
+              </ul>
+            </div>
+
+            <aside className="case-evidence-note" aria-label="Nota de evidência do projeto">
+              <p className="case-detail-label">Nota de evidência</p>
+              <p>
+                O case é apresentado como evidência de execução. Não publicamos métricas ou resultados comerciais
+                que não tenham sido documentados pelo cliente.
+              </p>
+            </aside>
           </div>
         </section>
 
@@ -214,23 +215,46 @@ export default function Home() {
               <div className="audit-lead">
                 <span>LIGHTHOUSE MOBILE / LOCAL</span>
                 <strong>96</strong>
-                <p>Performance</p>
+                <div>
+                  <p>Performance</p>
+                  <small>O quanto a página abre rápido no celular. Página lenta perde o visitante antes da primeira linha.</small>
+                </div>
               </div>
               <dl className="audit-scores">
-                <div><dt>Acessibilidade</dt><dd>100</dd></div>
-                <div><dt>Boas práticas</dt><dd>100</dd></div>
-                <div><dt>SEO</dt><dd>100</dd></div>
+                {auditScores.map((item) => (
+                  <div key={item.label}>
+                    <dt>{item.label}</dt>
+                    <dd className="audit-score">{item.score}</dd>
+                    <dd className="audit-hint">{item.hint}</dd>
+                  </div>
+                ))}
               </dl>
               <div className="audit-notes">
                 <h3>Medimos o que entregamos.</h3>
-                <ul>
-                  <li>Build de produção, viewport mobile e dados reais desta página.</li>
-                  <li>HTML semântico, imagens responsivas e interação com movimento reduzido.</li>
-                  <li>PageSpeed da URL pública será validado após a publicação.</li>
-                </ul>
-                <p>Auditoria local executada em 18 set. 2026. Resultado pode variar conforme rede e hospedagem.</p>
+                <p className="audit-explainer">
+                  Os números vêm do Lighthouse, a ferramenta do Google que dá nota de 0 a 100 para a qualidade de
+                  um site. Rodamos no próprio site que você está vendo, simulando um celular.
+                </p>
+                <p>
+                  Auditoria local da versão de produção em 18 set. 2026. O resultado pode variar conforme rede e
+                  hospedagem, e o PageSpeed da URL pública será validado após a publicação.
+                </p>
               </div>
             </div>
+
+            <div className="evidence-heading">
+              <h3>O que tem por trás dos números.</h3>
+              <p>Cada termo técnico, e o que ele muda para quem visita o seu site.</p>
+            </div>
+            <ul className="evidence-grid">
+              {technicalEvidence.map((item) => (
+                <li key={item.term}>
+                  <span className="evidence-term">{item.term}</span>
+                  <strong>{item.benefit}</strong>
+                  <p>{item.description}</p>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 
@@ -264,8 +288,8 @@ export default function Home() {
             ))}
           </div>
           <p className="section-closing">
-            Somos jovens e temos plena consciência disso. Compensamos com nível técnico, com processo e com uma
-            noção honesta do que não sabemos fazer. Você fala com os três, do primeiro escopo à entrega.
+            Arquitetura de conteúdo, interface e código próprio ficam na mesma mesa. Performance medida, SEO
+            técnico na base e sistema versionado para continuar depois da publicação.
           </p>
         </section>
 
@@ -308,10 +332,10 @@ export default function Home() {
 
       <footer className="site-footer">
         <div className="footer-top">
-          <a className="brand footer-brand" href="#top" aria-label="Tekton Digital, ir para o topo">
+          <a className="brand footer-brand" href="#top" aria-label="Tekton Labs, ir para o topo">
             <Image
               src="/assets/brand/tekton-logo.png"
-              alt="Tekton Digital"
+              alt="Tekton Labs"
               width={720}
               height={194}
               loading="lazy"
@@ -321,7 +345,7 @@ export default function Home() {
           <a href="#top">Voltar ao topo <ArrowUpRight size={15} aria-hidden="true" /></a>
         </div>
         <div className="footer-bottom">
-          <span>© {new Date().getFullYear()} Tekton Digital</span>
+          <span>© {new Date().getFullYear()} Tekton Labs</span>
           <a href="/privacidade">Política de Privacidade</a>
           <span>Brasil · Atendimento remoto</span>
         </div>

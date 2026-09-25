@@ -69,7 +69,7 @@ export async function POST(request: NextRequest) {
   const { website: _website, ...lead } = result.data;
   const { error } = await supabase.from("leads").insert({
     ...lead,
-    source: "site-tekton",
+    source: "site-tektonlabs",
     user_agent: request.headers.get("user-agent")?.slice(0, 500) || null,
   });
 

@@ -3,7 +3,7 @@ import { ArrowLeft } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Política de Privacidade",
-  description: "Como a Tekton Digital trata os dados enviados pelo formulário de contato.",
+  description: "Como a Tekton Labs trata os dados enviados pelo formulário de contato.",
 };
 
 export default function PrivacyPage() {

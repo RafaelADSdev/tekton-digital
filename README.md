@@ -1,6 +1,6 @@
-# Tekton Digital
+# Tekton Labs
 
-Site institucional e portfólio da Tekton Digital, construído com Next.js, React, TypeScript, Tailwind CSS e Supabase.
+Site institucional e portfólio da Tekton Labs, construído com Next.js, React, TypeScript, Tailwind CSS e Supabase.
 
 ## Rodar localmente
 

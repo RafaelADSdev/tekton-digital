@@ -1,5 +1,5 @@
 ---
-name: "Tekton Digital"
+name: "Tekton Labs"
 description: "Uma mesa de execução digital que transforma rigor, prova real e decisão em uma linguagem visual premium."
 colors:
   mineral-black: "#141414"
@@ -19,7 +19,7 @@ colors:
 typography:
   display:
     fontFamily: "Plus Jakarta Sans, Arial, sans-serif"
-    fontSize: "clamp(3rem, 5.6vw, 6.65rem)"
+    fontSize: "clamp(2.9rem, 5.15vw, 6.2rem)"
     fontWeight: 700
     lineHeight: 0.98
     letterSpacing: "-0.045em"
@@ -102,7 +102,7 @@ components:
     padding: "clamp(1.5rem, 3vw, 2.5rem)"
 ---
 
-# Design System: Tekton Digital
+# Design System: Tekton Labs
 
 ## Overview
 

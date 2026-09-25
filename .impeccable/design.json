@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "generatedAt": "2026-09-18T21:53:05.7351215-03:00",
-  "title": "Design System: Tekton Digital",
+  "title": "Design System: Tekton Labs",
   "extensions": {
     "colorMeta": {
       "mineral-black": {
@@ -148,7 +148,7 @@
       "kind": "nav",
       "refersTo": "text-link",
       "description": "Navegação mineral fixa com marca, links medidos e sublinhado violeta responsivo.",
-      "html": "<nav class=\"ds-nav\" aria-label=\"Navegação de demonstração\"><a class=\"ds-nav-brand\" href=\"#\"><b>T</b><span>TEKTON DIGITAL</span></a><div class=\"ds-nav-links\"><a href=\"#\">SERVIÇOS</a><a href=\"#\">MÉTODO</a><a href=\"#\">EVIDÊNCIAS</a></div></nav>",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Navegação de demonstração\"><a class=\"ds-nav-brand\" href=\"#\"><b>T</b><span>TEKTON LABS</span></a><div class=\"ds-nav-links\"><a href=\"#\">SERVIÇOS</a><a href=\"#\">MÉTODO</a><a href=\"#\">EVIDÊNCIAS</a></div></nav>",
       "css": ".ds-nav { display: flex; align-items: center; justify-content: space-between; min-height: 4.75rem; padding: 0 1.25rem; border-bottom: 1px solid var(--line, rgba(207, 207, 207,0.13)); background: rgba(20, 20, 20,0.88); color: var(--paper, #cfcfcf); font-family: var(--font-body), Arial, sans-serif; backdrop-filter: blur(18px); gap: 2rem; } .ds-nav-brand { display: inline-flex; align-items: center; color: inherit; font-family: var(--font-display), Arial, sans-serif; font-size: 0.76rem; font-weight: 760; letter-spacing: 0.13em; text-decoration: none; gap: 0.8rem; } .ds-nav-brand b { display: inline-grid; place-items: center; width: 2rem; aspect-ratio: 1; border-radius: 0.4rem; background: var(--violet, #7e49b3); color: var(--ink, #141414); font-size: 1rem; font-weight: 800; letter-spacing: -0.04em; } .ds-nav-links { display: flex; gap: 2rem; } .ds-nav-links a { position: relative; color: var(--muted-strong, #b4b4b4); font-size: 0.78rem; font-weight: 600; text-decoration: none; } .ds-nav-links a::after { position: absolute; bottom: -0.55rem; left: 0; width: 100%; height: 1px; background: var(--violet, #7e49b3); content: ''; transform: scaleX(0); transform-origin: right; transition: transform 180ms ease; } .ds-nav-links a:hover::after, .ds-nav-links a:focus-visible::after { transform: scaleX(1); transform-origin: left; } .ds-nav a:focus-visible { outline: 2px solid var(--violet-pale, #be96e0); outline-offset: 4px; }"
     },
     {

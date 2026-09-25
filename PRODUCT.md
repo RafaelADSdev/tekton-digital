@@ -18,11 +18,11 @@ Next.js com App Router, React, TypeScript, Tailwind CSS e Supabase para persist�
 
 ## Product Purpose
 
-Ser o principal canal comercial e a maior prova de capacidade da Tekton Digital. A página deve comunicar confiança em poucos segundos, demonstrar qualidade com trabalho real e conduzir o visitante a iniciar uma conversa sobre seu projeto.
+Ser o principal canal comercial e a maior prova de capacidade da Tekton Labs. A página deve comunicar confiança em poucos segundos, demonstrar qualidade com trabalho real e conduzir o visitante a iniciar uma conversa sobre seu projeto.
 
 ## Positioning
 
-A Tekton Digital combina direção de design, engenharia de software e visão comercial para transformar necessidades reais de negócio em sites e sistemas completos, sem separar aparência, performance e operação.
+A Tekton Labs combina direção de design, engenharia de software e visão comercial para transformar necessidades reais de negócio em sites e sistemas completos, sem separar aparência, performance e operação.
 
 ## Operating Context
 
@@ -38,7 +38,7 @@ O visitante chega principalmente pelo celular, muitas vezes comparando fornecedo
 
 ## Brand Commitments
 
-- Nome: Tekton Digital.
+- Nome: Tekton Labs.
 - Identidade dark premium: fundo `#141414`, superfícies `#1c1c1c`, texto `#CFCFCF` e `#909090`, roxos `#5C3483` e `#7E49B3`.
 - Plus Jakarta Sans em títulos e Inter em textos.
 - Linguagem segura, clara e comercial, sem jargão desnecessário.

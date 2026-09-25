@@ -2,7 +2,7 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { ImageResponse } from "next/og";
 
-export const alt = "Tekton Digital: design e desenvolvimento para negócios reais";
+export const alt = "Tekton Labs: design e desenvolvimento para negócios reais";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -27,7 +27,7 @@ export default function OpenGraphImage() {
     >
       <div style={{ display: "flex" }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={`data:image/png;base64,${logo}`} width={334} height={90} alt="Tekton Digital" />
+        <img src={`data:image/png;base64,${logo}`} width={334} height={90} alt="Tekton Labs" />
       </div>
       <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
         <span style={{ color: "#BE96E0", fontSize: 22 }}>ESTRATÉGIA · DESIGN · ENGENHARIA</span>
