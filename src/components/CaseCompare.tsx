@@ -5,13 +5,8 @@ import { ChevronsLeftRight } from "lucide-react";
 import { useCallback, useEffect, useRef, useState, type CSSProperties, type PointerEvent } from "react";
 
 const clamp = (value: number) => Math.min(Math.max(value, 0), 100);
-const ease = (t: number) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
-
-// Varredura de apresentação na primeira vez que o case aparece:
-// mostra um pouco do antes, um pouco do depois e volta ao meio.
-const INTRO_KEYFRAMES = [50, 78, 24, 50];
-const INTRO_DURATION = 2600;
-const JUMP_DURATION = 750;
+const ease = (t: number) => 1 - Math.pow(1 - t, 3);
+const JUMP_DURATION = 360;
 
 export function CaseCompare() {
   const stageRef = useRef<HTMLDivElement>(null);
@@ -22,6 +17,8 @@ export function CaseCompare() {
   const dragging = useRef<HTMLElement | null>(null);
   const frame = useRef(0);
   const touchedRef = useRef(false);
+  const destination = useRef(50);
+  const hintAnimation = useRef<Animation | null>(null);
 
   const commit = useCallback((value: number) => {
     splitRef.current = value;
@@ -37,13 +34,14 @@ export function CaseCompare() {
     touchedRef.current = true;
     setTouched(true);
     cancelAnimation();
+    hintAnimation.current?.cancel();
   }, [cancelAnimation]);
 
-  // Interpola entre keyframes; cada trecho usa o mesmo ease para a
-  // divisória desacelerar em cada ponto de parada.
+  // Desacelera até o destino; novos cliques partem da posição atual.
   const animate = useCallback(
     (keyframes: number[], duration: number) => {
       cancelAnimation();
+      destination.current = keyframes[keyframes.length - 1];
       if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
         commit(keyframes[keyframes.length - 1]);
         return;
@@ -67,26 +65,53 @@ export function CaseCompare() {
   useEffect(() => {
     const stage = stageRef.current;
     if (!stage) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-
-    const observer = new IntersectionObserver(
+    const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const stopMotion = () => {
+      hintAnimation.current?.cancel();
+      if (frame.current) {
+        cancelAnimation();
+        commit(destination.current);
+      }
+    };
+    const onPreferenceChange = () => {
+      if (preference.matches) stopMotion();
+    };
+    const observer = "IntersectionObserver" in window ? new IntersectionObserver(
       ([entry]) => {
         if (!entry.isIntersecting) return;
-        observer.disconnect();
-        if (!touchedRef.current) animate(INTRO_KEYFRAMES, INTRO_DURATION);
+        observer?.disconnect();
+        if (touchedRef.current || preference.matches || document.documentElement.dataset.motionInput === "keyboard") return;
+        const icon = stage.querySelector<SVGElement>(".compare-handle svg");
+        if (icon && typeof icon.animate === "function") {
+          // A single directional hint introduces dragging without moving the comparison.
+          hintAnimation.current = icon.animate(
+            [{ transform: "translateX(0)" }, { transform: "translateX(3px)" },
+              { transform: "translateX(-3px)" }, { transform: "translateX(0)" }],
+            { duration: 640, easing: "cubic-bezier(0.22, 1, 0.36, 1)" },
+          );
+        }
       },
-      { threshold: 0.45 },
-    );
-    observer.observe(stage);
+      { threshold: 0.2 },
+    ) : null;
+    observer?.observe(stage);
+    preference.addEventListener("change", onPreferenceChange);
+    window.addEventListener("keydown", stopMotion);
 
     return () => {
-      observer.disconnect();
+      observer?.disconnect();
+      preference.removeEventListener("change", onPreferenceChange);
+      window.removeEventListener("keydown", stopMotion);
+      hintAnimation.current?.cancel();
       cancelAnimation();
     };
-  }, [animate, cancelAnimation]);
+  }, [cancelAnimation, commit]);
 
-  const jumpTo = (target: number) => {
+  const jumpTo = (target: number, instant = false) => {
     markTouched();
+    if (instant) {
+      commit(target);
+      return;
+    }
     animate([splitRef.current, target], JUMP_DURATION);
   };
 
@@ -196,10 +221,10 @@ export function CaseCompare() {
 
       <div className="compare-controls">
         <div className="compare-toggle" role="group" aria-label="Alternar comparação">
-          <button type="button" aria-pressed={split > 60} onClick={() => jumpTo(100)}>
+          <button type="button" aria-pressed={split > 60} onClick={(event) => jumpTo(100, event.detail === 0)}>
             Ver antes
           </button>
-          <button type="button" aria-pressed={split < 40} onClick={() => jumpTo(0)}>
+          <button type="button" aria-pressed={split < 40} onClick={(event) => jumpTo(0, event.detail === 0)}>
             Ver depois
           </button>
         </div>

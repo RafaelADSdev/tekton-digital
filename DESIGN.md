@@ -241,7 +241,7 @@ Os componentes parecem instrumentos de uma mesa de aprovação: compactos, contr
 
 - **Desktop:** marca à esquerda, links centrais com sublinhado violeta animado e ação à direita, sobre vidro mineral fixo com blur de `18px`.
 - **Mobile:** painel vertical abaixo do cabeçalho, itens com altura mínima de `4rem`, índice violeta e comando final preenchido.
-- **Motion:** transições de estado usam majoritariamente `180ms ease`; o painel móvel combina opacidade e deslocamento de `1rem`.
+- **Motion:** transições de estado usam majoritariamente `180ms com curva de desaceleração personalizada`; o painel móvel combina opacidade e deslocamento de `1rem`.
 
 ### Section Index
 
@@ -272,3 +272,33 @@ Uma régua de um pixel recebe uma faixa violeta de `3px` que progride com o cont
 - Don't usar violeta em grandes áreas sem relação com ação, progresso, foco ou evidência.
 - Don't inventar métricas, depoimentos ou imagens para preencher uma prancha de prova.
 - Don't esconder conteúdo atrás de opacidade inicial, recorte ou movimento obrigatório.
+
+## Movimento — refinamento de 6 de outubro de 2026
+
+Direção: Jakub para acabamento, Jhey para sequências breves de apresentação e Emil para navegação e controles frequentes.
+
+- Entrada inicial: títulos em 440ms, apoio em 360ms e atrasos até 280ms. A entrada não é reiniciada ao abrir âncoras ou restaurar a rolagem.
+- Seções: entrada única com opacidade e deslocamento de 8px em 420ms, com atrasos limitados a 120ms. Só elementos abaixo da tela inicial são observados; o conteúdo permanece visível sem JavaScript.
+- Controles: transições de transform que podem ser interrompidas; estados acionados pelo teclado respondem imediatamente.
+- Menu móvel: entrada de 240ms a partir do cabeçalho, saída de 120ms e painel fechado oculto. Escape fecha e devolve o foco ao botão.
+- Comparador: indicação direcional única de 640ms no ícone ao aparecer. Botões transitam em 360ms a partir da posição atual; arraste e teclado respondem imediatamente.
+- Luz de contato: efeito original de gradiente radial que acompanha o mouse na seção “Sem formulário. Conversa direta.”, restrito a ponteiros precisos e desativado com movimento reduzido.
+- Movimento reduzido: remove entradas, efeitos de ponteiro e deslocamentos no hover; cancela animações das seções e do comparador se a preferência mudar durante o uso.
+
+Validação: revisão do código segundo os cuidados de criação da skill e checagem de tipos TypeScript aprovada. A aparência em navegador, dispositivos e as métricas de performance não foram reavaliadas nesta alteração.
+
+## Refinamento de UI/UX — 6 de outubro de 2026
+
+Aplicação da skill ui-ux-pro-max ao site institucional existente, com pesquisas locais sobre foco desobstruído, equilíbrio dos títulos, legibilidade e implementação em Next.js.
+
+- Navegação indica a seção atual por sublinhado e aria-current; o menu móvel fecha por Escape, clique externo ou saída do foco.
+- O painel móvel respeita a altura disponível, permite rolagem interna em paisagem e fica inerte quando fechado.
+- A altura do cabeçalho é compartilhada com a margem de rolagem das âncoras e a posição do painel.
+- Controles de navegação e comparação têm área mínima de 44px por escolha de conforto; isso não é apresentado como mínimo universal de WCAG para web.
+- Títulos usam quebra equilibrada, textos de apoio ganham tamanho e os avisos secundários usam #989898 para melhorar contraste.
+- O painel de evidência elimina alturas vazias no celular; o terceiro retrato fica centralizado na composição de duas colunas.
+- A luz original do mouse na seção de contato permanece ativa.
+
+A inspeção visual pelo navegador não estava disponível nesta sessão. As métricas históricas do Lighthouse exibidas no conteúdo não representam uma medição deste refinamento.
+
+Validação local deste refinamento: TypeScript sem emissão aprovado; contraste calculado de #989898 sobre #1c1c1c em 5,91:1. O cálculo não substitui a inspeção das camadas visuais no navegador. A navegação ativa acompanha rolagem e redimensionamento com atualizações agrupadas por quadro.
