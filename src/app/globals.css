@@ -191,11 +191,11 @@ a {
 .hero {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 0.88fr) minmax(30rem, 1.12fr);
+  grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
   align-items: center;
-  min-height: 100dvh;
-  padding: 8.75rem var(--page-gutter) 5.5rem;
-  overflow: clip;
+  min-height: 100svh;
+  padding: 8.75rem 4vw 5.5rem;
+  overflow: visible;
   isolation: isolate;
 }
 
@@ -218,15 +218,16 @@ a {
 .hero-copy {
   position: relative;
   z-index: 2;
+  min-width: 0;
   max-width: 47rem;
   padding-right: 2rem;
 }
 
 .hero h1 {
-  max-width: 12ch;
+  max-width: min(12ch, 100%);
   margin: 0;
   font-family: var(--font-display), Arial, sans-serif;
-  font-size: clamp(2.9rem, 4.85vw, 5.75rem);
+  font-size: clamp(2.9rem, 5.15vw, 6.2rem);
   font-weight: 700;
   letter-spacing: -0.045em;
   line-height: 0.98;
@@ -327,6 +328,7 @@ a {
 
 .hero-actions {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 1.4rem;
   margin-top: 2.25rem;
@@ -387,6 +389,7 @@ a {
 .hero-proof {
   position: relative;
   z-index: 1;
+  min-width: 0;
   padding-left: clamp(1rem, 4vw, 4rem);
 }
 
@@ -669,10 +672,10 @@ a {
 
 .service-row {
   display: grid;
-  grid-template-columns: 3rem minmax(0, 1.25fr) minmax(0, 0.8fr) minmax(0, 0.75fr);
-  align-items: start;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr) auto;
+  align-items: center;
   min-height: 13rem;
-  padding: clamp(2rem, 3.5vw, 3rem) 0;
+  padding: 2rem 0;
   border-bottom: 1px solid var(--line);
   gap: 2rem;
   transition: none;
@@ -686,7 +689,7 @@ a {
 .service-row h3 {
   margin: 0 0 0.8rem;
   font-family: var(--font-display), Arial, sans-serif;
-  font-size: clamp(1.75rem, 2.5vw, 2.55rem);
+  font-size: clamp(1.8rem, 3vw, 3rem);
   font-weight: 650;
   letter-spacing: -0.035em;
 }
@@ -2619,14 +2622,14 @@ h3 {
   }
 }
 
-@media (min-width: 821px) and (max-width: 1279px) {
+@media (min-width: 821px) and (max-width: 1100px) {
   .service-row {
-    grid-template-columns: 3rem minmax(0, 1.4fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
     gap: 1.5rem 2rem;
   }
 
-  .service-cta {
-    grid-column: 2;
+  .service-row .service-cta {
+    grid-column: 1 / -1;
     justify-self: start;
   }
 }
@@ -2691,5 +2694,135 @@ h3 {
 
   .audit-notes > p:last-child {
     margin-top: 1.5rem;
+  }
+}
+
+/* Correção da abertura: conteúdo e ações respeitam a largura disponível. */
+.hero-copy > *,
+.hero-actions > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.hero h1 > span {
+  overflow-wrap: anywhere;
+}
+
+.hero-actions .primary-button {
+  white-space: normal;
+}
+
+@media (min-width: 821px) and (max-width: 1100px) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .hero-copy {
+    padding-right: 1rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.5rem, 5.25vw, 3.6rem);
+  }
+}
+
+@media (max-width: 560px) {
+  .hero-actions .primary-button,
+  .hero-actions .text-link,
+  .service-row .service-cta {
+    width: 100%;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.4rem, 11.5vw, 3.75rem);
+  }
+}
+
+
+/* Desktop: composicao anterior, mantendo o layout mobile atual. */
+@media (min-width: 821px) {
+  :root {
+    --page-gutter: 4vw;
+  }
+
+  .section {
+    width: min(92vw, 90rem);
+  }
+
+  .hero {
+    grid-template-columns: minmax(0, 0.88fr) minmax(30rem, 1.12fr);
+    padding: 8.75rem 4vw 5.5rem;
+  }
+
+  .hero-copy {
+    grid-column: 1;
+    grid-row: 1;
+    padding-right: 2rem;
+  }
+
+  .hero-proof {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.9rem, 5.15vw, 6.2rem);
+  }
+
+  .hero h1 > span {
+    overflow-wrap: normal;
+  }
+
+  .service-row {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr) auto;
+    gap: 2rem;
+  }
+
+  .service-row .service-cta {
+    grid-column: auto;
+    justify-self: end;
+    white-space: nowrap;
+  }
+
+  .evidence-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 0;
+    border-left: 1px solid var(--line);
+  }
+
+  .evidence-grid li {
+    padding: clamp(1.5rem, 2.6vw, 2.2rem);
+    border-right: 1px solid var(--line);
+  }
+
+  .evidence-term {
+    padding: 0.3rem 0.6rem;
+    border: 1px solid rgba(126, 73, 179, 0.45);
+    border-radius: 0.4rem;
+  }
+
+  .evidence-grid strong {
+    max-width: none;
+    font-size: 1.15rem;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .team-grid article:nth-child(n) {
+    grid-column: auto;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 821px) and (max-width: 1100px) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    padding-top: 7.5rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.8rem, 6vw, 4.6rem);
   }
 }

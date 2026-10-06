@@ -318,3 +318,18 @@ Aplicação da skill ao projeto existente: variância 8, densidade 4 e movimento
 Nenhuma dependência foi adicionada. A validação visual em navegador segue indisponível nesta sessão; os resultados históricos do Lighthouse não são uma medição deste refinamento.
 
 Validação local: compilação de produção Next.js e TypeScript aprovadas. A revisão da cascata ajustou as margens no tablet e unificou o recuo móvel do cabeçalho, conteúdo e rodapé em 1,25rem. A inspeção visual em navegador e as métricas públicas de desempenho não foram executadas.
+
+## Correção da abertura e dos serviços
+
+O usuário reportou recorte na abertura e desorganização na seção de Landing Pages. A inspeção encontrou três blocos no conteúdo dos serviços e quatro colunas no CSS: a primeira, de apenas 3rem, recebia o título. O CSS foi corrigido para corresponder ao conteúdo atual.
+
+- Serviços: três áreas no desktop (descrição, entregas e ação), duas colunas com ação em linha própria entre 821–1100px e uma coluna em telas menores.
+- Abertura: recuo anterior restaurado, colunas que podem encolher, ações que podem mudar de linha e remoção do recorte do contêiner.
+- Título: escala específica para telas estreitas e quebra de emergência para palavras que excedam a largura disponível.
+
+A confirmação visual em navegador continua indisponível nesta sessão; compilação é registrada separadamente da reprodução visual.
+
+
+## Layout desktop e mobile
+
+O desktop acima de 820 px recupera a composicao anterior a revisao editorial (referencia: bd8ba10): margens de 4vw, secoes de ate 90rem, abertura em duas colunas, servicos com descricao, lista e acao na mesma linha, evidencias em tres colunas e equipe alinhada sem deslocamento vertical. As regras atuais de mobile ate 820 px continuam aplicadas. Permanecem as protecoes de largura da abertura e a quebra flexivel das acoes para evitar novos cortes.
