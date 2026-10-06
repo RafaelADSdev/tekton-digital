@@ -19,7 +19,7 @@ colors:
 typography:
   display:
     fontFamily: "Plus Jakarta Sans, Arial, sans-serif"
-    fontSize: "clamp(2.9rem, 5.15vw, 6.2rem)"
+    fontSize: "clamp(2.9rem, 4.85vw, 5.75rem)"
     fontWeight: 700
     lineHeight: 0.98
     letterSpacing: "-0.045em"
@@ -177,7 +177,7 @@ A paleta parte de três cores base — Nox Noir `#141414`, Royal Amethyst `#7E49
 
 ## Layout
 
-O conteúdo usa um contêiner central de `min(92vw, 90rem)` e espaçamento vertical fluido de `clamp(5.5rem, 10vw, 9.5rem)`. A grade combina colunas assimétricas para colocar direção, explicação e prova em relações claras. Réguas, bordas contínuas e alinhamentos compartilhados conectam blocos que permanecem visualmente abertos.
+O conteúdo usa um contêiner central de `min(92vw, 87.5rem)` e espaçamento vertical fluido de `clamp(5.5rem, 10vw, 9.5rem)`. A grade combina colunas assimétricas para colocar direção, explicação e prova em relações claras. Réguas, bordas contínuas e alinhamentos compartilhados conectam blocos que permanecem visualmente abertos.
 
 Em telas largas, os grupos podem usar duas ou três colunas e o cabeçalho organiza marca, navegação e ação em três zonas. Em `1100px`, a navegação passa a um painel móvel. Em `820px`, composições principais colapsam para uma coluna, o contêiner passa a margens de `1.25rem` e as réguas se adaptam ao eixo disponível. Em `560px`, ações e campos ocupam toda a largura, listas preservam índices e o espaçamento prioriza toque e leitura.
 
@@ -302,3 +302,19 @@ Aplicação da skill ui-ux-pro-max ao site institucional existente, com pesquisa
 A inspeção visual pelo navegador não estava disponível nesta sessão. As métricas históricas do Lighthouse exibidas no conteúdo não representam uma medição deste refinamento.
 
 Validação local deste refinamento: TypeScript sem emissão aprovado; contraste calculado de #989898 sobre #1c1c1c em 5,91:1. O cálculo não substitui a inspeção das camadas visuais no navegador. A navegação ativa acompanha rolagem e redimensionamento com atualizações agrupadas por quadro.
+
+## Composição editorial — design-taste-frontend-v1
+
+Aplicação da skill ao projeto existente: variância 8, densidade 4 e movimento ajustado à direção sutil já aprovada. As regras genéricas de troca de paleta, fontes e biblioteca de ícones foram adaptadas à identidade existente da Tekton; Royal Amethyst, Plus Jakarta Sans, Inter e os ícones atuais permanecem. A luz do mouse solicitada na seção de contato é preservada.
+
+- Abertura assimétrica com título levemente menor e conteúdo alinhado a um limite de 1400px em telas largas.
+- Serviços numerados e separados por réguas, com título, descrição, entregas e ação em colunas próprias no desktop. A ação muda de linha em larguras intermediárias.
+- Evidências técnicas em duas colunas assimétricas, sem contêineres individuais; os termos e as descrições continuam intactos.
+- Retratos reais com posições alternadas no desktop e grade de quatro trilhas no tablet, sem cálculos de largura por porcentagem.
+- Abaixo de 768px, equipe, evidências, detalhes do case e painel técnico usam uma única coluna.
+- Sombras de botões são discretas e neutras; a órbita decorativa foi removida da abertura.
+- Novos elementos são estáticos no Server Component; o movimento continua nos componentes existentes, com tratamento de movimento reduzido e limpeza dos efeitos.
+
+Nenhuma dependência foi adicionada. A validação visual em navegador segue indisponível nesta sessão; os resultados históricos do Lighthouse não são uma medição deste refinamento.
+
+Validação local: compilação de produção Next.js e TypeScript aprovadas. A revisão da cascata ajustou as margens no tablet e unificou o recuo móvel do cabeçalho, conteúdo e rodapé em 1,25rem. A inspeção visual em navegador e as métricas públicas de desempenho não foram executadas.
